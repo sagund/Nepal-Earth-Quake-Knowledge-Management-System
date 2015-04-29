@@ -8,3 +8,5 @@ a. demands of relief support  : we will ask people to fill a form (very short) t
 b. list of supports available ( items and funds) : we will list all the available resources and funds.
 c. match supply and demand : we will help the supplies and demand and system will ensure that all possible people get help when possible.
 d. List of contacts at VDCs:We will do this by listing the representatives from each VDCs of the country through which the help will go. This will eliminate all the duplicate efforts. Right now in the ground different people from same VDCs are collecting relief packages so some VDCs have more supplies while other don't. This will also make everything transparent and easy to make an estimate for collecting funds.
+e. KMS will in long term help the government and other agencies to estimate funds needed for long term rehabilitation of the victims.
+

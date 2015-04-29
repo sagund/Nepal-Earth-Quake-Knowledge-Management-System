@@ -10,4 +10,9 @@ class Relief extends CI_Controller {
         //charge the view "contact" in the other view template
          $this->load->view('base', $data);
 	}
+
+    public function save()
+    {
+
+    }
 }

@@ -65,8 +65,11 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+
 	'username' => 'root',
 	'password' => 'mysqlpw',
+
+
 	'database' => 'db_relief911',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

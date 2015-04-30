@@ -49,6 +49,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'relief';
+
+
+/**
+ * ******************************************
+ *  USER ROUTES
+ */
+$route['user/register'] = 'user/register';
+$route['user/login'] = 'user/login';
+$route['user/logout'] = 'user/logout';
+$route['user/dashboard'] = 'user/dashboard';
+
+
+
+
+
+
+// ADMIN Routes
+
+$route['admin'] 			=             "relief_admin/reliefcrud/index";
+
+//USER CRUD ADMIN
+$route['admin/crud/user/(:any)'] 			=  "relief_admin/reliefcrud/user/$1";
+
+// DONATION CRUD ADMIN
+$route['admin/crud/donation/(:any)'] 			=  "relief_admin/reliefcrud/donation/$1";
+
+// VILLAGE CRUD ADMIN
+$route['admin/crud/village/(:any)'] 			=  "relief_admin/reliefcrud/village/$1";
+
+// DONATION_DISTRIBUTION CRUD ADMIN
+$route['admin/crud/donation_distribution/(:any)'] 			=  "relief_admin/reliefcrud/donation_distribution/$1";
+
+// NEED_RELIEF CRUD ADMIN
+$route['admin/crud/need_relief/(:any)'] 			=  "relief_admin/reliefcrud/need_relief/$1";
+
+$route['admin/crud/(:any)'] 			=  "relief_admin/reliefcrud/$1";
+
+
+$route['relief_admin/(:any)']     = "relief_admin/reliefcrud";
+
+
+//$route['default_controller'] = 'relief';
+
+$route['default_controller'] = 'volunteer/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

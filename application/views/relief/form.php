@@ -1,6 +1,9 @@
-<form>
+
+     <form action="" method="POST">
     <h3>Basic Information</h3>
     <hr>
+
+
     <div class="row">
         <div class="form-group col-lg-4">
             <label for="head_first_name">Family Head First Name</label>
@@ -8,7 +11,7 @@
         </div>
         <div class="form-group col-lg-4">
             <label for="head_mid_name">Family Head Middle Name</label>
-            <input type="text" class="form-control" id="head_mid_name" name="id="head_mid_name"">
+            <input type="text" class="form-control" id="head_mid_name" name="head_mid_name">
         </div>
         <div class="form-group col-lg-4">
             <label for="head_mid_name">Family Head Last Name</label>
@@ -18,13 +21,13 @@
     <div class="row">
         <div class="form-group col-lg-4">
             <label for="">Gender</label>
-            <input type="radio"  id="">Male
-            <input type="radio"  id="">Female
-            <input type="radio"  id="">Other
+            <input type="radio"  name="gender" value="m" id="">Male
+            <input type="radio"  name="gender" value="f" id="">Female
+            <input type="radio"  name="gender" value="u" id="">Other
         </div>
         <div class="form-group col-lg-2">
             <label for="age">Age</label>
-            <input type="text" class="form-control" id="age">
+            <input type="text" class="form-control" name="age" id="age">
         </div>
     </div>
     <div class="row">

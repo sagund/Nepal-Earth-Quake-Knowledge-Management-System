@@ -11,7 +11,6 @@
 
 <div class="" id="loginModal">
 	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		<h3>Have an Account?</h3>
 	</div>
 	<div class="modal-body">
@@ -58,22 +57,24 @@
 				<div class="tab-pane fade" id="create">
 					<form id="tab">
 						<label>First Name</label>
-						<input type="text" name="fname" value="" class="input-xlarge" required>
+						<input type="text" name="first_name" value="" class="input-xlarge" required>
                         <label>Middle Name</label>
-						<input type="text" name="mname" value="" class="input-xlarge">
+						<input type="text" name="middle_name" value="" class="input-xlarge">
 						<label>Last Name</label>
-						<input type="text" name="lname" value="" class="input-xlarge" required>
+						<input type="text" name="last_name" value="" class="input-xlarge" required>
+                        <label>Username</label>
+						<input type="text" name="username" value="" class="input-xlarge" required>
 						<label>Email</label>
 						<input type="email" name="email" value="" class="input-xlarge" required>
                         <label>Password</label>
 						<input type="password" name="password" value="" class="input-xlarge">
                         <label>Confirm Password</label>
-						<input type="password" name="confirmPassword" value="" class="input-xlarge" required>
+						<input type="password" name="confirm_password" value="" class="input-xlarge" required>
                         <label>Telephone/Mobile No.</label>
 						<input type="tel" name="phone" value="" class="input-xlarge">
                         
 						<label>City/Village</label>
-						<input type="text" name="cityVillage" value="" class="input-xlarge" required>
+						<input type="text" name="city" value="" class="input-xlarge" required>
                         <label>Country</label>
 						<input type="text" name="country" value="" class="input-xlarge" required>
 						<div>

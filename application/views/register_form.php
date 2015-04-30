@@ -78,7 +78,7 @@
                         <label>Country</label>
 						<input type="text" name="country" value="" class="input-xlarge" required>
 						<div>
-							<button type="submit" class="btn btn-primary">Create Account</button>
+							<button type="submit" name="submit" class="btn btn-primary">Create Account</button>
 						
 							<button type="reset" class="btn btn-primary">Reset Form</button>
 						</div>

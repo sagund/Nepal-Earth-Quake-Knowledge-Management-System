@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class ReliefCrud extends CI_Controller {
+class ReliefCrud extends MY_Controller {
 
 	public function __construct()
 	{

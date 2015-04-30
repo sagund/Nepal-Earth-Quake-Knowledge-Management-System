@@ -373,16 +373,10 @@ class Base_Model extends CI_Model
     public function add($data)
     {
 
-        $data['ip_address'] = Utils::getClientIpAddress();
 
-        if (! array_key_exists('ip_address', $data))
+        if (! array_key_exists('date_added', $data))
         {
-            $data['ip_address'] = Utils::getClientIpAddress();
-        }
-
-        if (! array_key_exists('date_created', $data))
-        {
-            $data['date_created'] = Utils::getDateTime();
+            $data['date_added'] = Utils::getDateTime();
         }
         return $this->db->insert($this->_table, $data);
     }

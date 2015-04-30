@@ -24,11 +24,37 @@ class Users_Model extends Base_Model
     public function __construct()
     {
         parent::__construct();
-        $this->_table = "users";
+        $this->_table = "user";
+    }
+
+    public function addUser($data)
+    {
+
+    	$data['date_added'] = Utils::getDateTime();
+    	$results = $this->db->insert($this->_table, $data);
+
+    	$insert_id = "-1";
+    	if ($results)
+    	{
+    		$insert_id = $this->db->insert_id();
+    	}
+
+    	return array("results"=>$results,'id'=>$insert_id);
     }
 
 
-    public function getById($user_d)
+    public function getEmailPasswordMatchExist($email_address,$password)
+    {
+
+    	$sql = "SELECT id,first_name,last_name,email FROM ".$this->_table." where email = '{$email_address}' AND password = '{$password}'  ";
+
+    	$results = $this->db->query($sql);
+
+    	return $results;
+    }
+
+
+    public function getById($user_d,$fields_csv="*")
     {
 
     	$user_obj = parent::getById($user_d);

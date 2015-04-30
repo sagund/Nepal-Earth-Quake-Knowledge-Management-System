@@ -50,6 +50,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+/**
+ * ******************************************
+ *  USER ROUTES
+ */
+$route['user/register'] = 'user/register';
+$route['user/login'] = 'user/login';
+$route['user/logout'] = 'user/logout';
+$route['user/dashboard'] = 'user/dashboard';
+
+
+
+
 
 
 // ADMIN Routes

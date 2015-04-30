@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Relief extends CI_Controller {
+class Relief extends MY_Controller {
 
 
 	public function index()

@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+
 /**
  * ******************************************
  *  USER ROUTES
@@ -89,9 +90,8 @@ $route['admin/crud/(:any)'] 			=  "relief_admin/reliefcrud/$1";
 $route['relief_admin/(:any)']     = "relief_admin/reliefcrud";
 
 
+//$route['default_controller'] = 'relief';
 
-
-
-$route['default_controller'] = 'relief';
+$route['default_controller'] = 'volunteer/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

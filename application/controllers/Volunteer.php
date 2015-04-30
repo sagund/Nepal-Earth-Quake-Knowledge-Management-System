@@ -21,7 +21,7 @@ class Volunteer extends CI_Controller {
 	public function register(){
 		$this->load->view('header');
 		$data['districts'] = $this->volunteer_model->getDistrictList();
-		$this->load->view('volunteer/register',$data);
+		$this->load->view('register_form',$data);
 		$this->load->view('footer');
 	}
 	

@@ -19,7 +19,7 @@ class Relief extends MY_Controller {
 			$data ['ward_num'] = Utils::get_from_POST ( "ward" );
 			$data ['vdc'] = Utils::get_from_POST ( "vdc" );
 
-			$this->load->model ( 'Needrelief_Model' );
+			//$this->load->model ( 'Needrelief_Model' );
 			$insert_results = $this->Needrelief_Model->addNeedRelief ( $data );
 
 			if ($insert_results ['results']) {

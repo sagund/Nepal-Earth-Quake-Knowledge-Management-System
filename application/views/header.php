@@ -26,3 +26,9 @@
 
 </head>
 <body>
+
+<?php
+
+require_once("application/views/flash_messages.inc.php");
+
+?>

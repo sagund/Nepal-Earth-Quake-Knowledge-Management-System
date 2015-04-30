@@ -12,9 +12,11 @@ class User extends MY_Controller {
 
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
+
 		$this->load->view ( 'templates/header', $data );
 		$this->load->view ( 'user/dashboard', $data );
 		$this->load->view ( 'templates/footer', $data );
+
 	}
 
 	public function register() {
@@ -62,13 +64,16 @@ class User extends MY_Controller {
 			}
 		} else {
 
-			$this->load->view ( 'templates/header', $data );
+			$this->load->view ( 'header', $data );
+			$this->load->view ( 'nav', $data );
+
 			$this->load->view ( 'user/register', $data );
-			$this->load->view ( 'templates/footer' );
+			$this->load->view ( 'footer' );
 		}
 	}
-	public function login() {
 
+
+	public function login() {
 
 		$data = array();
 		if ($_POST) {
@@ -81,9 +86,12 @@ class User extends MY_Controller {
 
 			if ($matched_data->result_id->num_rows > 0) {
 
+
 				$user_data_array = $matched_data->result_array ();
 				$user_data = $user_data_array [0];
 				$this->authenticateUser ( $user_data );
+
+
 
 				SESSION::set ( 'flash_msg_type', "success" );
 				SESSION::set ( 'flash_msg', "Successfully Logged in" );
@@ -94,6 +102,8 @@ class User extends MY_Controller {
 					redirect ( '/' . $r, 'refresh' );
 				}
 			} else {
+
+
 				SESSION::set ( 'flash_msg_type', "danger" );
 				SESSION::set ( 'flash_msg', "Sorry, your login and password did not match any records in our database. Please try again" );
 				redirect ( '/user/login', 'refresh' );
@@ -101,9 +111,11 @@ class User extends MY_Controller {
 		}
 
 
-			$this->load->view ( 'templates/header', $data );
+
+			$this->load->view ( 'header', $data );
+			$this->load->view ( 'nav', $data );
 			$this->load->view ( 'user/login', $data );
-			$this->load->view ( 'templates/footer' );
+			$this->load->view ( 'footer' );
 
 	}
 	public function authenticateUser($user_data_array) {
@@ -116,6 +128,7 @@ class User extends MY_Controller {
 				'email_address' => $user_data_array ['email'],
 				'id' => $user_data_array ['id']
 		);
+
 
 		Authenticator::setAuthenticatedCookieForUser ( $user_data_array ['id'] );
 	}

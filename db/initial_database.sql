@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Apr 30, 2015 at 02:06 AM
+-- Generation Time: Apr 30, 2015 at 07:00 AM
 -- Server version: 5.5.38
 -- PHP Version: 5.5.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `db_relief911`
@@ -40,7 +34,7 @@ CREATE TABLE `donation` (
   `media_upload_path` varchar(300) NOT NULL,
   `status` varchar(60) NOT NULL,
   `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -126,15 +120,16 @@ CREATE TABLE `user` (
   `user_type` enum('representative','admin','donator','editor') NOT NULL DEFAULT 'donator',
   `username` varchar(60) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `first_name` varchar(200) NOT NULL,
-  `second_name` varchar(200) NOT NULL,
-  `last_name` varchar(200) NOT NULL,
-  `phone` varchar(60) NOT NULL,
-  `city` varchar(150) NOT NULL,
-  `state` varchar(150) NOT NULL,
-  `country` varchar(150) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `first_name` varchar(200) DEFAULT NULL,
+  `second_name` varchar(200) DEFAULT NULL,
+  `last_name` varchar(200) DEFAULT NULL,
+  `phone` varchar(60) DEFAULT NULL,
+  `city` varchar(150) DEFAULT NULL,
+  `state` varchar(150) DEFAULT NULL,
+  `country` varchar(150) DEFAULT NULL,
   `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
 
 -- --------------------------------------------------------
 
@@ -151,7 +146,7 @@ CREATE TABLE `village` (
   `category` varchar(60) NOT NULL,
   `status` varchar(60) NOT NULL,
   `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Indexes for dumped tables
@@ -185,7 +180,7 @@ ALTER TABLE `relief_info`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
- ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `username` (`username`), ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `village`
@@ -201,7 +196,7 @@ ALTER TABLE `village`
 -- AUTO_INCREMENT for table `donation`
 --
 ALTER TABLE `donation`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `donation_distribution`
 --
@@ -221,12 +216,9 @@ MODIFY `rlf_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `village`
 --
 ALTER TABLE `village`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;

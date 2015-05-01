@@ -3,8 +3,12 @@
     <div class="container">
 		
 		<h3>Register me as a volunteer:</h3>
-<form action="" method="post" >
-	<select>
+<form action="<?php echo base_url();?>volunteer/create" method="post" >
+	<input type="text" name="name" />
+	
+	
+	<input type="text" name="mobile" />
+	<select name="district">
 		<option>District</option>
 		<?php
 	
@@ -15,11 +19,11 @@
 
 	?>
 	</select>
-	
-	<select>
-		<option>VDC</option>
+	Where?
+	<select name="vdc">
+		<option>VDC / Muncipality</option>
 	</select>
-	
+	Area of Expertise:
 	<input type="text" name="area"/>
 	What I can do:
 	<select>

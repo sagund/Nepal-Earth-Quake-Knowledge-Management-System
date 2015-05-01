@@ -5,8 +5,8 @@
 <link rel="icon" href="#">
 <title>Login/Registration</title>
 </head>
-<link class="cssdeck" rel="stylesheet" href="../../assets/css/bootstrap_form.css">
-<link class="cssdeck" rel="stylesheet" href="../../assets/css/bootstrap-responsive.min.css">
+<link class="cssdeck" rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap_form.css">
+<link class="cssdeck" rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-responsive.min.css">
 
 
 <div class="" id="loginModal">
@@ -88,5 +88,5 @@
 		</div>
 	</div>
 
-<script class="cssdeck" src="../../assets/js/jquery.min.js"></script>
-<script class="cssdeck" src="../../assets/js/bootstrap_form.js"></script>
+<script class="cssdeck" src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script class="cssdeck" src="<?php echo base_url();?>assets/js/bootstrap_form.js"></script>

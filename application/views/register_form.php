@@ -56,7 +56,6 @@
 				</div>
 				<div class="tab-pane fade" id="create">
 					<form class="form-horizontal" id="tab">
-                    <!--<fieldset>-->
                     	<div class="control-group">
                     		<label class="control-label">First Name</label>
                        		<div class="controls">
@@ -126,7 +125,6 @@
                                 <button type="reset" class="btn btn-primary">Reset Form</button>
                             </div>
 						</div>
-                     	<!--</fieldset>-->
 					</form>
 				</div>
 			</div>

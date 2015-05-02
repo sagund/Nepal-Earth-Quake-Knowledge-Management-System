@@ -13,8 +13,8 @@ class MY_Controller extends CI_Controller
 	{
 		parent::__construct ();
 
-		$this->load->model ( 'Base_Model' );
-		$this->load->helper ( 'url' );
+		$this->load->model('base_model');
+		$this->load->helper ('url' );
 		$this->load->library('session');
 
 

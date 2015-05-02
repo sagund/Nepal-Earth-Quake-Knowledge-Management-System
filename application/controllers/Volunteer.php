@@ -5,6 +5,7 @@ class Volunteer extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('volunteer_model');
+		$this->load->model('base_model');
 	}
  
 	public function index()

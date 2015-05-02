@@ -3,7 +3,7 @@
 if (! defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Base_Model extends CI_Model
+class Base_model extends CI_Model
 {
     public $_table;
 

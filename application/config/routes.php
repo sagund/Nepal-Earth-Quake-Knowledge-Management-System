@@ -60,7 +60,9 @@ $route['user/login'] = 'user/login';
 $route['user/logout'] = 'user/logout';
 $route['user/dashboard'] = 'user/dashboard';
 
-
+$route['about'] = 'volunteer/about';
+$route['emergency-contacts'] = 'volunteer/emergency';
+$route['help'] = 'volunteer/help';
 
 
 

@@ -88,35 +88,35 @@
                 <div class="control-group">
                     <label class="control-label"  for="babies">No. of Babies (Age 0-5yrs)</label>
                     <div class="controls">
-                        <input type="number" min="0" max="30" name="babies" value="" class="input-xlarge" required>
+                        <input type="number" min="0" max="30" name="babies" value="" class="input-xlarge">
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <label class="control-label"  for="babies">No. Children(Age 6-15 yrs)</label>
                     <div class="controls">
-                        <input type="number" min="0" max="30" name="children" value="" class="input-xlarge" required>
+                        <input type="number" min="0" max="30" name="children" value="" class="input-xlarge">
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <label class="control-label"  for="babies">No. Adult Male (Age 16-59yrs)</label>
                     <div class="controls">
-                        <input type="number" min="0" max="30" name="adult_male" value="" class="input-xlarge" required>
+                        <input type="number" min="0" max="30" name="adult_male" value="" class="input-xlarge">
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <label class="control-label"  for="babies">No. Adult Female (Age 16-59yrs)</label>
                     <div class="controls">
-                        <input type="number" min="0" max="30" name="adult_female" value="" class="input-xlarge" required>
+                        <input type="number" min="0" max="30" name="adult_female" value="" class="input-xlarge">
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <label class="control-label"  for="babies">No. Senior Citizens (Age 60yrs & above)</label>
                     <div class="controls">
-                        <input type="number" min="0" max="30" name="senior_citizen" value="" class="input-xlarge" required>
+                        <input type="number" min="0" max="30" name="senior_citizen" value="" class="input-xlarge">
                     </div>
                 </div>
                 

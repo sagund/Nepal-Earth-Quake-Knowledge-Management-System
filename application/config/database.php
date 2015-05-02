@@ -67,7 +67,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 
 	'username' => 'root',
-	'password' => 'mysqlpw',
+	'password' => 'sudin@123',
 
 
 	'database' => 'db_relief911',

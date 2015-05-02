@@ -13,7 +13,7 @@
 	<div class="modal-header">
 		<h3>Have an Account?</h3>
 	</div>
-	<div class="modal-body">
+	<!--<div class="modal-body">-->
 		<div class="well">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
@@ -86,7 +86,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	<!--</div>-->
+</div>
 
 <script class="cssdeck" src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 <script class="cssdeck" src="<?php echo base_url();?>assets/js/bootstrap_form.js"></script>

@@ -1,6 +1,11 @@
 <?php
 defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
 class Relief extends MY_Controller {
+    public function __construct() {
+        parent::__construct ();
+        $this->load->helper ( 'url' );
+    }
+
 	public function index() {
 
 
@@ -40,11 +45,11 @@ class Relief extends MY_Controller {
 		} else {
 
 
-			$this->load->view ( 'templates/header', $data );
+			$this->load->view ( 'header', $data );
+            $this->load->view ( 'nav', $data );
 			$this->load->view ( 'relief/form', $data );
-			$this->load->view ( 'templates/footer' );
-
-
+			$this->load->view ( 'footer' );
+            
 			//$data ['body'] = $this->load->view ( 'relief/form', '', true );
 			// charge the view "contact" in the other view template
 			//$this->load->view ( 'base', $data );

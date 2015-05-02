@@ -5,6 +5,7 @@ class Volunteer extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('volunteer_model');
+		$this->load->model('base_model');
 	}
  
 	public function index()
@@ -28,6 +29,21 @@ class Volunteer extends CI_Controller {
 	public function home(){
 		$this->load->view('header');
 		$this->load->view('home');
+		$this->load->view('footer');
+	}
+	public function about(){
+		$this->load->view('header');
+		$this->load->view('about');
+		$this->load->view('footer');
+	}
+	public function help(){
+		$this->load->view('header');
+		$this->load->view('help');
+		$this->load->view('footer');
+	}
+	public function emergency(){
+		$this->load->view('header');
+		$this->load->view('emergencycontact');
 		$this->load->view('footer');
 	}
 }

@@ -17,7 +17,7 @@ require_once('application/libraries/exceptions/NepalReliefException.php');
  * @name User_Model
  * @access public
  */
-class Needrelief_Model extends Base_Model
+class Needrelief_model extends Base_Model
 {
 
 

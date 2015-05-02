@@ -357,9 +357,13 @@ class Utils
     */
     static public function secure_crypt_password($password, $salt)
     {
-        $options =[
+		/*
+		$options =[
             'salt' => hex2bin($salt),
-        ];
+        ];*/
+        $options =array();
+        $options['salt'] = hex2bin($salt);
+      
         $passwordHash = password_hash($password, PASSWORD_BCRYPT, $options);
         return $passwordHash;
     }

@@ -69,7 +69,7 @@ $route['help'] = 'volunteer/help';
 
 // ADMIN Routes
 
-$route['admin'] 			=             "relief_admin/reliefcrud/index";
+$route['admin'] ="relief_admin/reliefcrud/index";
 
 //USER CRUD ADMIN
 $route['admin/crud/user/(:any)'] 			=  "relief_admin/reliefcrud/user/$1";

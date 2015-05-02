@@ -2,13 +2,8 @@
 defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
 class Relief extends MY_Controller {
 	public function index() {
-
-
 		$data = array ();
-
-
 		if ($_POST) {
-
 			$data ['first_name'] = Utils::get_from_POST ( "head_first_name" );
 			$data ['middle_name'] = Utils::get_from_POST ( "head_mid_name" );
 			$data ['last_name'] = md5 ( Utils::get_from_POST ( "head_last_name" ) );
@@ -43,11 +38,6 @@ class Relief extends MY_Controller {
 			$this->load->view ( 'templates/header', $data );
 			$this->load->view ( 'relief/form', $data );
 			$this->load->view ( 'templates/footer' );
-
-
-			//$data ['body'] = $this->load->view ( 'relief/form', '', true );
-			// charge the view "contact" in the other view template
-			//$this->load->view ( 'base', $data );
 		}
 	}
 

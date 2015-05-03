@@ -82,7 +82,7 @@
 
                 <div id="legend">
                 	<legend class=""></legend>
-                    <legend class="">Other Family Members</legend>
+                    <legend class="">Additional Information of Family Members</legend>
                 </div>
                 
                 <div class="control-group">

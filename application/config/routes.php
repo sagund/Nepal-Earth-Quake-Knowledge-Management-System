@@ -71,28 +71,46 @@ $route['login'] = 'user/login';
 
 // ADMIN Routes
 
-$route['admin'] ="relief_admin/reliefcrud/index";
 
 //USER CRUD ADMIN
 $route['admin/crud/user/(:any)'] 			=  "relief_admin/reliefcrud/user/$1";
+$route['admin/crud/user/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/user/$1/$2";
 
 // DONATION CRUD ADMIN
 $route['admin/crud/donation/(:any)'] 			=  "relief_admin/reliefcrud/donation/$1";
+$route['admin/crud/donation/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/donation/$1/$2";
 
 // VILLAGE CRUD ADMIN
 $route['admin/crud/village/(:any)'] 			=  "relief_admin/reliefcrud/village/$1";
+$route['admin/crud/village/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/village/$1/$2";
+
 
 // DONATION_DISTRIBUTION CRUD ADMIN
 $route['admin/crud/donation_distribution/(:any)'] 			=  "relief_admin/reliefcrud/donation_distribution/$1";
+$route['admin/crud/donation_distribution/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/donation_distribution/$1/$2";
+
 
 // NEED_RELIEF CRUD ADMIN
 $route['admin/crud/need_relief/(:any)'] 			=  "relief_admin/reliefcrud/need_relief/$1";
+$route['admin/crud/need_relief/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/need_relief/$1/$2";
+
+
+// DISTRICTS CRUD ADMIN
+$route['admin/crud/districts/(:any)'] 			=  "relief_admin/reliefcrud/districts/$1";
+$route['admin/crud/districts/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/districts/$1/$2";
+
+// DISTRICT UNITS CRUD ADMIN
+$route['admin/crud/district_units/(:any)'] 			=  "relief_admin/reliefcrud/district_units/$1";
+$route['admin/crud/district_units/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/district_units/$1/$2";
+
+// WARDS CRUD ADMIN
+$route['admin/crud/wards/(:any)'] 			=  "relief_admin/reliefcrud/wards/$1";
+$route['admin/crud/wards/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/wards/$1/$2";
+
+
 
 $route['admin/crud/(:any)'] 			=  "relief_admin/reliefcrud/$1";
-
-
-$route['relief_admin/(:any)']     = "relief_admin/reliefcrud";
-
+$route['admin'] ="relief_admin/reliefcrud";
 
 //$route['default_controller'] = 'relief';
 

@@ -90,6 +90,51 @@ class Reliefcrud extends MY_Controller {
 		$this->render_crud($output);
 	}
 
+
+
+	public function districts()
+	{
+		$crud = new grocery_CRUD();
+
+		$crud->set_table('districts');
+
+		$crud->set_subject('Districts');
+
+		$output = $crud->render();
+
+		$this->render_crud($output);
+	}
+
+
+
+	public function district_units()
+	{
+		$crud = new grocery_CRUD();
+
+		$crud->set_table('district_units');
+
+		$crud->set_subject('District Units');
+
+		$output = $crud->render();
+
+		$this->render_crud($output);
+	}
+
+
+	public function wards()
+	{
+		$crud = new grocery_CRUD();
+
+		$crud->set_table('wards');
+
+		$crud->set_subject('Wards');
+
+		$output = $crud->render();
+
+		$this->render_crud($output);
+	}
+
+
 	public function donation_distribution()
 	{
 		$crud = new grocery_CRUD();

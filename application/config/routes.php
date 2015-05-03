@@ -63,13 +63,15 @@ $route['user/dashboard'] = 'user/dashboard';
 $route['about'] = 'volunteer/about';
 $route['emergency-contacts'] = 'volunteer/emergency';
 $route['help'] = 'volunteer/help';
+$route['register'] = 'user/register';
+$route['login'] = 'user/login';
 
 
 
 
 // ADMIN Routes
 
-$route['admin'] 			=             "relief_admin/reliefcrud/index";
+$route['admin'] ="relief_admin/reliefcrud/index";
 
 //USER CRUD ADMIN
 $route['admin/crud/user/(:any)'] 			=  "relief_admin/reliefcrud/user/$1";

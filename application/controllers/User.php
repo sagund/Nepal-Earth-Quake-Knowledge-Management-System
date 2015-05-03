@@ -23,7 +23,11 @@ class User extends MY_Controller {
 		$data = array ();
 		if ($_POST) {
 
-			$data ['username'] = Utils::get_from_POST ( "username" );
+
+
+
+
+			$data ['username'] = "none";
 			$data ['email'] = Utils::get_from_POST ( "email" );
 			$data ['password'] = md5 ( Utils::get_from_POST ( "password" ) );
 			$data ['first_name'] = Utils::get_from_POST ( "first_name" );
@@ -32,7 +36,17 @@ class User extends MY_Controller {
 			$data ['city'] = Utils::get_from_POST ( "city" );
 			$data ['country'] = Utils::get_from_POST ( "country" );
 
+
 			$this->load->model('Users_model');
+			if ($this->Users_model->doesValueExist("email", $data ['email']))
+			{
+
+				SESSION::set ( 'flash_msg_type', "danger" );
+				SESSION::set ( 'flash_msg', "Sorry, email address is already registered" );
+				redirect ( '/user/register', 'refresh' );
+			}
+
+
 			$insert_results = $this->Users_model->addUser ( $data );
 
 			if ($insert_results ['results']) {

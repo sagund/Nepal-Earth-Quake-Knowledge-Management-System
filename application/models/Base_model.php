@@ -35,14 +35,23 @@ class Base_model extends CI_Model
     public function doesValueExist($field_name, $field_value)
     {
 
+
         $sql = "SELECT id FROM " . $this->_table . " where " . $this->_sanitize_string($field_name) . " = ?  ";
+
+
         $results = $this->db->query($sql, array($field_value));
-        if ($results->num_rows > 0)
+
+
+
+
+        if ($results->result_id->num_rows > 0)
         {
+
             return TRUE;
         }
         else
         {
+
             return FALSE;
         }
     }

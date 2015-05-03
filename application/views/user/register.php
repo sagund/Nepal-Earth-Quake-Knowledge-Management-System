@@ -11,18 +11,12 @@
             <h3>Account Information</h3>
 
 <div class="well">
-            <div class="control-group">
-              <label class="control-label" for="username">Username</label>
-              <div class="controls">
-                <input type="text" id="username" name="username" placeholder="" class="form-control input-lg">
-                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-              </div>
-            </div>
+
 
             <div class="control-group">
               <label class="control-label" for="email">E-mail</label>
               <div class="controls">
-                <input type="email" id="email" name="email" placeholder="" class="form-control input-lg">
+                <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" required>
                 <p class="help-block">Please provide your E-mail</p>
               </div>
             </div>
@@ -30,7 +24,7 @@
             <div class="control-group">
               <label class="control-label" for="password">Password</label>
               <div class="controls">
-                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg">
+                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg" required>
                 <p class="help-block">Password should be at least 6 characters</p>
               </div>
             </div>
@@ -43,7 +37,7 @@
             <div class="control-group">
               <label class="control-label" for="FirstName">First Name</label>
               <div class="controls">
-                <input type="text" id="first_name" name="first_name" placeholder="" class="form-control input-lg">
+                <input type="text" id="first_name" name="first_name" placeholder="" class="form-control input-lg" required>
 
               </div>
             </div>
@@ -51,7 +45,7 @@
     <div class="control-group">
               <label class="control-label" for="LastName">Last Name</label>
               <div class="controls">
-                <input type="text" id="last_name" name="last_name" placeholder="" class="form-control input-lg">
+                <input type="text" id="last_name" name="last_name" placeholder="" class="form-control input-lg" required>
 
               </div>
             </div>
@@ -67,7 +61,7 @@
                <div class="control-group">
               <label class="control-label" for="password_confirm">City</label>
               <div class="controls">
-                <input type="text" id="city" name="city" placeholder="" class="form-control input-lg">
+                <input type="text" id="city" name="city" placeholder="" class="form-control input-lg" required>
 
               </div>
             </div>
@@ -92,7 +86,8 @@
             </div>
           </fieldset>
         </form>
-
+        <br><br>
+ <p>If you already have an account, please <a href="/login">login</a>.</p>
     </div>
   </div>
 </div>

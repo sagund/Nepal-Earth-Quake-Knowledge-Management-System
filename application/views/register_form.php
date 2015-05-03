@@ -11,10 +11,9 @@
 
 <div class="" id="loginModal">
 	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		<h3>Have an Account?</h3>
 	</div>
-	<div class="modal-body">
+	<!--<div class="modal-body">-->
 		<div class="well">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
@@ -56,36 +55,82 @@
 					</form>                
 				</div>
 				<div class="tab-pane fade" id="create">
-					<form id="tab">
-						<label>First Name</label>
-						<input type="text" name="fname" value="" class="input-xlarge" required>
-                        <label>Middle Name</label>
-						<input type="text" name="mname" value="" class="input-xlarge">
-						<label>Last Name</label>
-						<input type="text" name="lname" value="" class="input-xlarge" required>
-						<label>Email</label>
-						<input type="email" name="email" value="" class="input-xlarge" required>
-                        <label>Password</label>
-						<input type="password" name="password" value="" class="input-xlarge">
-                        <label>Confirm Password</label>
-						<input type="password" name="confirmPassword" value="" class="input-xlarge" required>
-                        <label>Telephone/Mobile No.</label>
-						<input type="tel" name="phone" value="" class="input-xlarge">
+					<form class="form-horizontal" id="tab">
+                    	<div class="control-group">
+                    		<label class="control-label">First Name</label>
+                       		<div class="controls">
+								<input type="text" name="first_name" value="" class="input-xlarge" required>
+                        	</div>
+                        </div>
+                        <div class="control-group">
+                    		<label class="control-label">Middle Name</label>
+                            <div class="controls">
+								<input type="text" name="middle_name" value="" class="input-xlarge">
+                            </div>
+                        </div>        
+						<div class="control-group">
+                    		<label class="control-label">Last Name</label>
+                            <div class="controls">
+								<input type="text" name="last_name" value="" class="input-xlarge" required>
+                            </div>
+                        </div>    
+                        <div class="control-group">
+                    		<label class="control-label">Username</label>
+                            <div class="controls">
+								<input type="text" name="username" value="" class="input-xlarge" required>
+                            </div>
+                        </div>    
+						<div class="control-group">
+                    		<label class="control-label">Email</label>
+                            <div class="controls">
+								<input type="email" name="email" value="" class="input-xlarge" required>
+                            </div>
+                       </div>     
+                        <div class="control-group">
+                    		<label class="control-label">Password</label>
+                            <div class="controls">
+								<input type="password" name="password" value="" class="input-xlarge">
+                            </div>
+                        </div>    
+                        <div class="control-group">
+                    		<label class="control-label">Confirm Password</label>
+                            <div class="controls">
+								<input type="password" name="confirm_password" value="" class="input-xlarge" required>
+                            </div>
+                        </div>    
                         
-						<label>City/Village</label>
-						<input type="text" name="cityVillage" value="" class="input-xlarge" required>
-                        <label>Country</label>
-						<input type="text" name="country" value="" class="input-xlarge" required>
-						<div>
-							<button type="submit" class="btn btn-primary">Create Account</button>
-						
-							<button type="reset" class="btn btn-primary">Reset Form</button>
+                        <div class="control-group">
+                    		<label class="control-label">Telephone/Mobile No.</label>
+                            <div class="controls">
+								<input type="tel" name="phone" value="" class="input-xlarge">
+                            </div>
+                        </div>        
+                        
+						<div class="control-group">
+                    		<label class="control-label">City/Village</label>
+                            <div class="controls">
+								<input type="text" name="city" value="" class="input-xlarge" required>
+                            </div>    
+                        </div>
+                        <div class="control-group">
+                    		<label class="control-label">Country</label>
+                            <div class="controls">
+								<input type="text" name="country" value="" class="input-xlarge" required>
+                            </div>
+                        </div>    	
+						<div class="control-group">
+                        	<div class="controls">
+                                <button type="submit" name="submit" class="btn btn-primary">Register</button>
+                            
+                                <button type="reset" class="btn btn-primary">Reset Form</button>
+                            </div>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+	<!--</div>-->
+</div>
 
 <script class="cssdeck" src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 <script class="cssdeck" src="<?php echo base_url();?>assets/js/bootstrap_form.js"></script>

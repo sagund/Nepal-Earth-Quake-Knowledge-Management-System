@@ -32,7 +32,7 @@ class User extends MY_Controller {
 			$data ['city'] = Utils::get_from_POST ( "city" );
 			$data ['country'] = Utils::get_from_POST ( "country" );
 
-			$this->load->model ( 'Users_model' );
+			$this->load->model('Users_model');
 			$insert_results = $this->Users_model->addUser ( $data );
 
 			if ($insert_results ['results']) {

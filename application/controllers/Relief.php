@@ -45,7 +45,7 @@ class Relief extends MY_Controller {
 
 			$this->load->view ( 'header', $data );
             $this->load->view ( 'nav', $data );
-			$this->load->view ( 'relief/form', $data );
+			$this->load->view ( 'relief/info_form', $data );
 
 			$this->load->view ( 'templates/footer' );
 

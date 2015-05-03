@@ -112,6 +112,7 @@ class Reliefcrud extends MY_Controller {
 		$crud = new grocery_CRUD();
 
 		$crud->set_table('district_units');
+		$crud->set_relation('district_id','districts','name');
 
 		$crud->set_subject('District Units');
 
@@ -126,6 +127,7 @@ class Reliefcrud extends MY_Controller {
 		$crud = new grocery_CRUD();
 
 		$crud->set_table('wards');
+		$crud->set_relation('disctict_unit_id','district_units','name');
 
 		$crud->set_subject('Wards');
 

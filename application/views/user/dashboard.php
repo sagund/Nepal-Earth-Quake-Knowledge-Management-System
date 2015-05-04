@@ -1,9 +1,13 @@
+<div class="container">
 <?php
-
-if ($logged_in){
+if ($logged_in){ ?>
+	 <div class="row">
+        <div class="col-lg-12">
+            <h4 class="page-header"><?php echo 'Welcome '.$username.' ['.$user_type.']'; ?></h1>
+        </div>
+    </div>
 	
-	echo 'Welcome '.$username.' ['.$user_type.']';
-
+	<?php
 	echo '<ul>';
 	
 	if($user_type == "volunteer"){
@@ -42,3 +46,4 @@ if ($logged_in){
 <?php
 }
 ?>
+</div>

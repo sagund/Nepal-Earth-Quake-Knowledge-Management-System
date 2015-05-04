@@ -5,9 +5,7 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-				<br/>
-                <h1 class="page-header">Nepal Earthquake 2015 KMS
-                </h1>
+                <h1 class="page-header">Nepal Earthquake 2015 KMS</h1>
             </div>
         </div>
         <!-- /.row -->

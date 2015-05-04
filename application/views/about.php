@@ -1,15 +1,13 @@
 <?php require_once('nav.php') ;?>
-    <!-- Page Content -->
-    <div class="container">
+<!-- Page Content -->
+<div class="container">
 
-        <!-- Portfolio Item Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-				<br/>
-                <h1 class="page-header">Project Description
-                </h1>
-            </div>
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Project Description</h1>
         </div>
+
         
         <div class="row">
                 <p>This is an attempt to very quickly realize a Knowledge Management System(KMS) which you can use to match demands, supplies, supports and needs in the earthquake victim relief endeavors, where everyone in the world is with Nepal.
@@ -42,5 +40,8 @@
 			<li>Raju Dawadi [Code Contribution]</li>
 			<li>Rajiv Parajuli</li>
          </ul>
+
          </div>
+     </div>
+</div>
 

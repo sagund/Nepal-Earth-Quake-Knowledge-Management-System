@@ -15,13 +15,15 @@ class User extends MY_Controller {
 		}
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
+
 		$data ['user_id'] = Authenticator::getLoggedInUserId();
 		$data ['user_type'] = Authenticator::getUserType();
 		$data['username'] = $this->Users_model->getUsername($data ['user_id']);
 		
-		$this->load->view ( 'templates/header', $data );
+		$this->load->view ( 'header', $data );
+		$this->load->view ( 'nav' );
 		$this->load->view ( 'user/dashboard', $data );
-		$this->load->view ( 'templates/footer', $data );
+		$this->load->view ( 'footer', $data );
 
 	}
 

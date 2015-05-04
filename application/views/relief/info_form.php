@@ -1,15 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="icon" href="#">
-	<title>Victim Info</title>
 
-</head>
-<link class="cssdeck" rel="stylesheet"
-	href="<?php echo base_url();?>assets/css/bootstrap_form.css">
-	<link class="cssdeck" rel="stylesheet"
-		href="<?php echo base_url();?>assets/css/bootstrap-responsive.min.css">
+<?php //print_r($districts); ?>
+
+<link class="cssdeck" rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap_form.css">
+<link class="cssdeck" rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-responsive.min.css">
 
 		<div class="well">
 			<div id="myTabContent" class="tab-content">
@@ -109,8 +102,9 @@
 						<div class="control-group">
 							<label class="control-label" for="vdc_municipality">VDC/Municipality</label>
 							<div class="controls">
-								<input type="text" name="vdc_municipality" value=""
-									class="input-xlarge" required>
+								<select name="vdc_municipality" id="vdc" class="input-xlarge" >
+
+								</select>	
 
 							</div>
 						</div>
@@ -319,18 +313,18 @@ $(document).ready(function(){
 									</div>
 
 									<div class="control-group">
-										<label class="control-label" for="house_condition">Affected by
+										<label class="control-label" for="disease">Affected by
 											any contagious disease ?</label>
 										<div class="controls">
 											<label class="radio-inline"><input type="radio"
-												name="disease" value="1" class="input-xlarge" required>&nbsp;Yes&nbsp;</label>
+												name="disease" value="1"  class="input-xlarge" checked required>&nbsp;Yes&nbsp;</label>
 											<label class="radio-inline"><input type="radio"
 												name="disease" value="0" class="input-xlarge" required>&nbsp;No&nbsp;</label>
 										</div>	
 									</div>
 
-									<div class="control-group">
-										<label class="control-label" for="house_condition">Name</label>
+									<div class="control-group disease_name">
+										<label class="control-label" for="disease_name">Name</label>
 										<div class="controls">
 											<input type="text" name="disease_name" value=""
 												class="input-xlarge">
@@ -338,8 +332,8 @@ $(document).ready(function(){
 										</div>
 									</div>
 
-									<div class="control-group">
-										<label class="control-label" for="house_condition">Condition</label>
+									<div class="control-group disease_condition">
+										<label class="control-label" for="disease_condition">Condition</label>
 										<div class="controls">
 											<textarea name="disease_condition" class="input-xlarge"></textarea>
 										</div>
@@ -396,15 +390,15 @@ $(document).ready(function(){
 										<div class="controls">
 											<label class="radio-inline"><input type="radio"
 												name="economic_state" value="no warm clothing"
-												class="input-xlarge">very very poor = has less than 100
-													rupees to spend per day for the family for a month</label><br />
+												class="input-xlarge">very very poor (has less than 100
+													rupees to spend per day for the family for a month)</label><br />
 											<label class="radio-inline"><input type="radio"
 												name="economic_state" value="no blankets"
-												class="input-xlarge"> poor = has less than 500 rupees per
-													day to spend for the family for a month</label><br /> <label
+												class="input-xlarge"> poor (has less than 500 rupees per
+													day to spend for the family for a month)</label><br /> <label
 												class="radio-inline"><input type="radio"
 												name="economic_state" value="no mat" class="input-xlarge">
-													non-poor = has more than 500 rupees per day to spend for
+													non-poor (has more than 500 rupees per day to spend for
 													the family for a month )</label>
 
 										</div>
@@ -435,8 +429,6 @@ $(document).ready(function(){
 										</div>
 									</div>
 
-
-
 									<div class="control-group">
 										<!-- Button -->
 										<div class="controls">
@@ -453,3 +445,41 @@ $(document).ready(function(){
 				</div>
 			</div>
 		</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var districts=<?php echo json_encode($districts); ?>;
+		//console.log(districts);
+		$("#district").change(function(){
+			var district_id = $("#district").val();
+	        $('#vdc').empty();
+	        $.each(districts, function (key, value) {
+	        	if(value.id==district_id){
+	        		//console.log(value);
+	        		//console.log(value.district_units);
+	        		$.each(value.district_units, function (key, village) {
+		                $('#vdc').append($('<option>', {
+		                    value: village.id,
+		                    text: village.name
+		                }));
+	            	});
+	        	}
+	        });
+		});
+
+		$("input:radio[name=disease]:first-child").click(function(){
+			if($(this).val()==1){
+				$(".disease_name").css("display","block");
+				$(".disease_condition").css("display","block");
+			}else{
+				$(".disease_name").css("display","none");
+				$(".disease_condition").css("display","none");
+			}
+		})
+
+
+	})
+</script>
+
+
+
+

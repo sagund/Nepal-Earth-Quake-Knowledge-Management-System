@@ -9,7 +9,6 @@ class Victim extends MY_Controller {
     }
 	public function index() {
 		
-		$this->load->view('header');
 		
 		$this->load->model('volunteer_model');
         $data['districts'] = $this->volunteer_model->getDistrictList();

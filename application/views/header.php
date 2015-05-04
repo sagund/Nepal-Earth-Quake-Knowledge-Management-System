@@ -36,9 +36,10 @@
 
 </head>
 <body>
-
+<div class="container">
 <?php
 
 require_once("application/views/flash_messages.inc.php");
 
 ?>
+</div>

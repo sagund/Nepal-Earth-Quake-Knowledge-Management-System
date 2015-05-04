@@ -18,7 +18,8 @@ class Victim extends MY_Controller {
 		$this->load->view ( 'victim/list', $data );
 
 		$this->load->view ( 'footer' );
-}
+	}
+
 	public function add() {
 		$data = array ();
 		$this->load->model('volunteer_model');
@@ -34,6 +35,7 @@ class Victim extends MY_Controller {
 
 			$data ['address1'] = Utils::get_from_POST ( "address1" );
 			$data ['tole'] = Utils::get_from_POST ( "tole" );
+			$data ['district'] = Utils::get_from_POST ( "district" );
 			$data ['ward_num'] = Utils::get_from_POST ( "ward" );
 			$data ['vdc'] = Utils::get_from_POST ( "vdc_municipality" );
 			//$data ['fb_id'] = Utils::get_from_POST ( "fb_id" );

@@ -42,6 +42,11 @@ class Volunteer extends CI_Controller {
 		$this->load->view('help');
 		$this->load->view('footer');
 	}
+	public function tomorrow(){
+		$this->load->view('header');
+		$this->load->view('tomorrow');
+		$this->load->view('footer');
+	}
 	public function emergency(){
 		$this->load->view('header');
 		$this->load->view('emergencycontact');

@@ -27,6 +27,9 @@
 					<li>Total Injured: </li>
 					<li>Mostly Affected Districts: </li>
                 </ul>
+                
+                <h3><a href="<?php echo base_url();?>tomorrow" >WHAT IS HAPPENING TOMORROW!</a></h3>
+                
             </div>
 
         </div>

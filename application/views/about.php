@@ -29,13 +29,18 @@
                 </ol>
          </div>
          <div class="row">
-         <h3>Core TEAM</h3>
+         <h3>Volunteers TEAM</h3>
          <ul>
 			<li>Sagun Dhakhwa [KMS]</li>
+			<li>Tina Rajbhandari [Volunteer Coordinator]</li>
 			<li>Rajan Acharya [UI Developer]</li>
 			<li>Niesh Dosooye [Core Developer]</li>
 			<li>Sudin Manandhar [Core Developer]</li>
 			<li>Subarna Sapkota [DATA]</li>
+			<li>Biju Nakarmi [Technical Manager]</li>
+			<li>Spandan Shrestha [Data &amp; Analytics]</li>
+			<li>Raju Dawadi [Code Contribution]</li>
+			<li>Rajiv Parajuli</li>
          </ul>
          </div>
 

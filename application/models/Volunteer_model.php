@@ -13,7 +13,19 @@ class Volunteer_model extends CI_Model {
 		$sql = "SELECT * FROM districts ORDER BY name ASC";
 		$query=$this->db->query($sql);
 		$result= $query->result_array();
-		return $result;
+		$final_result = array();
+		foreach($result as $key=>$res){
+				
+				$sql = "SELECT * FROM district_units where district_id = ?";
+				$query=$this->db->query($sql,$res['id']);
+				$dis= $query->result_array();
+			
+				
+				$res['district_units'] = $dis;
+				$final_result[$key] = $res;
+				
+		}
+		return $final_result;
 		
 	}
 	

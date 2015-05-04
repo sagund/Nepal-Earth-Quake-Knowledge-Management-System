@@ -28,6 +28,23 @@
                 <p class="help-block">Password should be at least 6 characters</p>
               </div>
             </div>
+            <div class="control-group">
+              <label class="control-label" for="user_type">Role</label>
+              <div class="controls">
+				  <select id="user_type" name="user_type" placeholder="" class="form-control input-lg" required>
+					  <?php 
+					  print_r($user_types);
+					  foreach($user_types as $type){
+						   echo '<option value="'.$type.'">'.$type.'</option>';
+					  }
+					  
+					  ?>
+				 
+				  </select>
+                
+                <p class="help-block">Choose your role</p>
+              </div>
+            </div>
 </div>
 
 
@@ -69,8 +86,21 @@
                <div class="control-group">
               <label class="control-label" for="password_confirm">Country</label>
               <div class="controls">
-                <input type="text" id="country" name="country" placeholder="" class="form-control input-lg">
-
+                <select id="country" name="country" placeholder="" class="form-control input-lg">
+				<?php 
+				foreach($countries as $key=>$country){
+					echo '<option value="'.$country['country_name'].'" ';
+					
+					if($country['country_name'] == "Nepal"){
+						echo 'selected';
+					}
+					echo '>'.$country['country_name'].'</option>';
+					
+					
+				}
+				
+				?>
+				</select>
               </div>
             </div>
 

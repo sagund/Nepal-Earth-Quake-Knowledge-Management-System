@@ -10,7 +10,7 @@ if (!defined("COOKIE_L_DEFAULT_TIME_TO_LIVE"))
 class Authenticator
 {
 
-	public static  function buildauthedstring($user_id,$is_authed)
+	public static  function buildauthedstring($user_id,$is_authed,$user_type)
 	{
 		$authstring = uniqid().date("shi");
 		$authstring .= AUTH_SEPARATOR;
@@ -18,15 +18,17 @@ class Authenticator
 		$authstring .= AUTH_SEPARATOR;
 		$authstring .= $is_authed;
 		$authstring .= AUTH_SEPARATOR;
+		$authstring .= $user_type;
+		$authstring .= AUTH_SEPARATOR;
 		$authstring .= date("s");
 		return $authstring;
 	}
 
 
 
-	public static function setAuthenticatedCookieForUser($user_id,$cookie_time_to_live=COOKIE_L_DEFAULT_TIME_TO_LIVE)
+	public static function setAuthenticatedCookieForUser($user_id,$user_type,$cookie_time_to_live=COOKIE_L_DEFAULT_TIME_TO_LIVE)
 	{
-		CookieMonster::set("L",self::buildauthedstring($user_id,"y"),$cookie_time_to_live);
+		CookieMonster::set("L",self::buildauthedstring($user_id,"y",$user_type),$cookie_time_to_live);
 	}
 
 
@@ -45,7 +47,7 @@ class Authenticator
 		if ($login!="")
 		{
 
-			list($junk1,$user_id,$auth,$junk2)=explode(AUTH_SEPARATOR,$login);
+			list($junk1,$user_id,$auth,$type,$junk2)=explode(AUTH_SEPARATOR,$login);
 
 
 			if ($auth=="y")
@@ -75,10 +77,26 @@ class Authenticator
 	}
 
 
-	public static function getLoggedInUserId()
-	{
+	public static function getLoggedInUserId(){
          return self::isLoggedIn(true);
 	}
-
-
+	
+	public static function getUserType(){
+        $login = CookieMonster::get("L");
+		if ($login!=""){
+			list($junk1,$user_id,$auth,$type,$junk2)=explode(AUTH_SEPARATOR,$login);
+			if ($auth=="y")
+			{
+				return $type;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
 }

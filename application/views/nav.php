@@ -24,7 +24,7 @@
                         <a href="<?php echo base_url(); ?>emergency-contacts">Emergency Contacts</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url(); ?>relief">Relief</a>
+                        <a href="<?php echo base_url(); ?>victim">Victims</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url(); ?>register">Register</a></a>

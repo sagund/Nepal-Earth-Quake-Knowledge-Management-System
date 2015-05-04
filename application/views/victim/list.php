@@ -7,7 +7,7 @@ require_once(APPPATH.'views/nav.php');
 	
 	
 
-
+	<h3>Victims by District and VDCs/ Muncipalities</h3>
 
 
 

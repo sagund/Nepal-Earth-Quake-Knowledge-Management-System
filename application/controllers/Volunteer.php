@@ -18,13 +18,14 @@ class Volunteer extends CI_Controller {
         $this->load->view('footer');
 	}
 
-	
+	/*
 	public function register(){
 		$this->load->view('header');
 		$data['districts'] = $this->volunteer_model->getDistrictList();
 		$this->load->view('register_form',$data);
 		$this->load->view('footer');
 	}
+	* */
 	
 	public function home(){
 		$this->load->view('header');

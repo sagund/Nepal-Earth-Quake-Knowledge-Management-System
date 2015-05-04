@@ -51,6 +51,8 @@ class Victim_model extends Base_Model
     	$user_obj = parent::getById($user_d);
     	return $user_obj;
     }
+    
+    
 
 
 }

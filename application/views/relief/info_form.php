@@ -78,11 +78,21 @@
 						</div>
 
 						<div class="control-group">
-							<label class="control-label" for="ward">Ward No.</label>
+							<label class="control-label" for="district">District</label>
 							<div class="controls">
-								<input type="number" name="ward" value="" min="1" max="50"
-									class="input-xlarge" required>
+								<select name="district" id="district" class="input-xlarge" required>
+									<?php 
+										if(isset($districts) && sizeof($districts)>0){
+											foreach ($districts as $key => $district) {
+												echo '<option value="'.$district['id'].'">'.$district['name'].'</option>';
+											}
+										}else{
+											echo '<option></option>';
+										}
 
+									?>
+
+								</select>
 							</div>
 						</div>
 
@@ -94,6 +104,17 @@
 
 							</div>
 						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="ward">Ward No.</label>
+							<div class="controls">
+								<input type="number" name="ward" value="" min="1" max="50"
+									class="input-xlarge" required>
+
+							</div>
+						</div>
+
+						
 
 
 
@@ -290,12 +311,18 @@ $(document).ready(function(){
 									<div class="control-group">
 										<label class="control-label" for="house_condition">Affected by
 											any contagious disease ?</label>
+										<div class="controls">
+											<label class="radio-inline"><input type="radio"
+												name="disease" value="1" class="input-xlarge" required>&nbsp;Yes&nbsp;</label>
+											<label class="radio-inline"><input type="radio"
+												name="disease" value="0" class="input-xlarge" required>&nbsp;No&nbsp;</label>
+										</div>	
 									</div>
 
 									<div class="control-group">
 										<label class="control-label" for="house_condition">Name</label>
 										<div class="controls">
-											<input type="text" name="disease" value=""
+											<input type="text" name="disease_name" value=""
 												class="input-xlarge">
 
 										</div>

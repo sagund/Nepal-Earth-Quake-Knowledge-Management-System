@@ -34,7 +34,7 @@ class Authenticator
 
 	public static function setLoggedOutCookieForUser($cookie_time_to_live=COOKIE_L_DEFAULT_TIME_TO_LIVE)
 	{
-		CookieMonster::set("L",self::buildauthedstring("","n"),$cookie_time_to_live);
+		CookieMonster::set("L",self::buildauthedstring("","n",""),$cookie_time_to_live);
 	}
 
 

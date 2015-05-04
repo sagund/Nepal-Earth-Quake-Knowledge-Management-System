@@ -32,6 +32,23 @@
                     <li>
                         <a href="<?php echo base_url(); ?>login">Login</a>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dropdown Link 1</a></li>
+                            <li><a href="#">Dropdown Link 2</a></li>
+                            <li><a href="#">Dropdown Link 3</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Dropdown Submenu Link 4.1</a></li>
+                                    <li><a href="#">Dropdown Submenu Link 4.2</a></li>
+                                    <li><a href="#">Dropdown Submenu Link 4.3</a></li>
+                                    <li><a href="#">Dropdown Submenu Link 4.4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

@@ -5,9 +5,7 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-				<br/>
-                <h1 class="page-header">Help in the Relief
-                </h1>
+                <h1 class="page-header">Help in the Relief</h1>
                 
                 Here are the list of volunteers group. Please send your group to rite2sagun@gmail.com to get added to this page.
                  <iframe style="width:100%;height:800px;" 

@@ -1,8 +1,8 @@
+
 <?php //print_r($districts); ?>
-<link class="cssdeck" rel="stylesheet"
-	href="<?php echo base_url();?>assets/css/bootstrap_form.css">
-	<link class="cssdeck" rel="stylesheet"
-		href="<?php echo base_url();?>assets/css/bootstrap-responsive.min.css">
+
+<link class="cssdeck" rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap_form.css">
+<link class="cssdeck" rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-responsive.min.css">
 
 		<div class="well">
 			<div id="myTabContent" class="tab-content">

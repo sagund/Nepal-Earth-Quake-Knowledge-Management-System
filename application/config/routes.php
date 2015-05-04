@@ -67,9 +67,9 @@ $route['register'] = 'user/register';
 $route['login'] = 'user/login';
 $route['relief'] = 'relief';
 
-$route['victim/add'] = 'victim/index';
+$route['victim/add'] = 'victim/add';
 
-$route['victim/getVDClist/(:any)']='victim/getVDClist/$1';
+
 
 
 

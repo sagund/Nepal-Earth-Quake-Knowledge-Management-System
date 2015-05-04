@@ -12,6 +12,7 @@ class Donor extends MY_Controller {
     {
     	$data=array();
     	if($_POST){
+    		//need to implement donation insert code here....
 
     	}else{
     		$this->load->view ( 'header', $data );

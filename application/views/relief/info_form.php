@@ -390,15 +390,15 @@ $(document).ready(function(){
 										<div class="controls">
 											<label class="radio-inline"><input type="radio"
 												name="economic_state" value="no warm clothing"
-												class="input-xlarge">very very poor = has less than 100
-													rupees to spend per day for the family for a month</label><br />
+												class="input-xlarge">very very poor (has less than 100
+													rupees to spend per day for the family for a month)</label><br />
 											<label class="radio-inline"><input type="radio"
 												name="economic_state" value="no blankets"
-												class="input-xlarge"> poor = has less than 500 rupees per
-													day to spend for the family for a month</label><br /> <label
+												class="input-xlarge"> poor (has less than 500 rupees per
+													day to spend for the family for a month)</label><br /> <label
 												class="radio-inline"><input type="radio"
 												name="economic_state" value="no mat" class="input-xlarge">
-													non-poor = has more than 500 rupees per day to spend for
+													non-poor (has more than 500 rupees per day to spend for
 													the family for a month )</label>
 
 										</div>

@@ -10,7 +10,7 @@ class Volunteer_model extends CI_Model {
 	}
 
 	public function getDistrictList(){
-		$sql = "SELECT * FROM districts";
+		$sql = "SELECT * FROM districts ORDER BY name ASC";
 		$query=$this->db->query($sql);
 		$result= $query->result_array();
 		$final_result = array();

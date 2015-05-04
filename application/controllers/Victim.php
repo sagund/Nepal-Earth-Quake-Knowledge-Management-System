@@ -22,6 +22,8 @@ class Victim extends MY_Controller {
 }
 	public function add() {
 		$data = array ();
+		$this->load->model('volunteer_model');
+		$data['districts']=$this->volunteer_model->getDistrictList();
 		if ($_POST) {
 
 

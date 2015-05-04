@@ -3,19 +3,22 @@ class User extends MY_Controller {
 	public function __construct() {
 		parent::__construct ();
 		$this->load->helper ( 'url' );
+		$this->load->model('Users_model');
 	}
 
 
 	public function dashboard() {
 
 		$logged_in = Authenticator::isLoggedIn ();
-
+		if(!$logged_in){
+			redirect ( base_url(), 'refresh' );
+		}
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
 		$data ['user_id'] = Authenticator::getLoggedInUserId();
 		$data ['user_type'] = Authenticator::getUserType();
-		print_r($data);
-
+		$data['username'] = $this->Users_model->getUsername($data ['user_id']);
+		
 		$this->load->view ( 'templates/header', $data );
 		$this->load->view ( 'user/dashboard', $data );
 		$this->load->view ( 'templates/footer', $data );
@@ -24,7 +27,7 @@ class User extends MY_Controller {
 
 	public function register() {
 		$data = array ();
-		$this->load->model('Users_model');
+		
 		$data['user_types'] = array('volunteer','representative','donor','editor',);
 		if ($_POST) {
 			$data ['username'] = "none";
@@ -109,7 +112,7 @@ class User extends MY_Controller {
 		$data = array();
 		if ($_POST) {
 			$r = Utils::get_from_POST ( 'r' );
-			$this->load->model ( 'Users_model' );
+			
 			$email = Utils::get_from_POST ( 'email' );
 			$password = Utils::get_from_POST ('password' );
 
@@ -119,7 +122,11 @@ class User extends MY_Controller {
 
 
 				$user_data_array = $matched_data->result_array ();
+				
+				
 				$user_data = $user_data_array [0];
+				
+				
 				$this->authenticateUser ( $user_data );
 
 

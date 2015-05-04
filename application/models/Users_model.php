@@ -47,7 +47,7 @@ class Users_model extends Base_Model
     public function getEmailPasswordMatchExist($email_address,$password)
     {
 
-    	$sql = "SELECT id,first_name,last_name,email FROM ".$this->_table." where email = '{$email_address}' AND password = '{$password}'  ";
+    	$sql = "SELECT id,first_name,last_name,email,user_type FROM ".$this->_table." where email = '{$email_address}' AND password = '{$password}'  ";
 
     	$results = $this->db->query($sql);
 
@@ -69,6 +69,11 @@ class Users_model extends Base_Model
 
     	return $results->result_array();
 	}
-
+	
+	public function getUsername($user_d){
+		$user_obj = parent::getById($user_d);
+		
+		return $user_obj->email;
+	}
 
 }

@@ -7,8 +7,20 @@ class Victim extends MY_Controller {
         parent::__construct ();
         $this->load->helper ( 'url' );
     }
-
 	public function index() {
+		
+		$this->load->view('header');
+		
+		$this->load->model('volunteer_model');
+        $data['districts'] = $this->volunteer_model->getDistrictList();
+        
+		$this->load->view ( 'header', $data );
+		$this->load->view ( 'nav', $data );
+		$this->load->view ( 'victim/list', $data );
+
+		$this->load->view ( 'footer' );
+}
+	public function add() {
 		$data = array ();
 		if ($_POST) {
 

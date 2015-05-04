@@ -69,6 +69,8 @@ $route['relief'] = 'relief';
 
 $route['victim/add'] = 'victim/index';
 
+$route['victim/getVDClist/(:any)']='victim/getVDClist/$1';
+
 
 
 

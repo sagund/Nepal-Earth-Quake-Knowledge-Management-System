@@ -14,11 +14,7 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-1.11.2.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -153,16 +153,32 @@ class Reliefcrud extends MY_Controller {
 		$this->render_crud($output);
 	}
 
-	public function need_relief()
+	public function victim()
 	{
 		$crud = new grocery_CRUD();
 
-		$crud->set_table('need_relief');
+		$crud->set_table('victim');
 
 		$crud->set_relation('village_id','village','name');
 
-		$crud->set_subject('Need Relief');
+		$crud->set_subject('Victim');
 		$crud->required_fields('first_name','last_name');
+
+		$output = $crud->render();
+
+		$this->render_crud($output);
+	}
+
+
+	public function victim_family()
+	{
+		$crud = new grocery_CRUD();
+
+		$crud->set_table('victim_family');
+
+		$crud->set_relation('victim_parent_id','victim','last_name');
+
+		$crud->set_subject('Victim Family');
 
 		$output = $crud->render();
 

@@ -1,6 +1,8 @@
 <?php
 defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
-class Relief extends MY_Controller {
+
+
+class Victim extends MY_Controller {
     public function __construct() {
         parent::__construct ();
         $this->load->helper ( 'url' );
@@ -9,25 +11,59 @@ class Relief extends MY_Controller {
 	public function index() {
 		$data = array ();
 		if ($_POST) {
+
+
 			$data ['first_name'] = Utils::get_from_POST ( "first_name" );
 			$data ['middle_name'] = Utils::get_from_POST ( "middle_name" );
-			$data ['last_name'] = md5 ( Utils::get_from_POST ( "last_name" ) );
+			$data ['last_name'] = Utils::get_from_POST ( "last_name" ) ;
 			$data ['gender'] = Utils::get_from_POST ( "gender" );
 			$data ['age'] = Utils::get_from_POST ( "age" );
+
 			$data ['address1'] = Utils::get_from_POST ( "address1" );
 			$data ['tole'] = Utils::get_from_POST ( "tole" );
 			$data ['ward_num'] = Utils::get_from_POST ( "ward" );
 			$data ['vdc'] = Utils::get_from_POST ( "vdc_municipality" );
+			//$data ['fb_id'] = Utils::get_from_POST ( "fb_id" );
+
+			$num_family =  Utils::get_from_POST ( "num_family" , 0);
+
+
+			$family = array();
+			for ($a=0;$a<$num_family;$a++)
+			{
+				$victim_family_name = Utils::get_from_POST ( "name".$a );
+
+				if ($victim_family_name!="")
+				{
+				$family_member = array();
+				$family_member['name'] = $victim_family_name;
+				$family_member['age'] = Utils::get_from_POST ( "age".$a );
+				$family_member['gender'] = Utils::get_from_POST ( "gender".$a );
+				$family_member['status'] = Utils::get_from_POST ( "status".$a );
+				$family[] = $family_member;
+				}
+			}
 
 
 
 
-			$this->load->model ( 'Needrelief_model' );
-			$insert_results = $this->Needrelief_model->addNeedRelief ( $data );
+
+			$this->load->model ( 'Victim_model' );
+			$this->load->model ( 'Victim_family_model' );
+
+			$insert_results = $this->Victim_model->addVictim ( $data );
+
 
 			if ($insert_results ['results']) {
 
 				$insert_id = $insert_results ['id'];
+
+				foreach($family as $member)
+				{
+					$member['victim_parent_id'] = $insert_id;
+					$family_insert_results = $this->Victim_family_model->addVictimFamily ( $member );
+				}
+
 
 				SESSION::set ( 'flash_msg_type', "success" );
 				SESSION::set ( 'flash_msg', "Data Saved Successfully" );
@@ -47,7 +83,7 @@ class Relief extends MY_Controller {
             $this->load->view ( 'nav', $data );
 			$this->load->view ( 'relief/info_form', $data );
 
-			$this->load->view ( 'templates/footer' );
+			$this->load->view ( 'footer' );
 
 			//$this->load->view ( 'footer' );
 

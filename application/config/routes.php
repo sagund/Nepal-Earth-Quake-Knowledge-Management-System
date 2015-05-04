@@ -66,7 +66,7 @@ $route['help'] = 'volunteer/help';
 $route['register'] = 'user/register';
 $route['login'] = 'user/login';
 
-$route['victim/add'] = 'relief/index';
+$route['victim/add'] = 'victim/index';
 
 
 

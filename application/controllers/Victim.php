@@ -7,23 +7,9 @@ class Victim extends MY_Controller {
         parent::__construct ();
         $this->load->helper ( 'url' );
     }
+
 	public function index() {
-		
-		
-		$this->load->model('volunteer_model');
-        $data['districts'] = $this->volunteer_model->getDistrictList();
-        
-		$this->load->view ( 'header', $data );
-		$this->load->view ( 'nav', $data );
-		$this->load->view ( 'victim/list', $data );
-
-		$this->load->view ( 'footer' );
-	}
-
-	public function add() {
 		$data = array ();
-		$this->load->model('volunteer_model');
-		$data['districts']=$this->volunteer_model->getDistrictList();
 		if ($_POST) {
 
 
@@ -35,7 +21,6 @@ class Victim extends MY_Controller {
 
 			$data ['address1'] = Utils::get_from_POST ( "address1" );
 			$data ['tole'] = Utils::get_from_POST ( "tole" );
-			$data ['district'] = Utils::get_from_POST ( "district" );
 			$data ['ward_num'] = Utils::get_from_POST ( "ward" );
 			$data ['vdc'] = Utils::get_from_POST ( "vdc_municipality" );
 			//$data ['fb_id'] = Utils::get_from_POST ( "fb_id" );
@@ -62,11 +47,11 @@ class Victim extends MY_Controller {
 
 
 
-
+ 
 			$this->load->model ( 'Victim_model' );
 			$this->load->model ( 'Victim_family_model' );
 
-			$insert_results = $this->Victim_model->addVictim ( $data );
+			$insert_results = $this->Victim_model->addVictim ( $data, );
 
 
 			if ($insert_results ['results']) {
@@ -83,7 +68,7 @@ class Victim extends MY_Controller {
 				SESSION::set ( 'flash_msg_type', "success" );
 				SESSION::set ( 'flash_msg', "Data Saved Successfully" );
 
-				redirect ( '/', 'refresh' );
+				redirect ( '/relief/condition', 'refresh' );
 
 
 			} else {
@@ -105,6 +90,5 @@ class Victim extends MY_Controller {
 		}
 	}
 
-	
-
 }
+

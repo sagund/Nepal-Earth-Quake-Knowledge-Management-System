@@ -27,9 +27,9 @@ class Victim_model extends Base_Model
         $this->_table = "victim";
     }
 
-    public function addVictim($data)
+    public function addVictim($data,$condition=NULL)
     {
-
+if($condition==NULL){
     	$data['date_added'] = Utils::getDateTime();
     	$results = $this->db->insert($this->_table, $data);
 
@@ -40,7 +40,27 @@ class Victim_model extends Base_Model
     	}
 
     	return array("results"=>$results,'id'=>$insert_id);
+
     }
+    else{
+           $insert_id = $this->db->insert_id();
+           $data['date_added'] = Utils::getDateTime();
+
+$this->db->where('id', $insert_id); 
+        $results = $this->db->update($this->_table, $data);
+
+        $insert_id = "-1";
+        if ($results)
+        {
+            $insert_id = $this->db->insert_id();
+        }
+
+        return array("results"=>$results,'id'=>$insert_id);
+
+
+
+    }
+}
 
 
 
@@ -51,8 +71,7 @@ class Victim_model extends Base_Model
     	$user_obj = parent::getById($user_d);
     	return $user_obj;
     }
-    
-    
 
 
 }
+

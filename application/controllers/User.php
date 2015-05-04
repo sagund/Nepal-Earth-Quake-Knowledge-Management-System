@@ -13,9 +13,10 @@ class User extends MY_Controller {
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
 
-		$this->load->view ( 'templates/header', $data );
+		$this->load->view ( 'header', $data );
+		$this->load->view('nav');
 		$this->load->view ( 'user/dashboard', $data );
-		$this->load->view ( 'templates/footer', $data );
+		$this->load->view ( 'footer', $data );
 
 	}
 

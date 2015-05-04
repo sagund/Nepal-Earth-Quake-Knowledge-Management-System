@@ -5,9 +5,7 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-				<br/>
-                <h1 class="page-header">Emergency Contacts
-                </h1>
+                <h1 class="page-header">Emergency Contacts</h1>
             </div>
         </div>
         

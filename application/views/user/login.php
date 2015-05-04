@@ -9,25 +9,23 @@
             </div>
 
 
-<div class="well">
+            <div class="well">
+              <div class="control-group">
+                <label class="control-label" for="email">E-mail</label>
+                <div class="controls">
+                  <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" required>
 
+                </div>
+              </div>
 
-            <div class="control-group">
-              <label class="control-label" for="email">E-mail</label>
-              <div class="controls">
-                <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" required>
+              <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                  <input type="password" id="password" name="password" placeholder="" class="form-control input-lg" required>
 
+                </div>
               </div>
             </div>
-
-            <div class="control-group">
-              <label class="control-label" for="password">Password</label>
-              <div class="controls">
-                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg" required>
-
-              </div>
-            </div>
-</div>
 
 
             <br><br>
@@ -42,7 +40,7 @@
           </fieldset>
         </form>
         <br><br>
- <p>If you don't have an account, please <a href="/register">register</a>.</p>
+ <p>If you don't have an account, please <a href="<?php echo base_url(); ?>register">register</a>.</p>
   </div>
     </div>
 

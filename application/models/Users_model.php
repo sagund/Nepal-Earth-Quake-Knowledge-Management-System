@@ -42,7 +42,7 @@ class Users_model extends Base_Model
 
     	return array("results"=>$results,'id'=>$insert_id);
     }
-
+	
 
     public function getEmailPasswordMatchExist($email_address,$password)
     {
@@ -61,6 +61,14 @@ class Users_model extends Base_Model
     	$user_obj = parent::getById($user_d);
     	return $user_obj;
     }
+    
+    public function getCountryList(){
+		$sql = "SELECT * FROM countries";
+
+    	$results = $this->db->query($sql);
+
+    	return $results->result_array();
+	}
 
 
 }

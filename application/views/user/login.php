@@ -34,7 +34,9 @@
             </div>
           </fieldset>
         </form>
+
         <br>
+
  <p>If you don't have an account, please <a href="<?php echo base_url(); ?>register">register</a>.</p>
   </div>
     </div>

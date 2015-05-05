@@ -66,14 +66,34 @@ class Users_model extends Base_Model
 		$sql = "SELECT * FROM countries";
 
     	$results = $this->db->query($sql);
-
     	return $results->result_array();
 	}
+
+    public function doesValueExist($field_name, $field_value)
+    {
+
+        $sql="SELECT * FROM ".$this->_table." where $field_name = ?";
+
+        $results=$this->db->query($sql,$field_value);
+
+       if ($results->result_id->num_rows > 0)
+        {
+
+            return TRUE;
+        }
+        else
+        {
+
+            return FALSE;
+        }
+    }
+
 	
 	public function getUsername($user_d){
 		$user_obj = parent::getById($user_d);
 		
 		return $user_obj->email;
 	}
+
 
 }

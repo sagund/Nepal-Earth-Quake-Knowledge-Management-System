@@ -40,6 +40,7 @@ class User extends MY_Controller {
 			$data ['phone'] = Utils::get_from_POST ( "phone" );
 			$data ['city'] = Utils::get_from_POST ( "city" );
 			$data ['country'] = Utils::get_from_POST ( "country" );
+
 			$data ['user_type'] = Utils::get_from_POST ( "user_type" );
 			
 			

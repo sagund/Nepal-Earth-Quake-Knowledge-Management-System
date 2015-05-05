@@ -100,5 +100,6 @@
             <br>
         <p>If you already have an account, please <a href="<?php echo base_url();?>login">login</a>.</p>
         </div>
+
     </div>
 </div>

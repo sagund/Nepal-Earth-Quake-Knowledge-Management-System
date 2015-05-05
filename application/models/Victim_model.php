@@ -29,37 +29,36 @@ class Victim_model extends Base_Model
 
     public function addVictim($data,$condition=NULL)
     {
-if($condition==NULL){
-    	$data['date_added'] = Utils::getDateTime();
-    	$results = $this->db->insert($this->_table, $data);
+        if($condition==NULL){
+        	$data['date_added'] = Utils::getDateTime();
+        	$results = $this->db->insert($this->_table, $data);
 
-    	$insert_id = "-1";
-    	if ($results)
-    	{
-    		$insert_id = $this->db->insert_id();
-    	}
+        	$insert_id = "-1";
+        	if ($results)
+        	{
+        		$insert_id = $this->db->insert_id();
+        	}
 
-    	return array("results"=>$results,'id'=>$insert_id);
+        	return array("results"=>$results,'id'=>$insert_id);
 
-    }
-    else{
-           $insert_id = $this->db->insert_id();
-           $data['date_added'] = Utils::getDateTime();
-
-$this->db->where('id', $insert_id); 
-        $results = $this->db->update($this->_table, $data);
-
-        $insert_id = "-1";
-        if ($results)
-        {
+        }else{
             $insert_id = $this->db->insert_id();
+            $data['date_added'] = Utils::getDateTime();
+
+            $this->db->where('id', $insert_id); 
+            $results = $this->db->update($this->_table, $data);
+
+            $insert_id = "-1";
+            if ($results)
+            {
+                $insert_id = $this->db->insert_id();
+            }
+            
+            return array("results"=>$results,'id'=>$insert_id);
+
+
+
         }
-
-        return array("results"=>$results,'id'=>$insert_id);
-
-
-
-    }
 }
 
 

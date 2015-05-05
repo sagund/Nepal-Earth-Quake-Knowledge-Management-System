@@ -89,11 +89,11 @@ class Relief extends MY_Controller {
 
 				$insert_id = $insert_results ['id'];
 
-				foreach($family as $member)
-				{
-					$member['victim_parent_id'] = $insert_id;
-					$family_insert_results = $this->Victim_family_model->addVictimFamily ( $member );
-				}
+				// foreach($family as $member)
+				// {
+				// 	$member['victim_parent_id'] = $insert_id;
+				// 	$family_insert_results = $this->Victim_family_model->addVictimFamily ( $member );
+				// }
 
 
 				SESSION::set ( 'flash_msg_type', "success" );

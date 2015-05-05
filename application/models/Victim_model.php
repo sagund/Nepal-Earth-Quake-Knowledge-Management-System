@@ -53,7 +53,7 @@ class Victim_model extends Base_Model
             {
                 $insert_id = $this->db->insert_id();
             }
-            die('here');
+            
             return array("results"=>$results,'id'=>$insert_id);
 
 

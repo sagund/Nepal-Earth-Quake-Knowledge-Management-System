@@ -23,7 +23,8 @@ a:hover
 		<a href='<?php echo site_url('admin/crud/donation')?>'>Donation Admin</a> |
 		<a href='<?php echo site_url('admin/crud/village')?>'>Village Admin</a> |
 		<a href='<?php echo site_url('admin/crud/donation_distribution')?>'>Donation_Distribution Admin</a> |
-				<a href='<?php echo site_url('admin/crud/need_relief')?>'>Victim Admin</a> |
+				<a href='<?php echo site_url('admin/crud/victim')?>'>Victim Admin</a> |
+								<a href='<?php echo site_url('admin/crud/victim_family')?>'>Victim Family Admin</a> |
 				<a href='<?php echo site_url('admin/crud/districts')?>'>District Admin</a> |
 <a href='<?php echo site_url('admin/crud/district_units')?>'>DistrictUnits Admin</a> |
 <a href='<?php echo site_url('admin/crud/wards')?>'>Wards Admin</a>

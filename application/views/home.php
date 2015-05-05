@@ -5,9 +5,7 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-				<br/>
-                <h1 class="page-header">Nepal Earthquake 2015 KMS
-                </h1>
+                <h1 class="page-header">Nepal Earthquake 2015 KMS</h1>
             </div>
         </div>
         <!-- /.row -->
@@ -27,6 +25,9 @@
 					<li>Total Injured: </li>
 					<li>Mostly Affected Districts: </li>
                 </ul>
+                
+                <h3><a href="<?php echo base_url();?>tomorrow" >WHAT IS HAPPENING TOMORROW!</a></h3>
+                
             </div>
 
         </div>

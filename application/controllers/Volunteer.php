@@ -1,4 +1,4 @@
-<?php
+ <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Volunteer extends CI_Controller {
@@ -18,13 +18,14 @@ class Volunteer extends CI_Controller {
         $this->load->view('footer');
 	}
 
-	
+	/*
 	public function register(){
 		$this->load->view('header');
 		$data['districts'] = $this->volunteer_model->getDistrictList();
 		$this->load->view('register_form',$data);
 		$this->load->view('footer');
 	}
+	* */
 	
 	public function home(){
 		$this->load->view('header');
@@ -39,6 +40,11 @@ class Volunteer extends CI_Controller {
 	public function help(){
 		$this->load->view('header');
 		$this->load->view('help');
+		$this->load->view('footer');
+	}
+	public function tomorrow(){
+		$this->load->view('header');
+		$this->load->view('tomorrow');
 		$this->load->view('footer');
 	}
 	public function emergency(){

@@ -65,8 +65,12 @@ $route['emergency-contacts'] = 'volunteer/emergency';
 $route['help'] = 'volunteer/help';
 $route['register'] = 'user/register';
 $route['login'] = 'user/login';
+$route['relief'] = 'relief';
+$route['tomorrow'] = 'volunteer/tomorrow';
 
-$route['victim/add'] = 'relief/index';
+$route['victim/add'] = 'victim/add';
+
+
 
 
 

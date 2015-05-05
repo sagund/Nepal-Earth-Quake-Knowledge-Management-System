@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="<?php echo base_url(); ?>assets/css/portfolio-item.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,11 +25,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+        <!-- jQuery -->
+    <script src="<?php echo base_url(); ?>assets/js/jquery-1.11.2.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
+
+
 </head>
 <body>
-
+<div class="container">
 <?php
 
 require_once("application/views/flash_messages.inc.php");
 
 ?>
+</div>

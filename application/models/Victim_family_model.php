@@ -17,17 +17,17 @@ require_once('application/libraries/exceptions/NepalReliefException.php');
  * @name User_Model
  * @access public
  */
-class Needrelief_model extends Base_Model
+class Victim_family_model extends Base_Model
 {
 
 
     public function __construct()
     {
         parent::__construct();
-        $this->_table = "need_relief";
+        $this->_table = "victim_family";
     }
 
-    public function addNeedRelief($data)
+    public function addVictimFamily($data)
     {
 
     	$data['date_added'] = Utils::getDateTime();

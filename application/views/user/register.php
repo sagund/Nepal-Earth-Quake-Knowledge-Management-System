@@ -87,7 +87,7 @@
           </fieldset>
         </form>
         <br><br>
- <p>If you already have an account, please <a href="/login">login</a>.</p>
+ <p>If you already have an account, please <a href="<?php echo base_url(); ?>login">login</a>.</p>
     </div>
   </div>
 </div>

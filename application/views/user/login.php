@@ -42,7 +42,7 @@
           </fieldset>
         </form>
         <br><br>
- <p>If you don't have an account, please <a href="/register">register</a>.</p>
+ <p>If you don't have an account, please <a href="<?php echo base_url(); ?>register">register</a>.</p>
   </div>
     </div>
 

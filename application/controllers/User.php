@@ -38,7 +38,7 @@ class User extends MY_Controller {
 
 
 			$this->load->model('Users_model');
-			if ($this->Users_model->doesValueExist("email", $data ['email']))
+			if ($this->Users_model->doesValueExist("email", $data ['email']));
 			{
 
 				SESSION::set ( 'flash_msg_type', "danger" );

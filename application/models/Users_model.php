@@ -62,5 +62,15 @@ class Users_model extends Base_Model
     	return $user_obj;
     }
 
+    public function doesValueExist($column, $email)
+    {
+
+        $sql="SELECT * FROM ".$this->_table." where $coulmn = ?";
+
+        $result=$this->db->query($sql,$email);
+
+        return $results;
+    }
+
 
 }

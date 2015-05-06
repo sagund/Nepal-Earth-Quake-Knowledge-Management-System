@@ -6,17 +6,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="This is an attempt to very quickly realize a Knowledge Management System(KMS) which you can use to match demands, supplies, supports and needs in the earthquake victim relief endeavors, where everyone in the world is with Nepal.">
+    <meta name="author" content="Nepal Earthquake 2015 Knowledge Management System (KMS)">
 
-    <title>Nepal Earthquake 2015 KMS</title>
+    <title>Nepal Earthquake 2015 Knowledge Management System (KMS)</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fonts/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="<?php echo base_url(); ?>assets/css/portfolio-item.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/creative.css" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prettyPhoto.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/normalize.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,21 +36,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-        <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>assets/js/jquery-1.11.2.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
-
-
+    <!-- jQuery -->
+    <script src="<?php echo base_url(); ?>assets/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        /*global variable for js*/
+        var base_url = "<?php echo base_url(); ?>";
+        var current_url = "<?php echo base_url(uri_string()); ?>";
+    </script>
 </head>
-<body>
-<div class="container">
-<?php
-
-require_once("application/views/flash_messages.inc.php");
-
-?>
-</div>
+<body id="page-top">

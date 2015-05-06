@@ -10,7 +10,7 @@
 						<fieldset>
 							<div id="legend">
 					            <legend class="">Donation Information</legend>
-					        </div>   
+					        </div>
 							<div class="control-group">
 			                    <label class="control-label"  for="item_name">Item Name</label>
 			                    <div class="controls">
@@ -64,7 +64,7 @@
 			                    		<option value="audio"> Audio File </option>
 
 			                    	</select>
-			                        
+
 			                    </div>
 			                </div> -->
 			                <div class="control-group">
@@ -77,7 +77,7 @@
 			                <div class="control-group">
 			                    <label class="control-label"  for="status">Status</label>
 			                    <div class="controls">
-			                        <input type="text" name="statys" value="" placeholder="Item status (i.e available, on-the-way, etc..." class="input-xlarge">
+			                        <input type="text" name="status" value="" placeholder="Item status (i.e available, on-the-way, etc..." class="input-xlarge">
 			                    </div>
 			                </div>
 			                <div class="control-group">
@@ -90,7 +90,7 @@
 					</form>
 
 				</div>
-			</div>	
+			</div>
 		</div>
-	</div>	
-</div>	
+	</div>
+</div>

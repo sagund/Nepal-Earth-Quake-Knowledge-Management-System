@@ -51,7 +51,7 @@ class Victim extends MY_Controller {
 			$this->load->model ( 'Victim_model' );
 			$this->load->model ( 'Victim_family_model' );
 
-			$insert_results = $this->Victim_model->addVictim ( $data, );
+			$insert_results = $this->Victim_model->addVictim ( $data);
 
 
 			if ($insert_results ['results']) {

@@ -16,10 +16,8 @@ class User extends MY_Controller {
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
 
-		$data ['user_id'] = Authenticator::getLoggedInUserId();
-		$data ['user_type'] = Authenticator::getUserType();
-		$data['username'] = $this->Users_model->getUsername($data ['user_id']);
-		
+		$data ['UD'] = $_SESSION['UD'];
+
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav' );
 		$this->load->view ( 'user/dashboard', $data );
@@ -28,8 +26,16 @@ class User extends MY_Controller {
 	}
 
 	public function register() {
+
+		if(Authenticator::isLoggedIn ()){
+			SESSION::set ( 'flash_msg_type', "success" );
+			SESSION::set ( 'flash_msg', "You are already logged in" );
+			redirect ( '/user/dashboard', 'refresh' );
+		}
+
+
 		$data = array ();
-		
+
 		$data['user_types'] = array('volunteer','representative','donor','editor',);
 		if ($_POST) {
 			$data ['username'] = "none";
@@ -42,11 +48,11 @@ class User extends MY_Controller {
 			$data ['country'] = Utils::get_from_POST ( "country" );
 
 			$data ['user_type'] = Utils::get_from_POST ( "user_type" );
-			
-			
-			
+
+
+
 			$counter = 0;
-			
+
 			foreach($data['user_types'] as $type){
 				if($data['user_type']  == $type){
 					$counter ++;
@@ -57,7 +63,7 @@ class User extends MY_Controller {
 				SESSION::set ( 'flash_msg', "Invalid Role Chosen" );
 				redirect ( '/user/register', 'refresh' );
 			}
-			
+
 			if ($this->Users_model->doesValueExist("email", $data ['email']))
 			{
 
@@ -86,7 +92,7 @@ class User extends MY_Controller {
 
 				SESSION::set ( 'flash_msg_type', "success" );
 				SESSION::set ( 'flash_msg', "Account created Successfully" );
-				
+
 				redirect ( '/user/dashboard', 'refresh' );
 
 				// $this->load->view('templates/header', $data);
@@ -99,7 +105,7 @@ class User extends MY_Controller {
 			}
 		} else {
 			$data['countries'] = $this->Users_model->getCountryList();
-			
+
 
 			$this->load->view ( 'header', $data );
 			$this->load->view ( 'nav', $data );
@@ -112,10 +118,16 @@ class User extends MY_Controller {
 
 	public function login() {
 
+		if(Authenticator::isLoggedIn ()){
+			SESSION::set ( 'flash_msg_type', "success" );
+			SESSION::set ( 'flash_msg', "You are already logged in" );
+			redirect ( '/user/dashboard', 'refresh' );
+		}
+
 		$data = array();
 		if ($_POST) {
 			$r = Utils::get_from_POST ( 'r' );
-			
+
 			$email = Utils::get_from_POST ( 'email' );
 			$password = Utils::get_from_POST ('password' );
 
@@ -125,11 +137,11 @@ class User extends MY_Controller {
 
 
 				$user_data_array = $matched_data->result_array ();
-				
-				
+
+
 				$user_data = $user_data_array [0];
-				
-				
+
+
 				$this->authenticateUser ( $user_data );
 
 
@@ -163,6 +175,7 @@ class User extends MY_Controller {
 
 		// $this->load->library('emailer');
 		// $this->emailer->sendWelcomeEmail("nilesh.dosooye@gmail.com","IL");
+
 		$auth_data = array (
 				'first_name' => $user_data_array ['first_name'],
 				'last_name' => $user_data_array ['last_name'],
@@ -171,10 +184,17 @@ class User extends MY_Controller {
 				'type' =>$user_data_array ['user_type']
 		);
 
-
 		Authenticator::setAuthenticatedCookieForUser ( $user_data_array ['id'], $user_data_array ['user_type']);
+
+		Session::set("UD", $auth_data);
 	}
+
+
 	public function logout() {
+
+		SESSION::delete("UD");
+		unset($_SESSION['UD']);
+
 		Authenticator::setLoggedOutCookieForUser ();
 		redirect ( '/user/dashboard', 'refresh' );
 	}

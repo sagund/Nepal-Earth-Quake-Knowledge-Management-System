@@ -31,6 +31,8 @@
               <div class="controls">
                 <button class="btn btn-success">Login</button>
               </div>
+              <br>
+              <a href="#">Forgot Password?</a>
             </div>
           </fieldset>
         </form>
@@ -42,8 +44,3 @@
     </div>
 
 </div>
-
-
-
-
-

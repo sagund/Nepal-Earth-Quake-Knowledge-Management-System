@@ -20,4 +20,16 @@ class MY_Controller extends CI_Controller
 
 	}
 
+	public function checkIfAuthenticated()
+	{
+		if (!Authenticator::isLoggedIn())
+		{
+			SESSION::set ( 'flash_msg_type', "danger" );
+			SESSION::set ( 'flash_msg', "Sorry you need to be logged in to access this page" );
+
+			redirect ( '/user/login', 'refresh' );
+		}
+	}
+
+
 }

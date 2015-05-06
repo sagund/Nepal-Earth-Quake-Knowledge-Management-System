@@ -77,26 +77,5 @@ class Authenticator
 	}
 
 
-	public static function getLoggedInUserId(){
-         return self::isLoggedIn(true);
-	}
-	
-	public static function getUserType(){
-        $login = CookieMonster::get("L");
-		if ($login!=""){
-			list($junk1,$user_id,$auth,$type,$junk2)=explode(AUTH_SEPARATOR,$login);
-			if ($auth=="y")
-			{
-				return $type;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
-	}
+
 }

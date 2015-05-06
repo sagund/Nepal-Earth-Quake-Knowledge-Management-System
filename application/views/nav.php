@@ -1,98 +1,109 @@
- <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+ <?php
+
+ $logged_in = Authenticator::isLoggedIn();
+
+ if($logged_in)
+ {
+    $UD = $_SESSION['UD'];
+    $username = $UD['email_address'];
+    $user_type = $UD['type'];
+    $first_name = $UD['first_name'];
+    $last_name = $UD['last_name'];
+ }
+ else
+
+ {
+    $username = "";
+ }
+
+ ?>
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url(); ?>">Disaster</a>
+                <a class="navbar-brand page-scroll" href="<?php echo base_url() ?>#page-top">AfterQuake.org</a>
             </div>
+            <?php 
+                $menulink="";
+                if (base_url()!=base_url(uri_string())) {
+                    $menulink = base_url();
+                }
+            ?>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?php echo base_url(); ?>about">About</a>
+                        <a class="imp-menu" href="<?php echo $menulink ?>tomorrow">Tomorrows' Event</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url(); ?>help">Help the victims</a>
+                        <a class="page-scroll" href="<?php echo $menulink ?>#about">About</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url(); ?>emergency-contacts">Emergency Contacts</a>
+                        <a class="page-scroll" href="<?php echo $menulink ?>#help">Help</a>
                     </li>
-                    
-                    <?php if (isset($logged_in)){ 
-                        echo '<li>
-                            <a href="'.base_url().'victim">Victims</a>
-                        </li>';
-                    }?>
+                    <li>
+                        <a class="page-scroll" href="<?php echo $menulink ?>#districts">Affected Districts</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                           <li><a class="page-scroll" href="<?php echo $menulink ?>#contact">Our Contact</a></li>
+                            <li><a href="<?php echo $menulink ?>emergency-contacts">Emergency Contact</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?php echo base_url(); ?>agencies">Relief Agencies</a>
+                    </li>
 
-                    <?php if (!isset($logged_in)){
+                    <?php 
+                    if (!$logged_in){
                         echo '<li>
-                                <a href="'.base_url().'register">Register</a></a>
+                                <a href="'.$menulink.'register">Register</a></a>
                             </li>
                             <li>
-                                <a href="'.base_url().'login">Login</a>
+                                <a href="'.$menulink.'login">Login</a>
                             </li>';
-                    }?>
+                    }else{ ?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <?php  echo ($first_name.' '.$last_name); ?> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                    if($user_type == "volunteer"){
+                                        echo '<li><a href="'.base_url().'/victim">Report a Victim</a></li>';
+                                        echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';
+                                    }
 
-                    
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Dropdown Link 1</a></li>
-                            <li><a href="#">Dropdown Link 2</a></li>
-                            <li><a href="#">Dropdown Link 3</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Dropdown Submenu Link 4.1</a></li>
-                                    <li><a href="#">Dropdown Submenu Link 4.2</a></li>
-                                    <li><a href="#">Dropdown Submenu Link 4.3</a></li>
-                                    <li><a href="#">Dropdown Submenu Link 4.4</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                                    if($user_type == "admin" ){
+                                        echo '<li><a href="'.base_url().'/victim">Report a Victim</a></li>';
+                                        echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';
+                                        echo '<li><a href="'.base_url().'/donation/add">Add a Donation</a></li>';
+                                        echo '<li><a href="'.base_url().'/donation/add">Report a Situation!</a></li>';
+                                    }
+                                    if($user_type == "donor" ){
+                                        echo '<li><a href="'.base_url().'/donation/add">Add a Donation</a></li>';
+                                    }
+                                    if($user_type == "editor" ){
+                                        echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';
+                                    }
+                                    if($user_type == "representative" ){
+                                        echo '<li><a href="'.base_url().'/donation/add">Report a Situation!</a></li>';
+                                    }
+                                ?>
+                               <li><a href="<?php echo base_url(); ?>user/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <?php }
+                    ?>
                 </ul>
-
-                <?php if (isset($logged_in)){ ?>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <?php  echo ($username); ?> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <?php 
-                                if($user_type == "volunteer"){
-                                    echo '<li><a href="'.base_url().'/victim">Report a Victim</a></li>';
-                                    echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';   
-                                }
-                                
-                                if($user_type == "admin" ){
-                                    echo '<li><a href="'.base_url().'/victim">Report a Victim</a></li>';
-                                    echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';   
-                                    echo '<li><a href="'.base_url().'/donation/add">Add a Donation</a></li>';   
-                                    echo '<li><a href="'.base_url().'/donation/add">Report a Situation!</a></li>';
-                                }
-                                if($user_type == "donor" ){
-                                    echo '<li><a href="'.base_url().'/donation/add">Add a Donation</a></li>';   
-                                }
-                                if($user_type == "editor" ){
-                                    echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';   
-                                }
-                                if($user_type == "representative" ){
-                                    echo '<li><a href="'.base_url().'/donation/add">Report a Situation!</a></li>';  
-                                }
-                            ?>
-                           <li><a href="<?php echo base_url(); ?>user/logout">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <?php } ?>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>

@@ -3,12 +3,13 @@ defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
 
 
 class Relief extends MY_Controller {
-    public function __construct() {
-        parent::__construct ();
-        $this->load->helper ( 'url' );
-        $this->load->library('upload');
-        $this->load->helper('string');
-    }
+	public function __construct() {
+		parent::__construct ();
+		$this->load->helper ( 'url' );
+		$this->load->library('upload');
+		$this->load->helper('string');
+		$this->load->library('session');
+	}
 
 	public function condition() {
 		$data = array ();
@@ -21,7 +22,7 @@ class Relief extends MY_Controller {
 		$upload_data = $this->upload->data(); 		
 		$this->upload->do_upload('photographs');
 		if(empty($_FILES['photographs']['name'])) {
-		$file_name = "0";
+			$file_name = "0";
 		}
 		else {
 			$file_name = $_FILES['photographs']['name'];
@@ -48,56 +49,37 @@ class Relief extends MY_Controller {
 			foreach ($_POST['physical_state'] as $physical_value)
 			{  
 				
-  			$physicalvalue[] = $physical_value;
+				$physicalvalue[] = $physical_value;
 			}
 			$physicalvalue1=implode(',',$physicalvalue);
 
 
-  			$data ['physical_state'] = $physicalvalue1;
+			$data ['physical_state'] = $physicalvalue1;
 
-  			$psychologicalvalue=array();
+			$psychologicalvalue=array();
 			foreach ($_POST['psychological_state'] as $psychological_value)
 			{  
 				
-  			$psychologicalvalue[] = $psychological_value;
+				$psychologicalvalue[] = $psychological_value;
 			}
 			$psychologicalvalue1=implode(',',$psychologicalvalue);
 
 
 			$data ['psychological_state'] = $psychologicalvalue1;
-			
-
-
 			$data ['economic_state'] = Utils::get_from_POST ( "economic_state" );
 			$data ['initial_assessment'] = Utils::get_from_POST ( "initial_assesment" );
 			$data ['photographs'] = $file_name;
-
-			
-
-			//$data ['fb_id'] = Utils::get_from_POST ( "fb_id" );
-
-
-
- 
 			$this->load->model ( 'Victim_model' );
 			$this->load->model ( 'Victim_family_model' );
 
-			$insert_results = $this->Victim_model->addVictim ($data,"extra");
+			$insert_results = $this->Victim_model->updateVictim ($data);
 
 
 			if ($insert_results ['results']) {
 
 				$insert_id = $insert_results ['id'];
 
-				foreach($family as $member)
-				{
-					$member['victim_parent_id'] = $insert_id;
-					$family_insert_results = $this->Victim_family_model->addVictimFamily ( $member );
-				}
-
-
 				SESSION::set ( 'flash_msg_type', "success" );
-				SESSION::set ( 'flash_msg', "Data Saved Successfully" );
 
 				redirect ( '/', 'refresh' );
 
@@ -111,12 +93,11 @@ class Relief extends MY_Controller {
 
 
 			$this->load->view ( 'header', $data );
-            $this->load->view ( 'nav', $data );
+			$this->load->view ( 'nav', $data );
 			$this->load->view ( 'relief/condition_form', $data );
 
 			$this->load->view ('footer' );
 
-			//$this->load->view ( 'footer' );
 
 		}
 	}

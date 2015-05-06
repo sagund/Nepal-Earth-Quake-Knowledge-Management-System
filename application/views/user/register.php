@@ -20,14 +20,22 @@
                         <div class="control-group">
                             <label class="control-label" for="password">Password</label>
                             <div class="controls">
-                                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg" required>
+                                <input type="password" id="password" name="password" placeholder="" pattern=".{6,}"   required title="Password should be minimum six characters" class="form-control input-lg" required>
                                 <p class="help-block">Password should be at least 6 characters</p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="confirm_password">Confirm Password</label>
+                            <div class="controls">
+                                <input type="password" id="confirm_password" name="confirm_password" placeholder="" pattern=".{6,}"   required title="Password should be minimum six characters" class="form-control input-lg" required>
+                                <p class="help-block">Retype your password to confirm</p>
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="user_type">Role</label>
                             <div class="controls">
                                 <select id="user_type" name="user_type" placeholder="" class="form-control input-lg" required>
+                                	<option>User Type</option>
                                     <?php 
                                         print_r($user_types);
                                         foreach($user_types as $type){
@@ -43,28 +51,28 @@
                     <h3>Personal Information</h3>
                     <div class="well">
                         <div class="control-group">
-                            <label class="control-label" for="FirstName">First Name</label>
+                            <label class="control-label" for="first_name">First Name</label>
                             <div class="controls">
                                 <input type="text" id="first_name" name="first_name" placeholder="" class="form-control input-lg" required>
                             </div>
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label" for="LastName">Last Name</label>
+                            <label class="control-label" for="last_name">Last Name</label>
                             <div class="controls">
                                 <input type="text" id="last_name" name="last_name" placeholder="" class="form-control input-lg" required>
                             </div>
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label" for="Phone">Phone</label>
+                            <label class="control-label" for="phone">Phone</label>
                             <div class="controls">
-                                <input type="text" id="phone" name="phone" placeholder="" class="form-control input-lg">
+                                <input type="tel" id="phone" name="phone" placeholder="" class="form-control input-lg">
                             </div>
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label" for="password_confirm">City</label>
+                            <label class="control-label" for="city">City</label>
                             <div class="controls">
                                 <input type="text" id="city" name="city" placeholder="" class="form-control input-lg" required>
 
@@ -72,10 +80,11 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label" for="password_confirm">Country</label>
+                            <label class="control-label" for="country">Country</label>
                             <div class="controls">
-                                <select id="country" name="country" placeholder="" class="form-control input-lg">
-                                <?php 
+                                <select id="country" name="country" placeholder="" class="form-control input-lg" required>
+                                	<option>Select Country</option>
+                                    <?php 
                                     foreach($countries as $key=>$country){
                                     echo '<option value="'.$country['country_name'].'" ';
                                     if($country['country_name'] == "Nepal"){
@@ -93,6 +102,7 @@
                         <!-- Button -->
                         <div class="controls">
                             <button class="btn btn-success">Register</button>
+                            <button type="reset" class="btn btn-warning pull-right">Reset Form</button>
                         </div>
                     </div>
                 </fieldset>

@@ -62,11 +62,12 @@ $route['user/dashboard'] = 'user/dashboard';
 
 $route['about'] = 'volunteer/about';
 $route['emergency-contacts'] = 'volunteer/emergency';
-$route['help'] = 'volunteer/help';
+
 $route['register'] = 'user/register';
 $route['login'] = 'user/login';
 $route['relief'] = 'relief';
 $route['tomorrow'] = 'volunteer/tomorrow';
+$route['agencies'] = 'volunteer/agencies';
 
 $route['victim/add'] = 'victim/add';
 

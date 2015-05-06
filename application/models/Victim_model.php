@@ -48,7 +48,8 @@ class Victim_model extends Base_Model
     {
 
             $data['date_added'] = Utils::getDateTime();
-            $victim_id=SESSION::get('victim_id');
+            
+            $victim_id=$_SESSION["victim_id"];
             $this->db->where('id', $victim_id); 
             $results = $this->db->update($this->_table, $data);
             $insert_id = $this->db->insert_id();

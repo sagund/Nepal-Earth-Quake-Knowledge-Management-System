@@ -6,6 +6,7 @@ class Victim extends MY_Controller {
     public function __construct() {
         parent::__construct ();
         $this->load->helper ( 'url' );
+        $this->load->library('session');
     }
 	public function index() {
 		
@@ -73,7 +74,8 @@ class Victim extends MY_Controller {
 			if ($insert_results ['results']) {
 
 				$insert_id = $insert_results ['id'];
-
+				
+				$_SESSION["victim_id"] = $insert_id;
 				foreach($family as $member)
 				{
 					$member['victim_parent_id'] = $insert_id;

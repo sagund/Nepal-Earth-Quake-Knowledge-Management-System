@@ -22,12 +22,13 @@ $email = $UD['email_address'];
 	echo '<ul>';
 
 	if($user_type == "volunteer"){
-		echo '<li><a href="'.base_url().'/victim">Report a Victim</a></li>';
+		echo '<li><a href="'.base_url().'/victim">View Districts</a></li>';
+		echo '<li><a href="'.base_url().'/victim/add">Report a Victim</a></li>';
 		echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';
 	}
 
 	if($user_type == "admin" ){
-		echo '<li><a href="'.base_url().'/victim">Report a Victim</a></li>';
+		echo '<li><a href="'.base_url().'/victim/add">Report a Victim</a></li>';
 		echo '<li><a href="'.base_url().'/media/add">Add Media</a></li>';
 		echo '<li><a href="'.base_url().'/donation/add">Add a Donation</a></li>';
 		echo '<li><a href="'.base_url().'/donation/add">Report a Situation!</a></li>';

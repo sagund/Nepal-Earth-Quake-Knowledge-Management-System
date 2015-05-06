@@ -16,9 +16,9 @@ class User extends MY_Controller {
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
 
-		$data ['user_id'] = Authenticator::getLoggedInUserId();
-		$data ['user_type'] = Authenticator::getUserType();
-		$data['username'] = $this->Users_model->getUsername($data ['user_id']);
+		$data ['user_id'] = $_SESSION['UD']['id'];
+		$data ['user_type'] = $_SESSION['UD']['type'];
+		$data['username'] = $_SESSION['UD']['email'];
 
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav' );
@@ -28,6 +28,14 @@ class User extends MY_Controller {
 	}
 
 	public function register() {
+
+		if(Authenticator::isLoggedIn ()){
+			SESSION::set ( 'flash_msg_type', "success" );
+			SESSION::set ( 'flash_msg', "You are already logged in" );
+			redirect ( '/user/dashboard', 'refresh' );
+		}
+
+
 		$data = array ();
 
 		$data['user_types'] = array('volunteer','representative','donor','editor',);
@@ -111,6 +119,12 @@ class User extends MY_Controller {
 
 
 	public function login() {
+
+		if(Authenticator::isLoggedIn ()){
+			SESSION::set ( 'flash_msg_type', "success" );
+			SESSION::set ( 'flash_msg', "You are already logged in" );
+			redirect ( '/user/dashboard', 'refresh' );
+		}
 
 		$data = array();
 		if ($_POST) {

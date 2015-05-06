@@ -165,15 +165,15 @@
 									state</label>
 								<div class="controls">
 									<label class="radio-inline"><input type="radio"
-										name="economic_state" value="no warm clothing"
+										name="economic_state" value="very very poor"
 										class="input-xlarge">very very poor = has less than 100
 											rupees to spend per day for the family for a month</label><br />
 									<label class="radio-inline"><input type="radio"
-										name="economic_state" value="no blankets"
+										name="economic_state" value="poor"
 										class="input-xlarge"> poor = has less than 500 rupees per
 											day to spend for the family for a month</label><br /> <label
 										class="radio-inline"><input type="radio"
-										name="economic_state" value="no mat" class="input-xlarge">
+										name="economic_state" value="non-poor" class="input-xlarge">
 											non-poor = has more than 500 rupees per day to spend for
 											the family for a month )</label>
 

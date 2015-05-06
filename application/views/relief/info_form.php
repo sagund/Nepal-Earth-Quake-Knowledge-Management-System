@@ -147,11 +147,11 @@
 												<tr id='addr0'>
 													<td>1</td>
 													<td><input type='text' name='name0' placeholder='Name'
-														class='form-control' required /></td>
+														class='form-control'  /></td>
 													<td><input type='text' name='age0' type='number' min='0'
-														max='125' placeholder='Age' class='input-xlarge' required />
+														max='125' placeholder='Age' class='input-xlarge'  />
 													</td>
-													<td><select name='gender0' required>
+													<td><select name='gender0' >
 															<option value='m'>Male</option>
 															<option value='f'>Female</option>
 															<option value='o'>Other</option>
@@ -159,9 +159,9 @@
 													</select></td>
 
 													<td><input type='text' name='citizen_num0'
-														placeholder='Name' class='form-control' /></td>
+														placeholder='Citizenship No.' class='form-control' /></td>
 
-													<td><select name='status0' required>
+													<td><select name='status0' >
 															<option></option>
 															<option value='living'>Living & Healthy</option>
 															<option value='injured'>Injured</option>
@@ -200,7 +200,7 @@ $(document).ready(function(){
     $("#add_row").click(function(){
 
 
-	    $('#addr'+i).html("<td>"+ (i+1) +"</td> <td><input type='text' name='name"+i+"' placeholder='Name' class='form-control' required /></td> <td><input type='text' name='age"+i+"' type='number' min='0' max='125' placeholder='Age' class='input-xlarge' required /> </td> <td><select name='gender"+i+"' required> <option value='m'>Male</option> <option value='f'>Female</option> <option value='o'>Other</option> </select></td> <td><input type='text' name='citizen_num"+i+"' placeholder='Name' class='form-control' /></td> <td><select name='status"+i+"' required> <option></option> <option value='living'>Living & Healthy</option> <option value='injured'>Injured</option> <option value='missing'>Missing</option> <option value='dead'>Dead</option> </select></td>");
+	    $('#addr'+i).html("<td>"+ (i+1) +"</td> <td><input type='text' name='name"+i+"' placeholder='Name' class='form-control'  /></td> <td><input type='text' name='age"+i+"' type='number' min='0' max='125' placeholder='Age' class='input-xlarge'  /> </td> <td><select name='gender"+i+"' required> <option value='m'>Male</option> <option value='f'>Female</option> <option value='o'>Other</option> </select></td> <td><input type='text' name='citizen_num"+i+"' placeholder='Citizenship No.' class='form-control' /></td> <td><select name='status"+i+"' > <option></option> <option value='living'>Living & Healthy</option> <option value='injured'>Injured</option> <option value='missing'>Missing</option> <option value='dead'>Dead</option> </select></td>");
 
 
 	    $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');

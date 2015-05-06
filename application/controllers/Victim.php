@@ -38,6 +38,11 @@ class Victim extends MY_Controller {
 			$data ['district'] = Utils::get_from_POST ( "district" );
 			$data ['ward_num'] = Utils::get_from_POST ( "ward" );
 			$data ['vdc'] = Utils::get_from_POST ( "vdc_municipality" );
+			if($data['vdc']==""){
+				$data["vdc"]="";
+			}
+			// echo isset($data ['vdc']) ;
+			// die($data["vdc"]);
 			//$data ['fb_id'] = Utils::get_from_POST ( "fb_id" );
 
 			$num_family =  Utils::get_from_POST ( "num_family" , 0);

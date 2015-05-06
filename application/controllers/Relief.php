@@ -44,6 +44,7 @@ class Relief extends MY_Controller {
 			$data ['flag_temporary_shelter'] = Utils::get_from_POST ( "temp_shelter" );
 			$data ['flag_permanent_shelter'] = Utils::get_from_POST ( "perm_shelter" );
 			$data ['flag_contagious_disease'] = Utils::get_from_POST ( "cont_disease" );
+			$data['victim_condition']=Utils::get_from_POST("disease_condition");
 			$data ['house_conditions'] = Utils::get_from_POST ( "house_condition" );
 			$physicalvalue=array();
 			foreach ($_POST['physical_state'] as $physical_value)
@@ -81,7 +82,7 @@ class Relief extends MY_Controller {
 
 				SESSION::set ( 'flash_msg_type', "success" );
 
-				redirect ( '/', 'refresh' );
+				redirect ( base_url().'user/dashboard', 'refresh' );
 
 
 			} else {

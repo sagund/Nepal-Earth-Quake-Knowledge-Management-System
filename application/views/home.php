@@ -4,7 +4,7 @@
                 <h1>Nepal Earthquake 2015 Knowledge Management System (KMS)</h1>
                 <hr>
                 <p>Total Death: <strong>5489</strong>. Total Injured:<strong>10225</strong>.<br> 
-                	Mostly Affected Districts: <strong>Sindhupalchowk,Gorkha and Bhaktapur</strong></p>
+                	Most Affected Districts: <strong>Kathmandu, Sindhupalchowk,Gorkha, Nuwakot, Dhading, Bhaktapur</strong></p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
@@ -38,7 +38,7 @@
                      <a href="<?php echo base_url(); ?>victim"><div class="service-box">
                         <i class="fa fa-4x fa-users wow bounceIn text-primary"></i>
                         <h3>Victims</h3>
-                        <p class="text-muted">There are more than 8 millions people are affected by earthquake. Many are from very rural area of Nepal.</p>
+                        <p class="text-muted">There are more than 8 millions people are affected by earthquake. Many are from very remote areas of Nepal.</p>
                     </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -52,21 +52,21 @@
                     <a href="#"><div class="service-box">
                         <i class="fa fa-4x fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>Donate</h3>
-                        <p class="text-muted">Your donation shouldn't be wasted, we will help you to donate in very needy area of country.</p>
+                        <p class="text-muted">We help to make sure that the donations go to the people in need. We help in routing your contributions to the right people.</p>
                     </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                      <a href="<?php echo base_url(); ?>victim"><div class="service-box">
                         <i class="fa fa-4x fa-map-marker wow bounceIn text-primary" data-wow-delay=".3s"></i>
                         <h3>Affected Areas</h3>
-                        <p class="text-muted">Almost all 75 districts are affected by earthquake. View all in detail.</p>
+                        <p class="text-muted">More than 15 districts with estimated 8 million people have been affected by the earthquake. View all in detail.</p>
                     </div></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="no-padding" id="images">
+    <section class="no-padding" id="districts">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">

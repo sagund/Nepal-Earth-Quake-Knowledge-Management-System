@@ -49,7 +49,7 @@
                         <a class="page-scroll" href="<?php echo $menulink ?>#help">Help</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo $menulink ?>#images">Images</a>
+                        <a class="page-scroll" href="<?php echo $menulink ?>#districts">Affected Districts</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
@@ -58,7 +58,9 @@
                             <li><a href="<?php echo $menulink ?>emergency-contacts">Emergency Contact</a></li>
                         </ul>
                     </li>
-                    
+                    <li>
+                        <a class="page-scroll" href="<?php echo base_url(); ?>agencies">Relief Agencies</a>
+                    </li>
 
                     <?php 
                     if (!$logged_in){

@@ -79,7 +79,7 @@
                     </li>
                 </ul>
 
-                <?php if (isset($logged_in)){ ?>
+                <?php if ($logged_in){ ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <?php  echo ($username); ?> <b class="caret"></b></a>

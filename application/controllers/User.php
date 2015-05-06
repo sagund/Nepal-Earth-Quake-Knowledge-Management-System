@@ -16,9 +16,7 @@ class User extends MY_Controller {
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
 
-		$data ['user_id'] = $_SESSION['UD']['id'];
-		$data ['user_type'] = $_SESSION['UD']['type'];
-		$data['username'] = $_SESSION['UD']['email'];
+		$data ['UD'] = $_SESSION['UD'];
 
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav' );

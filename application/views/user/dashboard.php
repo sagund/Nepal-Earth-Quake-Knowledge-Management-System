@@ -1,9 +1,20 @@
 <div class="container">
 <?php
-if ($logged_in){ ?>
+if ($logged_in){
+
+
+$user_type = $UD['type'];
+$first_name = $UD['first_name'];
+$last_name = $UD['last_name'];
+$email = $UD['email_address'];
+
+?>
+
+
+
 	 <div class="row">
         <div class="col-lg-12">
-            <h4 class="page-header"><?php echo 'Welcome '.$username.' ['.$user_type.']'; ?></h1>
+            <h4 class="page-header"><?php echo 'Welcome '.$first_name.' '.$last_name; ?></h1>
         </div>
     </div>
 

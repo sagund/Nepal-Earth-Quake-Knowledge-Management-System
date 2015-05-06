@@ -62,11 +62,15 @@ class Donor extends MY_Controller {
 
     		}
     	}else{
+
+
+
+
     		$this->load->view ( 'header', $data );
             $this->load->view ( 'nav', $data );
 			$this->load->view ( 'donor/add_donor', $data );
 
-			$this->load->view ( 'footer' );
+			$this->load->view ( 'footer' , $data);
     	}
     }
 

@@ -10,6 +10,11 @@
  	$first_name = $UD['first_name'];
  	$last_name = $UD['last_name'];
  }
+ else
+
+ {
+ 	$username = "";
+ }
 
  ?>
 

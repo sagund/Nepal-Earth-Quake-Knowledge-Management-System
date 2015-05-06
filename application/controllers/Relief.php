@@ -11,6 +11,9 @@ class Relief extends MY_Controller {
     }
 
 	public function condition() {
+
+
+
 		$data = array ();
 		$userfile=($this->input->post('photographs'));
 		$config['upload_path'] = './images';
@@ -18,7 +21,7 @@ class Relief extends MY_Controller {
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 		$this->upload->initialize($config);
-		$upload_data = $this->upload->data(); 		
+		$upload_data = $this->upload->data();
 		$this->upload->do_upload('photographs');
 		if(empty($_FILES['photographs']['name'])) {
 		$file_name = "0";
@@ -29,7 +32,7 @@ class Relief extends MY_Controller {
 
 
 		$this->upload->initialize($config);
-		
+
 
 		if ($_POST) {
 
@@ -46,8 +49,8 @@ class Relief extends MY_Controller {
 			$data ['house_conditions'] = Utils::get_from_POST ( "house_condition" );
 			$physicalvalue=array();
 			foreach ($_POST['physical_state'] as $physical_value)
-			{  
-				
+			{
+
   			$physicalvalue[] = $physical_value;
 			}
 			$physicalvalue1=implode(',',$physicalvalue);
@@ -57,28 +60,28 @@ class Relief extends MY_Controller {
 
   			$psychologicalvalue=array();
 			foreach ($_POST['psychological_state'] as $psychological_value)
-			{  
-				
+			{
+
   			$psychologicalvalue[] = $psychological_value;
 			}
 			$psychologicalvalue1=implode(',',$psychologicalvalue);
 
 
 			$data ['psychological_state'] = $psychologicalvalue1;
-			
+
 
 
 			$data ['economic_state'] = Utils::get_from_POST ( "economic_state" );
 			$data ['initial_assessment'] = Utils::get_from_POST ( "initial_assesment" );
 			$data ['photographs'] = $file_name;
 
-			
+
 
 			//$data ['fb_id'] = Utils::get_from_POST ( "fb_id" );
 
 
 
- 
+
 			$this->load->model ( 'Victim_model' );
 			$this->load->model ( 'Victim_family_model' );
 

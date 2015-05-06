@@ -7,13 +7,13 @@ class Volunteer extends CI_Controller {
 		$this->load->model('volunteer_model');
 		$this->load->model('base_model');
 	}
- 
+
 	public function index()
 	{
 		$data['districts'] = $this->volunteer_model->getDistrictList();
 		$this->load->view('header');
-		
-		
+
+
         $this->load->view('volunteer/list',$data);
         $this->load->view('footer');
 	}
@@ -26,7 +26,7 @@ class Volunteer extends CI_Controller {
 		$this->load->view('footer');
 	}
 	* */
-	
+
 	public function home(){
 		$this->load->view('header');
 		$this->load->view('home');

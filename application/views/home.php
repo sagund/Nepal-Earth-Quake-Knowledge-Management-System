@@ -82,7 +82,7 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                                 <div class="portfolio-box-caption">
                                     <div class="portfolio-box-caption-content">
                                         <div class="project-category text-faded">
-                                            Bagmati
+                                            <?php echo $district['zone_name']; ?>
                                         </div>
                                         <div class="project-name">
                                             <?php echo $district['name']; ?>

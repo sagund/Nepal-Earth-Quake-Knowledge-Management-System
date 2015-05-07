@@ -21,18 +21,31 @@
 					$this->load->view ( 'nav' );
 				?>
 				<section class="grid">
-					<a class="grid__item" href="<?php echo base_url(); ?>victim/district_details">
-						<h2 class="title title--preview">Sindhupalchowk</h2>
-						<div class="loader"></div>
-						<span class="category">Bagmati Zone</span>
-						<div class="meta meta--preview">
-							<img class="meta__avatar" src="http://placehold.it/50x50&text=Map Outline" alt="Achham" />
-							<span class="meta__date"><i class="fa fa-times"></i> 15 Dead</span>
-							<span class="meta__reading-time"><i class="fa fa-medkit"></i> 25 Casualties</span>
-						</div>
-					</a>
-					
+				  <?php if(isset($districts) && sizeof($districts)>0){
+	                $effected_districts=array("Sindhupalchok", "Kathmandu","Nuwakot", "Rasuwa", "Kavrepalanchok", "Bhaktapur", "Dolakha", "Gorkha","Dhading","Lalitpur","Okhaldhunga","Makwanpur","Ramechhap" );
+	                foreach ($districts as $key => $district) {
+	                   if(in_array($district['name'], $effected_districts)){  ?>
+	                   <a class="grid__item" href="<?php echo base_url(); ?>victim/district_details/<?php echo $district['id'];?>">
+							<h2 class="title title--preview"><?php echo $district['name']; ?></h2>
+							<div class="loader"></div>
+							<span class="category"><?php echo $district['zone_name']; ?> Zone</span>
+							<div class="meta meta--preview">
+								
+								<img class="meta__avatar" src="<?php echo base_url(); ?>assets/img/district_small/<?php echo ucfirst($district['name']); ?>.png" alt="<?php echo $district['name']; ?>" />
+								<span class="meta__date"><i class="fa fa-times"></i> 15 Dead</span>
+								<span class="meta__reading-time"><i class="fa fa-medkit"></i> 25 Casualties</span>
+							</div>
+						</a>
+	            <?php  
+	                }
+
+	                   
+	                }
+	            }?>
 				</section>
+					
+					
+				
 				
 			</div>
 		</div><!-- /wrapper -->

@@ -22,12 +22,11 @@ class Victim extends MY_Controller {
 	}
 
 
-	public function district_details() {
-		
-		
+	public function district_details($district_id) {		
 		$this->load->model('volunteer_model');
-        $data['districts'] = $this->volunteer_model->getDistrictList();
-        
+        $data['district_detail'] = $this->volunteer_model->getDistrictdetail_byid($district_id);
+       /* print_r($data['district_detail']);
+        die();*/
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav');
 		

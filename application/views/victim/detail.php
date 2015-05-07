@@ -7,10 +7,10 @@
 			<div class="">
 				
 				<article class="" id="toTopAn">
-					<span class="category category--full">Bagmati Zone</span>
-					<h2 class="title title--full">Sindhupalchowk</h2>
+					<span class="category category--full"><?php echo $district_detail['zone_name'] ?> Zone</span>
+					<h2 class="title title--full"><?php echo $district_detail['name'] ?></h2>
 					<div class="meta meta--full">
-						<img class="meta__avatar" src="http://placehold.it/100x100&text=Map Outline" alt="Achham" />
+						<img class="meta__avatar__large" src="<?php echo base_url(); ?>assets/img/district_large/<?php echo ucfirst($district_detail['name']); ?>.png" alt="<?php echo $district_detail['name'] ?>" />
 					
 					</div>
 					<div class="">
@@ -25,12 +25,11 @@
 								</ol>
 							</div>
 							<div class="clearfix"></div><br>
-							<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
-							<p>The four essays which are here collected will be of interest to a wide circle of educated people, but they can only be thoroughly understood and judged by those who are really acquainted with psychoanalysis as such. It is hoped that they may serve as a bond between students of ethnology, philology, folklore and of the allied sciences, and psychoanalysts; they cannot, however, supply both groups the entire requisites for such co-operation. They will not furnish the former with sufficient insight into the new psychological technique, nor will the psychoanalysts acquire through them an adequate command over the material to be elaborated. Both groups will have to content themselves with whatever attention they can stimulate here and there and with the hope that frequent meetings between them will not remain unproductive for science.</p>
+							<p></p>
 						</div>
 						<div class="col-md-4">
 							<table cellspacing="3" class="table table-striped">
-						    	<h3 class="text-center">Sindhupalchowk</h3>
+						    	<h3 class="text-center"><?php echo $district_detail['name'] ?></h3>
 							    <tbody>
 							    	<tr>
 							    		<th>Urgent Need</th>
@@ -38,51 +37,51 @@
 							    	</tr>
 							    	<tr>
 							    		<th>Municipality</th>
-							    		<td>2</td>
+							    		<td></td>
 							    	</tr>
 							    	<tr>
 							    		<th>VDC</th>
-							    		<td>12</td>
+							    		<td></td>
 							    	</tr>
 							        <tr>
 							            <th>Dead</th>
-							            <td>150</td>
+							            <td></td>
 							        </tr>
 							        <tr>
 							            <th>Casualties</th>
-							            <td>400</td>
+							            <td></td>
 							        </tr>
 							        <tr>
 							            <th>Homeless</th>
-							            <td>30</td>
+							            <td></td>
 							        </tr>
 							        <tr>
 							            <th>Population</th>
-							            <td>9000</td>
+							            <td></td>
 							        </tr>
 							        <tr>
 							            <th>Male</th>
-							            <td>4000</td>
+							            <td></td>
 							        </tr>
 							         <tr>
 							            <th>Female</th>
-							            <td>5000</td>
+							            <td></td>
 							        </tr>
 							         <tr>
 							            <th>Children</th>
-							            <td>870</td>
+							            <td></td>
 							        </tr>
 							         <tr>
 							            <th>Total Houses</th>
-							            <td>100</td>
+							            <td></td>
 							        </tr>
 							         <tr>
 							            <th>Damaged Houses</th>
-							            <td>35</td>
+							            <td></td>
 							        </tr>
 							         <tr>
 							            <th>Livable Houses</th>
-							            <td>65</td>
+							            <td></td>
 							        </tr>
 
 							    </tbody>
@@ -162,9 +161,9 @@
 							<h2>Others</h2>
 							<h3>References</h3>
 							<ul>
-								<li><a href="">Earthquake 2015, Ekantipur.com</a></li>
+								<!-- <li><a href="">Earthquake 2015, Ekantipur.com</a></li>
 								<li><a href="">Earthquake Nepal Achham, Annapurna Post.com</a></li>
-								<li><a href="">Nepal Earthquake, Photography Nepal [FB Page]</a></li>
+								<li><a href="">Nepal Earthquake, Photography Nepal [FB Page]</a></li> -->
 							</ul>
 						</div>
 					</div>

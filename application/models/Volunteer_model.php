@@ -28,6 +28,12 @@ class Volunteer_model extends CI_Model {
 		return $final_result;
 		
 	}
+
+	public function getDistrictdetail_byid($district_id){
+		$sql = "SELECT * FROM districts INNER JOIN zones ON(districts.zone_id=zones.zone_id) WHERE districts.id = ?";
+		$query=$this->db->query($sql,array($district_id));
+		return $query->row_array();
+	}
 	
 	
 	

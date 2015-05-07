@@ -19,6 +19,10 @@
                     <li>List of contacts at VDCs:We will do this by listing the representatives from each VDCs of the country through which the help will go. This will eliminate all the duplicate efforts. Right now in the ground different people from same VDCs are collecting relief packages so some VDCs have more supplies while other don't. This will also make everything transparent and easy to make an estimate for collecting funds.</li>
                     <li>KMS will in long term help the government and other agencies to estimate funds needed for long term rehabilitation of the victims.</li>
                 </ol>
+                
+                <h3>Why is there  a new of such project?</h3>
+                
+                <a href="http://www.washingtonpost.com/posteverything/wp/2015/05/01/we-have-no-idea-how-to-help-countries-like-nepal-recover-from-natural-disasters/?wpisrc=nl_headlines&wpmm=1" >The Washingon Posts' article - We have too little data to know how to help countries like Nepal recover from natural disasters</a>No one collects data on disaster relief. That's a big problem.
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-12">

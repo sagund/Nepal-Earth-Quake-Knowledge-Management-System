@@ -1,10 +1,14 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Nepal Earthquake 2015 Knowledge Management System (KMS)</h1>
+                <h1>Nepal Earthquake 2015</h1>
+                <h2>VICTIM RELIEF ENDEAVORS</h2>
+                Nepal Earthquake 2015 Knowledge Management System (KMS)
+                
                 <hr>
                 <p>Total Death: <strong>5489</strong>. Total Injured:<strong>10225</strong>.<br> 
-                	Most Affected Districts: <strong>Kathmandu, Sindhupalchowk,Gorkha, Nuwakot, Dhading, Bhaktapur</strong></p>
+                	Most Affected Districts: <strong>Sindhupalchowk, Kathmandu,Nuwakot, Rasuwa,
+Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga,Makawanpur,Ramechhap</strong></p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>

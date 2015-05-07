@@ -1,7 +1,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Nepal Earthquake Victim Relief Endeavours</h1>
+                <h1>Nepal Earthquake<br /> Victim Relief Endeavours</h1>
                 <hr>
                 <p>Total Death: <strong>5489</strong>. Total Injured:<strong>10225</strong>.<br> 
                 	Most Affected Districts: <strong>Kathmandu, Sindhupalchowk,Gorkha, Nuwakot, Dhading, Bhaktapur</strong></p>

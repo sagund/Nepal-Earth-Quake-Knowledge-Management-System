@@ -373,6 +373,14 @@ button:focus {
   display: block;
   border-radius: 50%;
   margin: 2em auto;
+  max-width: 100px;
+}
+
+.meta__avatar__large {
+  display: block;
+  
+  margin: 2em auto;
+  max-width: 300px;
 }
 
 .meta--preview .meta__avatar {

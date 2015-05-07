@@ -10,7 +10,7 @@ class Volunteer_model extends CI_Model {
 	}
 
 	public function getDistrictList(){
-		$sql = "SELECT districts.*,zones.zone_name FROM districts INNER JOIN zones ON(districts.zone_id=zones.zone_id) ORDER BY name ASC";
+		$sql = "SELECT districts.*,zones.zone_name,district_records.death,district_records.injured FROM districts INNER JOIN zones ON(districts.zone_id=zones.zone_id) LEFT JOIN district_records ON(districts.name=district_records.district_name) ORDER BY name ASC";
 		$query=$this->db->query($sql);
 		$result= $query->result_array();
 		$final_result = array();
@@ -27,6 +27,12 @@ class Volunteer_model extends CI_Model {
 		}
 		return $final_result;
 		
+	}
+
+	public function getDistrictdetail_byid($district_id){
+		$sql = "SELECT districts.*,zones.zone_name,district_records.* FROM districts INNER JOIN zones ON(districts.zone_id=zones.zone_id) LEFT JOIN district_records ON(districts.name=district_records.district_name) WHERE districts.id = ?";
+		$query=$this->db->query($sql,array($district_id));
+		return $query->row_array();
 	}
 	
 	

@@ -57,7 +57,7 @@
                             <label class="control-label"  for="district">District</label>
                             <div class="controls">
                                 <select name="district" class="form-control" required>
-                                    <option>Select District</option>
+                                    <option value="">Select District</option>
                                     <?php
             
             
@@ -74,7 +74,7 @@
                             <label class="control-label"  for="municipality">VDC/Municipality</label>
                             <div class="controls">
                                 <select name="district" class="form-control" required>
-                                    <option>Select VDC/Municipality</option>
+                                    <option value="">Select VDC/Municipality</option>
                                     <option  value="Kathmandu">Kathmandu</option>
                                 </select>
                             </div>

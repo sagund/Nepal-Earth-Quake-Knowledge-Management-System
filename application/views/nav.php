@@ -42,8 +42,12 @@
                     <li>
                         <a class="imp-menu" href="<?php echo $menulink ?>tomorrow">Tomorrows' Event</a>
                     </li>
-                    <li>
-                        <a class="imp-menu" href="<?php echo $menulink ?>report_missing">Report Missing</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle imp-menu" data-toggle="dropdown">Missing People <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="#" data-toggle="modal" data-target="#modal_reportMissing">Report Missing</a></li>
+                           <li><a href="<?php echo $menulink ?>missingpeople">View Missing People</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?php echo $menulink ?>#about">About</a>

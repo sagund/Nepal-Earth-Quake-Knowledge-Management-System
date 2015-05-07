@@ -68,7 +68,7 @@ $route['login'] = 'user/login';
 $route['relief'] = 'relief';
 $route['tomorrow'] = 'volunteer/tomorrow';
 $route['agencies'] = 'volunteer/agencies';
-$route['report_missing'] = 'volunteer/missing';
+$route['missingpeople'] = 'volunteer/missingpeople';
 
 $route['victim/add'] = 'victim/add';
 

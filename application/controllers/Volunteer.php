@@ -28,7 +28,8 @@ class Volunteer extends CI_Controller {
 	* */
 
 	public function home(){
-		$this->load->view('header');
+		$data['districts']=$this->volunteer_model->getDistrictList();
+		$this->load->view('header',$data);
 		$this->load->view('nav');
 		$this->load->view('home');
 		$this->load->view('footer');
@@ -56,6 +57,11 @@ class Volunteer extends CI_Controller {
 	public function agencies(){
 		$this->load->view('header');
 		$this->load->view('agencies');
+		$this->load->view('footer');
+	}
+	public function missing(){
+		$this->load->view('header');
+		$this->load->view('report_missing');
 		$this->load->view('footer');
 	}
 }

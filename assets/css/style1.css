@@ -198,7 +198,7 @@ button:focus {
 }
 
 .dropdown::after {
-  content: '\25BC';
+ /* content: '\25BC';*/
   margin-left: 2px;
   font-size: 80%;
 }

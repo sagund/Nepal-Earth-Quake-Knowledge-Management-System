@@ -5,7 +5,7 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Tomorrows' Events</h2>
+                <h2 class="page-header">Latest updates on volunteering opportunities</h2>
                 
                 <p>Here are the list of volunteers group who will be working tomorrow. Please send your group to <a href="mailto:rite2sagun@gmail.com">rite2sagun@gmail.com</a> to get added to this page.</p>
                

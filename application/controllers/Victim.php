@@ -21,6 +21,21 @@ class Victim extends MY_Controller {
 		$this->load->view ( 'footer' );
 	}
 
+
+	public function district_details() {
+		
+		
+		$this->load->model('volunteer_model');
+        $data['districts'] = $this->volunteer_model->getDistrictList();
+        
+		$this->load->view ( 'header', $data );
+		$this->load->view ( 'nav');
+		
+		$this->load->view ( 'victim/detail', $data );
+
+		$this->load->view ( 'footer' );
+	}
+
 	public function add() {
 		$data = array ();
 		

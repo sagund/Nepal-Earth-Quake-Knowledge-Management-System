@@ -32,36 +32,43 @@ class Volunteer extends CI_Controller {
 		$this->load->view('header',$data);
 		$this->load->view('nav');
 		$this->load->view('home');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
 	public function about(){
 		$this->load->view('header');
 		$this->load->view('about');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
 	public function help(){
 		$this->load->view('header');
 		$this->load->view('help');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
 	public function tomorrow(){
 		$this->load->view('header');
 		$this->load->view('tomorrow');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
 	public function emergency(){
 		$this->load->view('header');
 		$this->load->view('emergencycontact');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
 	public function agencies(){
 		$this->load->view('header');
 		$this->load->view('agencies');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
-	public function missing(){
+	public function missingpeople(){
 		$this->load->view('header');
-		$this->load->view('report_missing');
+		$this->load->view('missingpeople');
+		$this->load->view('modals');
 		$this->load->view('footer');
 	}
 }

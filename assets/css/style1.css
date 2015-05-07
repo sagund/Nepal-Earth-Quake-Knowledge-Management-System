@@ -605,11 +605,11 @@ button:focus {
 .meta--full .meta__author,
 .meta--full .meta__date,
 .meta--full .meta__reading-time {
-  opacity: 0;
+ /* opacity: 0;*/
 }
 
 .content__item p {
-  opacity: 0;
+ /* opacity: 0;*/
 }
 
 .category--full,

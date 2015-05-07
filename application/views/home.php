@@ -74,8 +74,13 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
             <div class="row no-gutter">
                 <?php if(isset($districts) && sizeof($districts)>0){
                     $effected_districts=array("Sindhupalchok", "Kathmandu","Nuwakot", "Rasuwa", "Kavrepalanchok", "Bhaktapur", "Dolakha", "Gorkha","Dhading","Lalitpur","Okhaldhunga","Makwanpur","Ramechhap" );
+                    $count = 0;
                     foreach ($districts as $key => $district) {
-                       if(in_array($district['name'], $effected_districts)){ ?>
+                       if(in_array($district['name'], $effected_districts)){ 
+                        //echo $count;
+                        if ($count<6) {
+                            
+                        ?>
                         <div class="col-lg-4 col-sm-6">
                             <a href="#" class="portfolio-box">
                                 <img src="<?php echo base_url(); ?>assets/img/quakes/1.jpg" class="img-responsive" alt="">
@@ -92,6 +97,10 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                             </a>
                         </div>
                 <?php   }
+                 $count++;
+                    }
+
+                       
                     }
                 }?>
                 <!-- <div class="col-lg-4 col-sm-6">

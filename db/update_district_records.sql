@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS district_records;
 CREATE TABLE IF NOT EXISTS district_records(
   id INTEGER(4) NOT NULL PRIMARY KEY 
-, district_name INTEGER(4)
+, district_name VARCHAR(255)
 , death INTEGER(11)
 , injured INTEGER(11)
 , house_destroyed INTEGER(11)

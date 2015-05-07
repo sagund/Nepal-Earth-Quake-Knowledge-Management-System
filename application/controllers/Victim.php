@@ -14,6 +14,7 @@ class Victim extends MY_Controller {
 		$this->load->model('volunteer_model');
         $data['districts'] = $this->volunteer_model->getDistrictList();
         
+        
 		$this->load->view ( 'header', $data );
 		
 		$this->load->view ( 'victim/list', $data );

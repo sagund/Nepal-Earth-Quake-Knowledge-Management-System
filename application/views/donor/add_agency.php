@@ -42,6 +42,13 @@
                             </div>
                         </div>
                         
+                        <div class="control-group">
+                            <label class="control-label" for="phone">Contact No.</label>
+                            <div class="controls">
+                                <input type="tel" id="phone" name="phone" placeholder="Enter Contact No." class="form-control" required>
+                            </div>
+                        </div>
+                        
 					</div>
                         
                     <div class="control-group col-md-12">
@@ -68,7 +75,7 @@
                                     </td>
 									<td><input name='vdc_mun0' type='text' placeholder='VDC/Municipality' class='form-control' />
                                     </td>
-									<td><textarea name='local_activity0' rows='3' placeholder='Enter in short the local activity of your agency' class='form-control'></textarea>
+									<td><textarea name='local_activity0' rows='2' placeholder='Enter in short the local activity of your agency' class='form-control'></textarea>
                                     </td>
                                     <td><input type='number' name='volunteer_no0' placeholder='No of Volunteers' min="0" class='form-control' />
                                     </td>
@@ -83,7 +90,8 @@
                            <button type="reset" class="btn btn-warning">Reset Form</button></div>
                            <br /><br />
                     	</div>
-                    	</div>
+                    	
+				</div>
             </fieldset>
         </form>
 	</div>
@@ -94,7 +102,7 @@
         var i=1;
         $("#add_row").click(function(){
     
-           $('#addr'+i).html("<td>"+ (i+1) +"</td> <td><select name='active_district"+i+"' class='form-control' required><option value=''>Select District</option><option value='kathmandu'>Kathmandu</option><option value='bhaktapur'>Bhaktapur</option></select></td> <td><input name='vdc_mun0"+i+"' type='text' placeholder='VDC/Municipality' class='form-control' required/> <td><textarea name='local_activity"+i+"' rows='3' placeholder='Enter in short the local activity of your agency' class='form-control'></textarea></td>  <td><input type='number' name='volunteer_no"+i+"' placeholder='No. of Volunteers' class='form-control' min='0' required/></td>");    
+           $('#addr'+i).html("<td>"+ (i+1) +"</td> <td><select name='active_district"+i+"' class='form-control' required><option value=''>Select District</option><option value='kathmandu'>Kathmandu</option><option value='bhaktapur'>Bhaktapur</option></select></td> <td><input name='vdc_mun0"+i+"' type='text' placeholder='VDC/Municipality' class='form-control' required/> <td><textarea name='local_activity"+i+"' rows='2' placeholder='Enter in short the local activity of your agency' class='form-control'></textarea></td>  <td><input type='number' name='volunteer_no"+i+"' placeholder='No. of Volunteers' class='form-control' min='0' required/></td>");    
     
         $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
     

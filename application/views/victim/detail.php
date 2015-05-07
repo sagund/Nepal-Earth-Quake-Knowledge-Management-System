@@ -1,19 +1,17 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ;?>assets/css/style1.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ;?>assets/css/district_list.css" />
-
+<div class="totop" ><a href="#theGrid"><i class="fa fa-chevron-up fa-2x"></i></a></div>
 <div class="container">
 	<div id="theGrid" class="">
 		<section class="grid">
 			<div class="">
-				<div class="totop" ><a href="#toTopAn"><i class="fa fa-chevron-up fa-2x"></i></a></div>
+				
 				<article class="" id="toTopAn">
-					<span class="category category--full">Seti Zone</span>
-					<h2 class="title title--full">Achham</h2>
+					<span class="category category--full">Bagmati Zone</span>
+					<h2 class="title title--full">Sindhupalchowk</h2>
 					<div class="meta meta--full">
 						<img class="meta__avatar" src="http://placehold.it/100x100&text=Map Outline" alt="Achham" />
-						<span class="meta__author">Far-Western Development Region</span>
-						<span class="meta__date hide"><i class="fa fa-times"></i> 15 Dead</span>
-						<span class="meta__reading-time hide"><i class="fa fa-medkit"></i> 25 Casualties</span>
+					
 					</div>
 					<div class="">
 						<div class="col-md-8">
@@ -32,7 +30,7 @@
 						</div>
 						<div class="col-md-4">
 							<table cellspacing="3" class="table table-striped">
-						    	<h3 class="text-center">Achham</h3>
+						    	<h3 class="text-center">Sindhupalchowk</h3>
 							    <tbody>
 							    	<tr>
 							    		<th>Urgent Need</th>

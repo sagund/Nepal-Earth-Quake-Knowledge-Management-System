@@ -21,10 +21,10 @@
 					$this->load->view ( 'nav' );
 				?>
 				<section class="grid">
-					<a class="grid__item" href="#achham" id="achham">
-						<h2 class="title title--preview">Achham</h2>
+					<a class="grid__item" href="<?php echo base_url(); ?>victim/district_details">
+						<h2 class="title title--preview">Sindhupalchowk</h2>
 						<div class="loader"></div>
-						<span class="category">Seti Zone</span>
+						<span class="category">Bagmati Zone</span>
 						<div class="meta meta--preview">
 							<img class="meta__avatar" src="http://placehold.it/50x50&text=Map Outline" alt="Achham" />
 							<span class="meta__date"><i class="fa fa-times"></i> 15 Dead</span>

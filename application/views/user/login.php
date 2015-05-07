@@ -1,46 +1,39 @@
-<div class="container">
-  <div class="row">
-  	<div class="col-md-6">
+<!--User Login Body-->    
+	<div class="container">
+		<div id="legend">
+    		<legend>Login</legend>
+		</div>
+		<div class="row col-md-6">
+        	<form class="form-horizontal" action="" method="POST">
+                <fieldset>
+                    <div class="well">
+                        <div class="control-group">
+                            <label class="control-label" for="email">E-mail</label>
+                            <div class="controls">
+                                <input type="email" id="email" name="email" placeholder="Enter Your Email" class="form-control  input-lg" required autofocus>
 
-          <form class="form-horizontal" action="" method="POST">
-          <fieldset>
-            <div id="legend">
-              <legend class="">Login</legend>
-            </div>
+                            </div>
+                        </div>
 
-            <div class="well">
-              <div class="control-group">
-                <label class="control-label" for="email">E-mail</label>
-                <div class="controls">
-                  <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" required>
+                        <div class="control-group">
+                            <label class="control-label" for="password">Password</label>
+                            <div class="controls">
+                                <input type="password" id="password" name="password" placeholder="Enter Your Password" class="form-control input-lg" required>
 
-                </div>
-              </div>
-
-              <div class="control-group">
-                <label class="control-label" for="password">Password</label>
-                <div class="controls">
-                  <input type="password" id="password" name="password" placeholder="" class="form-control input-lg" required>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <!-- Button -->
-              <div class="controls">
-                <button class="btn btn-success">Login</button>
-              </div>
-              <br>
-              <a href="#">Forgot Password?</a>
-            </div>
-          </fieldset>
-        </form>
-
-        <br>
-
- <p>If you don't have an account, please <a href="<?php echo base_url(); ?>register">register</a>.</p>
-  </div>
-    </div>
-
-</div>
+                            </div>
+                        </div>
+          
+                        <!-- Buttons -->
+                        <br />
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="btn btn-success">Login</button>
+                                <br /><br /><a href="#">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Don't have an account? Please <a href="<?php echo base_url(); ?>register">Register</a>.</p>
+                </fieldset>
+            </form>
+    	</div>
+	</div>

@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS district_records(
 , house_destroyed INTEGER(11)
 , partial_destroyed INTEGER(11)
 );
-INSERT INTO district_records(id,district_name,death,injured,house_destroyed,partial_destroyed) VALUES (1,"Sindhupalchowk",2991,852,44310,18991);
+INSERT INTO district_records(id,district_name,death,injured,house_destroyed,partial_destroyed) VALUES (1,"Sindhupalchok",2991,852,44310,18991);
 INSERT INTO district_records(id,district_name,death,injured,house_destroyed,partial_destroyed) VALUES (2,"Kathmandu",1210,4634,27640,33215);
 INSERT INTO district_records(id,district_name,death,injured,house_destroyed,partial_destroyed) VALUES (3,"Nuwakot",950,1312,30000,15000);
 INSERT INTO district_records(id,district_name,death,injured,house_destroyed,partial_destroyed) VALUES (4,"Dhading",702,698,20000,15000);

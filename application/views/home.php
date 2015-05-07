@@ -73,7 +73,29 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
     <section class="no-padding" id="districts">
         <div class="container-fluid">
             <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
+                <?php if(isset($districts) && sizeof($districts)>0){
+                    $effected_districts=array("Sindhupalchok", "Kathmandu","Nuwakot", "Rasuwa", "Kavrepalanchok", "Bhaktapur", "Dolakha", "Gorkha","Dhading","Lalitpur","Okhaldhunga","Makwanpur","Ramechhap" );
+                    foreach ($districts as $key => $district) {
+                       if(in_array($district['name'], $effected_districts)){ ?>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="portfolio-box">
+                                <img src="<?php echo base_url(); ?>assets/img/quakes/1.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Bagmati
+                                        </div>
+                                        <div class="project-name">
+                                            <?php echo $district['name']; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                <?php   }
+                    }
+                }?>
+                <!-- <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
                         <img src="<?php echo base_url(); ?>assets/img/quakes/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -162,7 +184,7 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
                 
             </div>
         </div>

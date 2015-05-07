@@ -43,6 +43,9 @@
                         <a class="imp-menu" href="<?php echo $menulink ?>tomorrow">Volunteering!</a>
                     </li>
                     <li>
+                        <a class="imp-menu" href="<?php echo $menulink ?>report_missing">Report Missing</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="<?php echo $menulink ?>#about">About</a>
                     </li>
                     <li>

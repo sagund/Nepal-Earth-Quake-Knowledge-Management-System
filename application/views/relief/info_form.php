@@ -71,7 +71,7 @@
                         <div class="control-group">
                             <label class="control-label" for="district">District</label>
                             <div class="controls">
-                                <select name="district" id="district" class="form-control" required>
+                                <select name="district" id="district" class="form-control" required><option value="">Select District</option>
                                     <?php 
                                         if(isset($districts) && sizeof($districts)>0){
                                             foreach ($districts as $key => $district) {
@@ -93,7 +93,6 @@
                                 <select name="vdc_municipality" id="vdc" class="form-control" >
                                     <option value="">Select VDC/Municipality</option>
                                         <option value="kathmandu">Kathmandu</option>
-                                </select>
                                 </select>	
 
                             </div>
@@ -138,7 +137,7 @@
                                     <td><input name='age0' type='number' min='0' max='125' placeholder='Age' class='form-control' /></td>
                                     <td>
                                         <select name='gender0' class='form-control'>
-                                            <option>Select Gender</option>
+                                            <option value="">Select Gender</option>
                                             <option value='m'>Male</option>
                                             <option value='f'>Female</option>
                                             <option value='o'>Other</option>
@@ -147,7 +146,7 @@
                                     <td><input type='text' name='citizen_num0' placeholder='Citizenship No.' class='form-control' /></td>
                                     <td>
                                         <select name='status0' class='form-control'>
-                                            <option>Select Physical State</option>
+                                            <option value="">Select Physical State</option>
                                             <option value='living'>Living & Healthy</option>
                                             <option value='injured'>Injured</option>
                                             <option value='missing'>Missing</option>

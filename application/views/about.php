@@ -34,12 +34,15 @@
         			<li>Rajan Acharya [UI Developer]</li>
         			<li>Niesh Dosooye [Core Developer]</li>
         			<li>Sudin Manandhar [Core Developer]</li>
-        			<li>Subarna Sapkota [DATA]</li>
+        			<li>Subarna Sapkota [Data]</li>
         			<li>Biju Nakarmi [Technical Manager]</li>
         			<li>Spandan Shrestha [Data &amp; Analytics]</li>
         			<li>Raju Dawadi [Code Contribution]</li>
         			<li>Rajiv Parajuli</li>
-        			<li>Rajiv Parajuli</li>
+        			<li>Pratik Hyomba [UI Developer]</li>
+                    <li>Khem Raj Dhakal [Data]</li>
+                    <li>Rajani Shrestha [Data]</li>
+                    <li>Sushan Shrestha [Data &amp; Misc.]</li>
                  </ul>
 
             </div>

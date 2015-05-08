@@ -72,6 +72,12 @@ $route['missingpeople'] = 'volunteer/missingpeople';
 
 $route['victim/add'] = 'victim/add';
 
+$route['admin/pages/(:any)']='admin/pages/$1';
+$route['admin/updatepage/(:any)']='admin/addpage/$1';
+$route['admin/deletepage/(:any)']='admin/deletepage/$1';
+
+$route['page/(:any)'] = 'volunteer/page/$1';
+
 
 
 

@@ -93,7 +93,6 @@
     .Copyleft{
         font-size: 1.5em;
     }
-
 </style>
    
 <br><br>
@@ -147,8 +146,8 @@
         <div class="col-sm-12 text-center Copyleft">
             Copyleft <i class="fa fa-copyright flip"></i> <?php echo date("Y"); ?>, <a href="<?php echo base_url(); ?>">Afterquake.org</a>
             <ul class="list-inline">
-              <li><a href="">Disclaimer</a></li> | 
-              <li><a href="">Credits</a></li>
+              <li><a href="<?php echo base_url(); ?>page/disclaimer">Disclaimer</a></li> | 
+              <li><a href="<?php echo base_url(); ?>page/credits">Credits</a></li>
             </ul>
         </div>
         
@@ -209,6 +208,18 @@
     <?php 
         }
     ?>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('img').attr('onerror','imgError(this);');
+      });
+
+      function imgError(image) {
+          image.onerror = "";
+          image.src = "http://placehold.it/640x480&text=No Image";
+          return true;
+      }
+    </script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
 
                 <hr>
                 <p>Total Death: <strong>7802</strong>. Total Injured:<strong>16434</strong>.<br> 
-                    <small>(Source: <a href="http://drrportal.gov.np">drrportal.gov.np</a>  Updated Date: 2015-05-08)</small><br />
+                    <small>(Source: <a href="http://drrportal.gov.np" target="_blank">drrportal.gov.np</a>  Updated Date: 2015-05-08)</small><br />
                 	Most Affected Districts: <strong>Sindhupalchowk, Kathmandu,Nuwakot, Rasuwa,
 Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga,Makawanpur,Ramechhap</strong></p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
@@ -79,12 +79,13 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                     foreach ($districts as $key => $district) {
                        if(in_array($district['name'], $effected_districts)){ 
                         //echo $count;
-                        if ($count<6) {
+                        //if ($count<6) {
                             
                         ?>
-                        <div class="col-lg-4 col-sm-6">
+                       <!--  <div class="col-lg-4 col-sm-6"> -->
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
                             <a href="<?php echo base_url(); ?>victim/district_details/<?php echo $district['id'];?>" class="portfolio-box">
-                                <img src="<?php echo base_url(); ?>assets/img/affected_areas/<?php echo $district['name']; ?>/main.jpg" class="img-responsive" alt="">
+                                <img src="<?php echo base_url(); ?>assets/img/affected_areas/<?php echo strtolower($district['name']); ?>/main.jpg" class="img-responsive" alt="">
                                 <div class="portfolio-box-caption">
                                     <div class="portfolio-box-caption-content">
                                         <div class="project-category text-faded">
@@ -97,7 +98,7 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                                 </div>
                             </a>
                         </div>
-                <?php   }
+                <?php   //}
                  $count++;
                     }
                  }

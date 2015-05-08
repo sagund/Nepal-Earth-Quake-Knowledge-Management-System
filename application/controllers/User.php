@@ -21,6 +21,7 @@ class User extends MY_Controller {
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav' );
 		$this->load->view ( 'user/dashboard', $data );
+		$this->load->view('modals');
 		$this->load->view ( 'footer', $data );
 
 	}
@@ -111,6 +112,7 @@ class User extends MY_Controller {
 			$this->load->view ( 'nav', $data );
 
 			$this->load->view ( 'user/register', $data );
+			$this->load->view('modals');
 			$this->load->view ( 'footer' );
 		}
 	}
@@ -168,6 +170,7 @@ class User extends MY_Controller {
 			$this->load->view ( 'header', $data );
 			$this->load->view ( 'nav', $data );
 			$this->load->view ( 'user/login', $data );
+			$this->load->view('modals');
 			$this->load->view ( 'footer' );
 
 	}

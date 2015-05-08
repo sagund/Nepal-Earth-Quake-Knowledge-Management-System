@@ -6,7 +6,7 @@
 
                 <hr>
                 <p>Total Death: <strong>7802</strong>. Total Injured:<strong>16434</strong>.<br> 
-                    <small>(Source: <a href="http://drrportal.gov.np">drrportal.gov.np</a>  Updated Date: 2015-05-08)</small><br />
+                    <small>(Source: <a href="http://drrportal.gov.np" target="_blank">drrportal.gov.np</a>  Updated Date: 2015-05-08)</small><br />
                 	Most Affected Districts: <strong>Sindhupalchowk, Kathmandu,Nuwakot, Rasuwa,
 Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga,Makawanpur,Ramechhap</strong></p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
@@ -21,7 +21,7 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                     <h2 class="section-heading">We've got what you need!</h2>
                     <hr class="light">
                     <p class="text-faded">This is an attempt to very quickly realize a Knowledge Management System(KMS) which you can use to match demands, supplies, supports and needs in the earthquake victim relief endeavors, where everyone in the world is with Nepal.</p>
-                    <a href="<?php echo base_url(); ?>about" class="btn btn-default btn-xl">Read More!</a>
+                    <a href="<?php echo base_url(); ?>page/about" class="btn btn-default btn-xl">Read More!</a>
                 </div>
             </div>
         </div>
@@ -39,21 +39,21 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
-                     <a href="<?php echo base_url(); ?>victim"><div class="service-box">
+                     <a href="<?php echo base_url(); ?>"><div class="service-box">
                         <i class="fa fa-4x fa-users wow bounceIn text-primary"></i>
                         <h3>Victims</h3>
                         <p class="text-muted">There are more than 8 millions people are affected by earthquake. Many are from very remote areas of Nepal.</p>
                     </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <a href="<?php echo base_url(); ?>help"><div class="service-box">
+                    <a href="<?php echo base_url(); ?>page/agencies"><div class="service-box">
                         <i class="fa fa-4x fa-thumbs-up wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Volunteer</h3>
                         <p class="text-muted">Even with your small effort many people can live better. Lets volunteer and help.</p>
                     </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <a href="#"><div class="service-box">
+                    <a href="<?php echo base_url(); ?>"><div class="service-box">
                         <i class="fa fa-4x fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>Donate</h3>
                         <p class="text-muted">We help to make sure that the donations go to the people in need. We help in routing your contributions to the right people.</p>
@@ -79,12 +79,13 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                     foreach ($districts as $key => $district) {
                        if(in_array($district['name'], $effected_districts)){ 
                         //echo $count;
-                        if ($count<6) {
+                        //if ($count<6) {
                             
                         ?>
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="#" class="portfolio-box">
-                                <img src="<?php echo base_url(); ?>assets/img/quakes/1.jpg" class="img-responsive" alt="">
+                       <!--  <div class="col-lg-4 col-sm-6"> -->
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <a href="<?php echo base_url(); ?>victim/district_details/<?php echo $district['id'];?>" class="portfolio-box">
+                                <img src="<?php echo base_url(); ?>assets/img/affected_areas/<?php echo strtolower($district['name']); ?>/main.jpg" class="img-responsive" alt="">
                                 <div class="portfolio-box-caption">
                                     <div class="portfolio-box-caption-content">
                                         <div class="project-category text-faded">
@@ -97,103 +98,11 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                                 </div>
                             </a>
                         </div>
-                <?php   }
+                <?php   //}
                  $count++;
                     }
-
-                       
-                    }
+                 }
                 }?>
-                <!-- <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="<?php echo base_url(); ?>assets/img/quakes/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Bagmati
-                                </div>
-                                <div class="project-name">
-                                    Kathmandu
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="<?php echo base_url(); ?>assets/img/quakes/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Seti
-                                </div>
-                                <div class="project-name">
-                                    Achham
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="<?php echo base_url(); ?>assets/img/quakes/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Lumbini
-                                </div>
-                                <div class="project-name">
-                                    Argakhanchi
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="<?php echo base_url(); ?>assets/img/quakes/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Bagmati
-                                </div>
-                                <div class="project-name">
-                                    Bhaktapur
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="<?php echo base_url(); ?>assets/img/quakes/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Dhaulagiri
-                                </div>
-                                <div class="project-name">
-                                    Baglung
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="<?php echo base_url(); ?>assets/img/quakes/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Mahakali
-                                </div>
-                                <div class="project-name">
-                                    Baitadi
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
                 
             </div>
         </div>
@@ -203,7 +112,7 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Let's help, even small effort can make big changes. </h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Join Us Now!</a>
+                <a href="<?php echo base_url(); ?>register" class="btn btn-default btn-xl wow tada">Join Us Now!</a>
             </div>
         </div>
     </aside>
@@ -218,11 +127,11 @@ Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
+                    <p>01-526-0469</p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@afterquake.org</a></p>
+                    <p><a href="mailto:feedback@afterquake.org">feedback@afterquake.org</a></p>
                 </div>
             </div>
         </div>

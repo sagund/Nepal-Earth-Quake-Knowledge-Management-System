@@ -46,38 +46,41 @@
                         <a href="#" class="dropdown-toggle imp-menu" data-toggle="dropdown">Missing People <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                            <li><a href="#" data-toggle="modal" data-target="#modal_reportMissing">Report Missing</a></li>
-                           <li><a href="<?php echo $menulink ?>missingpeople">View Missing People</a></li>
+                           <li><a href="<?php echo $menulink ?>page/missingpeople">View Missing People</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="page-scroll" href="<?php echo $menulink ?>#about">About</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a class="page-scroll" href="<?php echo $menulink ?>#help">Help</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="<?php echo $menulink ?>victim">Affected Districts</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="<?php echo $menulink ?>#districts">Affected Districts</a>
+                        <a class="page-scroll" href="<?php echo base_url(); ?>page/agencies">Relief Agencies</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                            <li><a class="page-scroll" href="<?php echo $menulink ?>#contact">Our Contact</a></li>
-                            <li><a href="<?php echo $menulink ?>emergency-contacts">Emergency Contact</a></li>
+                            <li><a href="<?php echo $menulink ?>page/emergencycontact">Emergency Contact</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="<?php echo base_url(); ?>agencies">Relief Agencies</a>
-                    </li>
+                    
 
+                     
                     <?php 
-                    if (!$logged_in){
-                        echo '<li>
-                                <a href="'.$menulink.'register">Register</a></a>
-                            </li>
-                            <li>
-                                <a href="'.$menulink.'login">Login</a>
-                            </li>';
-                    }else{ ?>
+                    if (!$logged_in){ ?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                               <li><a class="page-scroll" href="<?php echo $menulink ?>register">Register</a></li>
+                                <li><a href="<?php echo $menulink ?>login">Login</a></li>
+                            </ul>
+                        </li>
+                    <?php }else{ ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <?php  echo ($first_name.' '.$last_name); ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">

@@ -10,7 +10,9 @@
                 <h2 class="page-header"><?php echo $page_detail['page_title']; ?></h2>
                 <?php echo $page_detail['page_description']; ?>
                 <br>
-                <p>Last Updated On:<a ><?php echo $page_detail['updated_date']; ?></a></p>
+                <p>Last Updated On:<a ><?php 
+                $date = explode(' ', $page_detail['updated_date']);
+                echo $date[0]; ?></a></p>
             </div>
         </div>
     </div>

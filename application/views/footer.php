@@ -1,3 +1,163 @@
+<style type="text/css">
+    .foot-links a, .foot-links p{
+      font-size: 13px;
+      color: rgb(63, 63, 63);
+      text-shadow: rgb(255, 255, 255) 1px 1px 0px;
+    }
+
+    #footer{
+      background: rgb(241, 241, 241);
+      border-top: 1px solid rgb(222, 222, 222);
+      margin-top: -2px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+     }
+
+    .foot-header{
+      font-size: 18px;
+      color: #f05f40;
+      padding-bottom: 20px;
+      text-shadow: rgb(255, 255, 255) 1px 1px 0px;
+    }
+      
+    .footer-img{
+        width: 100%;
+    }
+
+    #bottom-footer{
+      margin-bottom: 20px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #bottom-footer a{
+          text-decoration: none;
+      color: #626262;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      font-size: 12px;
+      padding: 0px 15px;
+      border-right: 1px solid #ccc;
+      font-size: 13px;
+      color: #626262;
+      padding: 0 12px;
+      text-shadow: 1px 1px 0 rgba(255,255,255,1);
+    }
+
+    .foot-links a:hover, #bottom-footer a:hover{
+        color: #f05f40;
+    }
+
+    #bottom-footer .phone img{
+        margin-right: 7px;
+    }
+
+    #bottom-footer .phone .red{
+        font-size: 22px;
+      margin-top: -7px;
+      font-family: 'OpenSansRegular', Arial, sans-serif;
+      font-size: 18px!important;
+      color: #d10029!important;
+      position: relative;
+      top: -5px;
+      text-shadow: 1px 1px 0 rgba(255,255,255,1)!important;
+    }
+
+    #bottom-footer .phone .red small{
+        font-family: 'OpenSansRegular', Arial, sans-serif;
+      font-size: 12px!important;
+      display: block;
+      color: #626262!important;
+      text-shadow: 1px 1px 0 rgba(255,255,255,1)!important;
+      margin-top: -5px;
+    }
+
+    #final-footer{
+        font-size: 11px;
+        color: #666;
+    }
+
+    #final-footer i{
+        font-size: auto;
+    }
+
+    .flip{
+        transform:rotate(180deg);
+    }
+
+    .Copyleft{
+        font-size: 1.5em;
+    }
+
+</style>
+   
+<br><br>
+<div id="footer">
+<div class="container">
+  <div class="row">
+     <hr> 
+      <div class="col-sm-3">
+        <div class="foot-header">Important Links</div>
+        <div class="foot-links">
+            <ul class="list-unstyled">
+                <li><a href="http://drrportal.gov.np/" target="_blank">Nepal Disaster Risk Reduction Portal</a></li>
+                <li><a href="http://www.icimod.org/?q=17851" target="_blank">ICIMOD</a></li>
+                <li><a href="http://hami.ekantipur.com/" target="_blank">Hami Ekantipur</a></li>
+                <li><a href="http://bhukampa.net" target="_blank">Bhukampa</a></li>
+                <li><a href="http://kathmandulivinglabs.org/earthquake/" target="_blank">Kathmandu Living Labs</a></li>
+                <li><a href="http://kaha.co/#/app/section/volunteer" target="_blank">Kaha</a></li>
+            </ul>
+        </div>
+      </div><!--/col-sm-3-->
+    <div class="col-sm-3">
+      <div class="foot-header">Helping Groups</div>
+      <div class="foot-links">
+       <ul class="list-unstyled">
+            <li><a href="http://leadnepal.com/" target="_blank">BibekSheel Nepali</a></li>
+            <li><a href="http://www.nrcs.org/" target="_blank">Red Cross Nepal</a></li>
+            <li><a href="http://www.lionsclubs.org.np/" target="_blank">Lions Club Nepal</a></li>
+            <li><a href="http://volunteersnepal.net/" target="_blank">Volunteers Nepal</a></li>
+        </ul>
+      </div>
+    </div>
+     <div class="col-sm-6">
+      <div class="foot-header">What we are trying to do?</div>
+        <div class="foot-links">
+        <p>This is an attempt to very quickly realize a Knowledge Management System(KMS) which you can use to match demands, supplies, supports and needs in the earthquake victim relief endeavors, where everyone in the world is with Nepal.</p>
+        <p>The Washingon Posts' article - <a href="http://www.washingtonpost.com/posteverything/wp/2015/05/01/we-have-no-idea-how-to-help-countries-like-nepal-recover-from-natural-disasters/?wpisrc=nl_headlines&wpmm=1">We have too little data to know how to help countries like Nepal recover from natural disasters</a>. No one collects data on disaster relief. That's a big problem.</p>
+      </div>
+    </div><!--/col-sm-3-->
+    
+    </div><!--/row-->
+    <br>
+  <div class="row">
+    
+    <div id="">
+        <center><img src="<?php echo base_url(); ?>assets/img/footer.jpg" class="footer-img"></center>
+        <br>
+    </div>
+  </div><!--/row 2-->
+      <div class="row" id="final-footer">
+       
+        <div class="col-sm-12 text-center Copyleft">
+            Copyleft <i class="fa fa-copyright flip"></i> <?php echo date("Y"); ?>, <a href="<?php echo base_url(); ?>">Afterquake.org</a>
+            <ul class="list-inline">
+              <li><a href="">Disclaimer</a></li> | 
+              <li><a href="">Credits</a></li>
+            </ul>
+        </div>
+        
+      </div>
+  </div><!--/container-->
+</div><!--/footer--></div>
+
+
+<div id="push"></div>
 
     
 

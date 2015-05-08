@@ -9,16 +9,17 @@ class Volunteer extends CI_Controller {
 		$this->load->model('base_model');
 	}
 
-	public function index()
+	/*public function index()
 	{
 		$data['districts'] = $this->volunteer_model->getDistrictList();
 		$this->load->view('header');
 
 
         $this->load->view('volunteer/list',$data);
+        $this->load->view('modals');
         $this->load->view('footer');
 	}
-
+*/
 	/*
 	public function register(){
 		$this->load->view('header');

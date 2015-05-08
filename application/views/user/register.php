@@ -34,7 +34,7 @@
                                     <label class="control-label" for="user_type">Role</label>
                                     <div class="controls">
                                         <select id="user_type" name="user_type" placeholder="" class="form-control" required>
-                                            <option>Select User Type</option>
+                                            <option value="">Select User Type</option>
                                             <?php 
                                                 print_r($user_types);
                                                 foreach($user_types as $type){
@@ -83,7 +83,7 @@
                                     <label class="control-label" for="country">Country</label>
                                     <div class="controls">
                                         <select id="country" name="country" placeholder="" class="form-control" required>
-                                            <option>Select Your Country</option>
+                                            <option value="">Select Your Country</option>
                                             <?php 
                                             foreach($countries as $key=>$country){
                                             echo '<option value="'.$country['country_name'].'" ';

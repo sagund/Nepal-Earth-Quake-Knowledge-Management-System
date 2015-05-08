@@ -45,11 +45,11 @@
 							    	</tr>
 							        <tr>
 							            <th>Dead</th>
-							            <td></td>
+							            <td><?php echo $district_detail['death'] ?></td>
 							        </tr>
 							        <tr>
 							            <th>Casualties</th>
-							            <td></td>
+							            <td><?php echo $district_detail['injured'] ?></td>
 							        </tr>
 							        <tr>
 							            <th>Homeless</th>
@@ -77,7 +77,7 @@
 							        </tr>
 							         <tr>
 							            <th>Damaged Houses</th>
-							            <td></td>
+							            <td><?php echo $district_detail['house_destroyed']+$district_detail['partial_destroyed'] ?></td>
 							        </tr>
 							         <tr>
 							            <th>Livable Houses</th>

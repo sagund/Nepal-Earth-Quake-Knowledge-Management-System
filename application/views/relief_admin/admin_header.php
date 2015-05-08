@@ -11,14 +11,14 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 		<!-- basic styles -->
-		<link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
 
-		<link rel="stylesheet" href="/assets/admin/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" />
 		<!--[if IE 7]>
-		  <link rel="stylesheet" href="/assets/admin/css/font-awesome-ie7.min.css" />
+		  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/css/font-awesome-ie7.min.css" />
 		<![endif]-->
 
-
+		<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.11.3.min.js"></script>
 		<!-- page specific plugin styles -->
 
         <?php if ( isset( $css_files ) ): ?>
@@ -35,5 +35,12 @@
 
 	</head>
 
-	<body style="padding:20px">
-<h3>Nepal Earth Quake Knowledge Management System</h3>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="page-header">Nepal Earth Quake Knowledge Management System</h2>
+				</div>
+			</div>
+		</div>
+

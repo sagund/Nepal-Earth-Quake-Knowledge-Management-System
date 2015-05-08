@@ -10,4 +10,5 @@
 <li><a href='<?php echo site_url('admin/crud/districts')?>'>District Admin</a></li>
 <li><a href='<?php echo site_url('admin/crud/district_units')?>'>DistrictUnits Admin</a></li>
 <li><a href='<?php echo site_url('admin/crud/wards')?>'>Wards Admin</a></li>
+<li><a href='<?php echo site_url('admin/pages')?>'>Static Pages</a></li>
 </ul>

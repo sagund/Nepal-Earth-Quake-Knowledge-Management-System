@@ -5,6 +5,7 @@ class Volunteer extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('volunteer_model');
+		$this->load->model('admin_model');
 		$this->load->model('base_model');
 	}
 
@@ -71,4 +72,17 @@ class Volunteer extends CI_Controller {
 		$this->load->view('modals');
 		$this->load->view('footer');
 	}
+
+
+	public function page($url){
+		$this->data['page_detail']=$this->admin_model->getStaticPageDetail($url);
+		if (sizeof($this->data['page_detail'])>0) {
+			$this->load->view('header',$this->data);
+			$this->load->view('static_page',$this->data);
+			$this->load->view('modals');
+			$this->load->view('footer');	
+		}
+		
+	}
+
 }

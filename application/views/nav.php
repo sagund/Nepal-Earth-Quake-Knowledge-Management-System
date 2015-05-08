@@ -49,6 +49,9 @@
                            <li><a href="<?php echo $menulink ?>page/missingpeople">View Missing People</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="imp-menu" href="<?php echo $menulink ?>page/maps">Maps</a>
+                    </li>
                     <!-- <li>
                         <a class="page-scroll" href="<?php echo $menulink ?>#about">About</a>
                     </li> -->

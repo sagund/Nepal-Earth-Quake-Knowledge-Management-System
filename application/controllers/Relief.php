@@ -96,7 +96,7 @@ class Relief extends MY_Controller {
 			$this->load->view ( 'header', $data );
 			$this->load->view ( 'nav', $data );
 			$this->load->view ( 'relief/condition_form', $data );
-
+			$this->load->view('modals');
 			$this->load->view ('footer' );
 
 

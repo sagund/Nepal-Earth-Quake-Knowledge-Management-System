@@ -18,6 +18,7 @@ class Victim extends MY_Controller {
 		$this->load->view ( 'header', $data );
 		
 		$this->load->view ( 'victim/list', $data );
+		$this->load->view('modals');
 
 		$this->load->view ( 'footer' );
 	}
@@ -32,6 +33,7 @@ class Victim extends MY_Controller {
 		$this->load->view ( 'nav');
 		
 		$this->load->view ( 'victim/detail', $data );
+		$this->load->view('modals');
 
 		$this->load->view ( 'footer' );
 	}
@@ -121,7 +123,7 @@ class Victim extends MY_Controller {
 			$this->load->view ( 'header', $data );
             $this->load->view ( 'nav', $data );
 			$this->load->view ( 'relief/info_form', $data );
-
+			$this->load->view('modals');
 			$this->load->view ( 'footer' );
 
 			//$this->load->view ( 'footer' );

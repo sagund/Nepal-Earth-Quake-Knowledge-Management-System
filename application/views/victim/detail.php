@@ -57,7 +57,7 @@
 							        </tr>
 							        <tr>
 							            <th>Population</th>
-							            <td></td>
+							            <td><?php echo $district_detail['total_population'] ?></td>
 							        </tr>
 							        <tr>
 							            <th>Male</th>
@@ -73,15 +73,15 @@
 							        </tr>
 							         <tr>
 							            <th>Total Houses</th>
-							            <td></td>
+							            <td><?php $total_houses=$district_detail['total_houses']; echo $total_houses ?></td>
 							        </tr>
 							         <tr>
 							            <th>Damaged Houses</th>
-							            <td><?php echo $district_detail['house_destroyed']+$district_detail['partial_destroyed'] ?></td>
+							            <td><?php $total_damaged=$district_detail['public_house_full_destroyed']+$district_detail['public_house_partial_destroyed']; echo $total_damaged ?></td>
 							        </tr>
 							         <tr>
 							            <th>Livable Houses</th>
-							            <td></td>
+							            <td><?php $livable_houses=$total_houses-$total_damaged; echo $livable_houses; ?></td>
 							        </tr>
 
 							    </tbody>

@@ -44,3 +44,7 @@
 			</div>
 		</div>
 
+		<?php
+		 $application_path = dirname(__FILE__);
+		include("$application_path/../flash_messages.inc.php"); ?>
+

@@ -65,4 +65,10 @@ class admin_model extends CI_Model{
 	 For Static page Purpose Ends here
 	 ///////////////////////////// */
 
+	 function checkLoginDetail($email,$password){
+	 	$sql="Select * from user where email=? and password=? and user_type='admin'";
+	 	$query=$this->db->query($sql,array($email,md5($password)));
+	 	return $query->row_array();
+	 }
+
 } 

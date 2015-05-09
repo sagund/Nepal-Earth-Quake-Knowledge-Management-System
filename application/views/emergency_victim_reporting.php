@@ -134,7 +134,7 @@ function geolocate() {
         <form class="form-horizontal" action="" method="POST">
                 	<fieldset>
                         <div class="well col-md-12">
-                        	<h3><strong>Report Your Situation</strong></h4>
+                        	<h3><strong>Report Your Situation no.</strong></h4>
 							<legend></legend>
                             <div class="col-md-6">
                                 <h4><strong>Your Condition</strong></h4>
@@ -171,9 +171,19 @@ function geolocate() {
                             <label class="checkbox-inline"><input type="checkbox" name="victim_condition" value="suffocating" class="input-xlarge">Suffocation &nbsp;</label>
                             <label class="checkbox-inline"><input type="checkbox" name="victim_condition" value="dehydrating" class="input-xlarge">Dehydration &nbsp;</label>
                             <label class="checkbox-inline"><input type="checkbox" name="victim_condition" value="bleeding" class="input-xlarge">Bleeding &nbsp;</label>
-                            <label class="checkbox-inline"><input type="checkbox" name="victim_condition" value="unconscious" class="input-xlarge">Losing my consciousness</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="victim_condition" value="unconscious" class="input-xlarge">Losing consciousness</label>
 							</div>
 						</div>
+                        
+                        		<div class="control-group">
+									<label class="control-label" for="hazards">Please check mark if you are in any of the following hazarduous situation. </label>
+									<div class="controls">
+                            			<label class="checkbox-inline"><input type="checkbox" name="fire" value="fire" class="input-xlarge">Fire</label>
+                            			<label class="checkbox-inline"><input type="checkbox" name="chemical" value="chemical" class="input-xlarge">Chemical</label>
+                            			<label class="checkbox-inline"><input type="checkbox" name="debries" value="debries" class="input-xlarge">Falling Debries / Collapsing Buildings </label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="altitude" value="altitude" class="input-xlarge">Altitude</label>
+									</div>
+								</div>
                         
                         		<div class="control-group">
                             <label class="control-label" for="situation_descp">If you can, please describe your situation further.</label>

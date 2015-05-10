@@ -5,7 +5,7 @@
                 <h1>Nepal Earthquake<br /> Victim Relief Endeavours</h1>
 
                 <hr>
-                <p>Total Death: <strong>7903</strong>. Total Injured:<strong>17803</strong>.<br> 
+                <p>Total Dead: <strong>7903</strong>. Total Injured:<strong>17803</strong>.<br> 
                     <small>(Source: <a href="http://drrportal.gov.np" target="_blank">drrportal.gov.np</a>  Updated Date: 2015-05-09)</small><br />
                 	Most Affected Districts: <strong>Sindhupalchowk, Kathmandu,Nuwakot, Rasuwa,
 Kavrepalanchowk, Bhaktapur, Dolakha,Nuwakot, Gorkha,Dhading,Lalitpur,Okhaldhunga,Makawanpur,Ramechhap</strong></p>

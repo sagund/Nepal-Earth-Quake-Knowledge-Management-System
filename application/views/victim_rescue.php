@@ -351,10 +351,6 @@ function showPosition(position) {
 		});
 	}
 	
-	function updateMarkerStatus(str) {
-		document.getElementById('markerStatus').innerHTML = str;
-	}
-	
 	function updateMarkerPosition(latLng) {
 		document.getElementById('info').innerHTML = [
     	latLng.lat(),

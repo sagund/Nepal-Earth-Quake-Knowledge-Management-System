@@ -332,12 +332,10 @@ function showPosition(position) {
   });
   
   google.maps.event.addListener(marker, 'drag', function() {
-    //updateMarkerStatus('Dragging...');
     updateMarkerPosition(marker.getPosition());
   });
   
   google.maps.event.addListener(marker, 'dragend', function() {
-    //updateMarkerStatus('Drag ended');
     geocodePosition(marker.getPosition());
   });
 

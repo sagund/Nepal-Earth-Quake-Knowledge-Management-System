@@ -6,7 +6,7 @@ class Admin extends MY_Controller {
 	public function __construct() {
 		parent::__construct ();
 		$this->load->helper ( 'url','form' );
-		$this->load->model('Admin_model');
+		$this->load->model('admin_model');
 		$this->load->library('upload');
 		$this->load->helper('download');
 		$this->load->helper('inflector');
@@ -15,33 +15,44 @@ class Admin extends MY_Controller {
 
 	public function index(){
     	//$data = array();
+    	if($this->session->userdata("admin_detail")){    		
+    		
+			return redirect('admin/crud');
+    	}
 		$this->load->view ( 'relief_admin/admin_header');
 		$this->load->view('relief_admin/admin_login.php');
 		$this->load->view ( 'relief_admin/admin_footer');
 	}
 
 	public function login(){
+		if($this->session->userdata("admin_detail")){
+			$this->session->set_userdata( 'flash_msg_type', "success" );
+			$this->session->set_flashdata( 'flash_msg', "Already Logged in" );
+    		return redirect('admin/crud');
+    	}
 		$email=$this->input->post('email');
 		$password=$this->input->post('password');
 		$login=$this->admin_model->checkLoginDetail($email,$password);
 
 		if($login){
-			SESSION::set ( 'flash_msg_type', "success" );
-			SESSION::set ( 'flash_msg', "Successfully Logged in" );
+			$this->session->set_userdata("admin_detail",$login);
+			$this->session->set_userdata( 'flash_msg_type', "success" );
+			$this->session->set_flashdata( 'flash_msg', "Successfully Logged in" );
 			$this->load->view ( 'relief_admin/admin_header');
 			$this->load->view('relief_admin/admin');
 			$this->load->view ( 'relief_admin/admin_footer');
 		}else{
-			SESSION::set ( 'flash_msg_type', "danger" );
-			SESSION::set ( 'flash_msg', "Sorry, your login and password did not match any records in our database. Please try again" );
+			$this->session->set_userdata( 'flash_msg_type', "danger" );
+			$this->session->set_flashdata( 'flash_msg', "Sorry, your login and password did not match any records in our database. Please try again" );
 			redirect ( 'admin', 'refresh' );
 		}
 
 	}
 
 	function logout(){
-		SESSION::set ( 'flash_msg_type', "success" );
-		SESSION::set ( 'flash_msg', "Successfully Logged out" );
+		$this->session->unset_userdata("admin_detail");
+		$this->session->set_userdata( 'flash_msg_type', "success" );
+		$this->session->set_flashdata( 'flash_msg', "Successfully Logged out" );
 		redirect ( 'admin', 'refresh' );
 	}
 
@@ -106,14 +117,14 @@ class Admin extends MY_Controller {
 
 				$insert_id = $insert_results ['media_id'];
 
-				SESSION::set ( 'flash_msg_type', "success" );
-
+				$this->session->set_userdata( 'flash_msg_type', "success" );
+				$this->session->set_flashdata( 'flash_msg', "Data saved Successfully." );
 				redirect ( base_url().'admin/media', 'refresh' );
 
 
 			} else {
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Sorry, we were unable to add the data. Please try again" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Sorry, we were unable to add the data. Please try again" );
 				redirect ( '/user/register', 'refresh' );
 			}
 
@@ -167,7 +178,6 @@ class Admin extends MY_Controller {
 	 		$this->data['page_detail']=$this->admin_model->getStaticPageDetailforedit($page_id);
 	 	}
 	 	$this->load->view('relief_admin/admin_header',$this->data);
-		//$this->load->view('flash_message.inc');
 	 	$this->load->view('relief_admin/admin-pages');
 	 	$this->load->view('relief_admin/admin_footer');
 	 }
@@ -192,12 +202,12 @@ class Admin extends MY_Controller {
 	 		if($page_id==""){
 	 			$insert=$this->admin_model->insertStaticPage($page_title,$desc,$status,$page_url);
 	 			if($insert!=0){
-	 				SESSION::set ( 'flash_msg_type', "success" );
-	 				SESSION::set('msg','Page Detail Insert Successfull.');
+	 				$this->session->set_userdata( 'flash_msg_type', "success" );
+	 				$this->session->set_flashdata('msg','Page Detail Insert Successfull.');
 	 				return redirect(base_url().'admin/pages');
 	 			}else{
-	 				SESSION::set ( 'flash_msg_type', "danger" );
-	 				SESSION::set('msg','Page Detail Insert Failed Or No changes has been made.');
+	 				$this->session->set_userdata( 'flash_msg_type', "danger" );
+	 				$this->session->set_flashdata('msg','Page Detail Insert Failed Or No changes has been made.');
 	 				return redirect(base_url().'admin/pages');
 	 			}
 	 		}else{

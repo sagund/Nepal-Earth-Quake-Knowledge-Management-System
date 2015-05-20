@@ -17,7 +17,7 @@
       </div>
       OR
       <div class="form-group">
-        <label for="inputType" class=" control-label">Page Description </label>
+        <label for="inputType" class=" control-label">File Upload </label>
         <div class="">
           <input type="file" name="media">
           <div class="help-block alert-danger">

@@ -16,7 +16,7 @@ class User extends MY_Controller {
 		$data = array ();
 		$data ['logged_in'] = $logged_in;
 
-		$data ['UD'] = $_SESSION['UD'];
+		$data ['UD'] = $this->session->userdata['UD'];
 
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav' );
@@ -29,8 +29,8 @@ class User extends MY_Controller {
 	public function register() {
 
 		if(Authenticator::isLoggedIn ()){
-			SESSION::set ( 'flash_msg_type', "success" );
-			SESSION::set ( 'flash_msg', "You are already logged in" );
+			$this->session->set_userdata( 'flash_msg_type', "success" );
+			$this->session->set_flashdata( 'flash_msg', "You are already logged in" );
 			redirect ( '/user/dashboard', 'refresh' );
 		}
 
@@ -60,16 +60,16 @@ class User extends MY_Controller {
 				}
 			}
 			if($counter == 0){
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Invalid Role Chosen" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Invalid Role Chosen" );
 				redirect ( '/user/register', 'refresh' );
 			}
 
 			if ($this->Users_model->doesValueExist("email", $data ['email']))
 			{
 
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Sorry, email address is already registered" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Sorry, email address is already registered" );
 				redirect ( '/user/register', 'refresh' );
 			}
 			unset($data['user_types']);
@@ -91,8 +91,8 @@ class User extends MY_Controller {
 
 				$this->authenticateUser ( $user_data_array );
 
-				SESSION::set ( 'flash_msg_type', "success" );
-				SESSION::set ( 'flash_msg', "Account created Successfully" );
+				$this->session->set_userdata( 'flash_msg_type', "success" );
+				$this->session->set_flashdata( 'flash_msg', "Account created Successfully" );
 
 				redirect ( '/user/dashboard', 'refresh' );
 
@@ -100,8 +100,8 @@ class User extends MY_Controller {
 				// $this->load->view('user/register_success', $data);
 				// $this->load->view('templates/footer');
 			} else {
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Sorry, we were unable to create a new account. Please try again" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Sorry, we were unable to create a new account. Please try again" );
 				redirect ( '/user/register', 'refresh' );
 			}
 		} else {
@@ -121,8 +121,8 @@ class User extends MY_Controller {
 	public function login() {
 
 		if(Authenticator::isLoggedIn ()){
-			SESSION::set ( 'flash_msg_type', "success" );
-			SESSION::set ( 'flash_msg', "You are already logged in" );
+			$this->session->set_userdata( 'flash_msg_type', "success" );
+			$this->session->set_flashdata( 'flash_msg', "You are already logged in" );
 			redirect ( '/user/dashboard', 'refresh' );
 		}
 
@@ -148,8 +148,8 @@ class User extends MY_Controller {
 
 
 
-				SESSION::set ( 'flash_msg_type', "success" );
-				SESSION::set ( 'flash_msg', "Successfully Logged in" );
+				$this->session->set_userdata( 'flash_msg_type', "success" );
+				$this->session->set_flashdata( 'flash_msg', "Successfully Logged in" );
 
 				if ($r == "") {
 					redirect ( '/user/dashboard', 'refresh' );
@@ -159,8 +159,8 @@ class User extends MY_Controller {
 			} else {
 
 
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Sorry, your login and password did not match any records in our database. Please try again" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Sorry, your login and password did not match any records in our database. Please try again" );
 				redirect ( '/user/login', 'refresh' );
 			}
 		}
@@ -189,16 +189,15 @@ class User extends MY_Controller {
 
 		Authenticator::setAuthenticatedCookieForUser ( $user_data_array ['id'], $user_data_array ['user_type']);
 
-		Session::set("UD", $auth_data);
+		$this->session->set_userdata("UD", $auth_data);
 	}
 
 
 	public function logout() {
-
-		SESSION::delete("UD");
-		unset($_SESSION['UD']);
-
 		Authenticator::setLoggedOutCookieForUser ();
+		$this->session->sess_destroy();
+
+		
 		redirect ( '/user/dashboard', 'refresh' );
 	}
 }

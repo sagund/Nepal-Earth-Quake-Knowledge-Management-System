@@ -43,12 +43,16 @@
 							    		<th>VDC</th>
 							    		<td></td>
 							    	</tr>
+									<tr>
+							            <th>Total Casualties:</th>
+							            <td><?php echo ($district_detail['death'] + $district_detail['injured']) ?></td>
+							        </tr>
 							        <tr>
-							            <th>Dead</th>
+							            <th>Death</th>
 							            <td><?php echo $district_detail['death'] ?></td>
 							        </tr>
 							        <tr>
-							            <th>Casualties</th>
+							            <th>Injured</th>
 							            <td><?php echo $district_detail['injured'] ?></td>
 							        </tr>
 							        <tr>
@@ -80,7 +84,7 @@
 							            <td><?php $total_damaged=$district_detail['public_house_full_destroyed']+$district_detail['public_house_partial_destroyed']; echo $total_damaged ?></td>
 							        </tr>
 							         <tr>
-							            <th>Livable Houses</th>
+							            <th>Habitable Houses</th>
 							            <td><?php $livable_houses=$total_houses-$total_damaged; echo $livable_houses; ?></td>
 							        </tr>
 

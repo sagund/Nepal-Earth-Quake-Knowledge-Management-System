@@ -83,12 +83,15 @@ $route['page/(:any)'] = 'volunteer/page/$1';
 
 // ADMIN Routes
 
+$route['admin/crud']='relief_admin/reliefcrud';
+
 $route['admin/login']='relief_admin/admin/login';
 $route['admin/logout']='relief_admin/admin/logout';
 
 $route['admin/media']='relief_admin/admin/add_media';
 //Static page CRUD ADMIN
 
+$route['admin/pages']='relief_admin/admin/pages';
 $route['admin/pages/(:any)']='relief_admin/admin/pages/$1';
 $route['admin/updatepage/(:any)']='relief_admin/admin/addpage/$1';
 $route['admin/deletepage/(:any)']='relief_admin/admin/deletepage/$1';

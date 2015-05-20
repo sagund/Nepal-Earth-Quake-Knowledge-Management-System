@@ -301,7 +301,7 @@ function showPosition(position) {
 		var zoomlevel=12;
 	}
 	document.getElementById("pos_acc").value=position.coords.accuracy;
-	if(position.coords.altitudeAccuracy!=0){
+	if(!((position.coords.altitudeAccuracy==0)||(position.coords.altitudeAccuracy==null))){
 		document.getElementById("alt").value=position.coords.altitude;
 		document.getElementById("alt_acc").value=position.coords.altitudeAccuracy;
 	}

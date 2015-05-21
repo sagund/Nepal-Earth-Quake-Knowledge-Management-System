@@ -211,7 +211,7 @@
                             <div class = "infoPanel" id="infoPanel">
                             	
                                 <div class="myLoc">
-                                    <button class="btn btn-primary pull-left" onClick="getLocation()">Locate Me on the Map</button>
+                                    <a class="btn btn-primary pull-left" onClick="getLocation()">Locate Me on the Map</a>
                                     <br /><br />
                                 </div>
                                 

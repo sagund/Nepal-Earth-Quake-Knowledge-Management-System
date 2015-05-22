@@ -31,10 +31,8 @@ class Victim extends MY_Controller {
         die();*/
 		$this->load->view ( 'header', $data );
 		$this->load->view ( 'nav');
-		
 		$this->load->view ( 'victim/detail', $data );
-		$this->load->view('modals');
-
+		$this->load->view ( 'modals');
 		$this->load->view ( 'footer' );
 	}
 
@@ -81,10 +79,6 @@ class Victim extends MY_Controller {
 				}
 			}
 
-
-
-
-
 			$this->load->model ( 'Victim_model' );
 			$this->load->model ( 'Victim_family_model' );
 
@@ -105,15 +99,15 @@ class Victim extends MY_Controller {
 				}
 
 
-				SESSION::set ( 'flash_msg_type', "success" );
-				SESSION::set ( 'flash_msg', "Data Saved Successfully" );
+				$this->session->set_userdata( 'flash_msg_type', "success" );
+				$this->session->set_flashdata( 'flash_msg', "Data Saved Successfully" );
 
 				redirect ( '/relief/condition', 'refresh' );
 
 
 			} else {
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Sorry, we were unable to add the data. Please try again" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Sorry, we were unable to add the data. Please try again" );
 				redirect ( '/user/register', 'refresh' );
 			}
 		} else {

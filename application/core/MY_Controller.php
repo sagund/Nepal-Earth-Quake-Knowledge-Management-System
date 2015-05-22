@@ -24,8 +24,8 @@ class MY_Controller extends CI_Controller
 	{
 		if (!Authenticator::isLoggedIn())
 		{
-			SESSION::set ( 'flash_msg_type', "danger" );
-			SESSION::set ( 'flash_msg', "Sorry you need to be logged in to access this page" );
+			$this->session->set_userdata( 'flash_msg_type', "danger" );
+			$this->session->set_flashdata( 'flash_msg', "Sorry you need to be logged in to access this page" );
 
 			redirect ( '/user/login', 'refresh' );
 		}

@@ -35,6 +35,11 @@ class Volunteer_model extends CI_Model {
 		return $query->row_array();
 	}
 	
+	public function getDeathInjuredToll(){
+		$sql="SELECT sum(death) as death, sum(injured) as injured,date FROM district_records";
+		$query=$this->db->query($sql);
+		return $query->row_array();
+	}
 	
 	
 	

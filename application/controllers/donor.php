@@ -33,13 +33,13 @@ class Donor extends MY_Controller {
 
 				$insert_id = $insert_results ['id'];
 
-				SESSION::set ( 'flash_msg_type', "success" );
-				SESSION::set ( 'flash_msg', "Data Saved Successfully" );
+				$this->session->set_userdata( 'flash_msg_type', "success" );
+				$this->session->set_flashdata( 'flash_msg', "Data Saved Successfully" );
 
 				redirect ( '/user/dashboard', 'refresh' );
 			} else {
-				SESSION::set ( 'flash_msg_type', "danger" );
-				SESSION::set ( 'flash_msg', "Sorry, we were unable to add the data. Please try again" );
+				$this->session->set_userdata( 'flash_msg_type', "danger" );
+				$this->session->set_flashdata( 'flash_msg', "Sorry, we were unable to add the data. Please try again" );
 				redirect ( '/donor', 'refresh' );
 			}
 		} else {

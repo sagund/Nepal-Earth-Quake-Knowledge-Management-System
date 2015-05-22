@@ -10,6 +10,9 @@ class Reliefcrud extends MY_Controller {
 		$this->load->helper('url');
 
 		$this->load->library('grocery_CRUD');
+		if(!$this->session->userdata("admin_detail")){
+			return redirect('admin');
+		}
 	}
 
 
@@ -183,6 +186,15 @@ class Reliefcrud extends MY_Controller {
 		$output = $crud->render();
 
 		$this->render_crud($output);
+	}
+
+	public function newspapers(){
+		$this->load->library('grocery_CRUD');
+
+		$this->grocery_crud->set_table('newspapers');
+        $output = $this->grocery_crud->render();
+ 
+        $this->render_crud($output);
 	}
 
 

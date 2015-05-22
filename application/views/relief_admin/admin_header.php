@@ -19,6 +19,7 @@
 		<![endif]-->
 
 		<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
 		<!-- page specific plugin styles -->
 
         <?php if ( isset( $css_files ) ): ?>
@@ -43,4 +44,8 @@
 				</div>
 			</div>
 		</div>
+
+		<?php
+		 $application_path = dirname(__FILE__);
+		include("$application_path/../flash_messages.inc.php"); ?>
 

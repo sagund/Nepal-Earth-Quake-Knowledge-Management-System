@@ -31,6 +31,11 @@ class Volunteer extends CI_Controller {
 
 	public function home(){
 		$data['districts']=$this->volunteer_model->getDistrictList();
+		$toll=$this->volunteer_model->getDeathInjuredToll();
+		
+		$data['death']=$toll['death'];
+		$data['injured']=$toll['injured'];
+		$data['updateAt']=$toll['date'];
 		$this->load->view('header',$data);
 		$this->load->view('nav');
 		$this->load->view('home');

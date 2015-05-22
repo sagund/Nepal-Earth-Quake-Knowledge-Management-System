@@ -72,9 +72,7 @@ $route['missingpeople'] = 'volunteer/missingpeople';
 
 $route['victim/add'] = 'victim/add';
 
-$route['admin/pages/(:any)']='admin/pages/$1';
-$route['admin/updatepage/(:any)']='admin/addpage/$1';
-$route['admin/deletepage/(:any)']='admin/deletepage/$1';
+
 
 $route['page/(:any)'] = 'volunteer/page/$1';
 
@@ -85,6 +83,18 @@ $route['page/(:any)'] = 'volunteer/page/$1';
 
 // ADMIN Routes
 
+$route['admin/crud']='relief_admin/reliefcrud';
+
+$route['admin/login']='relief_admin/admin/login';
+$route['admin/logout']='relief_admin/admin/logout';
+
+$route['admin/media']='relief_admin/admin/add_media';
+//Static page CRUD ADMIN
+
+$route['admin/pages']='relief_admin/admin/pages';
+$route['admin/pages/(:any)']='relief_admin/admin/pages/$1';
+$route['admin/updatepage/(:any)']='relief_admin/admin/addpage/$1';
+$route['admin/deletepage/(:any)']='relief_admin/admin/deletepage/$1';
 
 //USER CRUD ADMIN
 $route['admin/crud/user/(:any)'] 			=  "relief_admin/reliefcrud/user/$1";
@@ -124,7 +134,7 @@ $route['admin/crud/wards/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/wards/$1
 
 
 $route['admin/crud/(:any)'] 			=  "relief_admin/reliefcrud/$1";
-$route['admin'] ="relief_admin/reliefcrud";
+$route['admin'] ="relief_admin/admin";
 
 //$route['default_controller'] = 'relief';
 

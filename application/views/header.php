@@ -48,3 +48,10 @@
     </script>
 </head>
 <body id="page-top">
+<div class="container">
+    <?php
+
+        require_once("application/views/flash_messages.inc.php");
+
+    ?>
+</div>

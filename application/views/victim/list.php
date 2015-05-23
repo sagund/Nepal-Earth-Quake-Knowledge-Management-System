@@ -33,7 +33,7 @@
 								
 								<img class="meta__avatar" src="<?php echo base_url(); ?>assets/img/district_small/<?php echo ucfirst($district['name']); ?>.png" alt="<?php echo $district['name']; ?>" />
 								<span class="meta__date"><i class="fa fa-times"></i> <?php echo $district['death']; ?> Dead</span>
-								<span class="meta__reading-time"><i class="fa fa-medkit"></i> <?php echo $district['injured']; ?> Casualties</span>
+								<span class="meta__reading-time"><i class="fa fa-medkit"></i> <?php echo $district['injured']; ?> Injured</span>
 							</div>
 						</a>
 	            <?php  

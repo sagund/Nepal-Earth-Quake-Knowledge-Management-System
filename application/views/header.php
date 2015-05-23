@@ -12,6 +12,7 @@
     <title>Nepal Earthquake 2015 Knowledge Management System (KMS)</title>
 
     <!-- Bootstrap Core CSS -->
+    
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css">
 
     <!-- Custom Fonts -->
@@ -28,6 +29,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prettyPhoto.css">
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/custom.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

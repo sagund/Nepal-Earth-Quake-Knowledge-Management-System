@@ -97,25 +97,26 @@
                             </div>
                         </div> <br />
                                 
-                                <div class="control-group">
+						<div class="control-group">
 							<label class="control-label" for="victim_condition">Please check mark if you are suffering from following complications. </label>
 							<div class="controls">
-                            <label class="checkbox-inline"><input type="checkbox" name="victim_condition1" value="suffocating" class="input-xlarge">Suffocation &nbsp;</label><br />
-                            <label class="checkbox-inline"><input type="checkbox" name="victim_condition2" value="dehydrating" class="input-xlarge">Dehydration &nbsp;</label><br />
-                            <label class="checkbox-inline"><input type="checkbox" name="victim_condition3" value="bleeding" class="input-xlarge">Bleeding &nbsp;</label><br />
-                            <label class="checkbox-inline"><input type="checkbox" name="victim_condition4" value="unconscious" class="input-xlarge">Losing consciousness</label>
+                            	<label class="checkbox-inline"><input type="checkbox" name="suffocation" value="suffocating" class="input-xlarge">Suffocation &nbsp;</label><br />
+                            	<label class="checkbox-inline"><input type="checkbox" name="dehydration" value="dehydrating" class="input-xlarge">Dehydration &nbsp;</label><br />
+                            	<label class="checkbox-inline"><input type="checkbox" name="bleeding" value="bleeding" class="input-xlarge">Bleeding &nbsp;</label><br />
+                            	<label class="checkbox-inline"><input type="checkbox" name="consciousness" value="unconscious" class="input-xlarge">Losing consciousness &nbsp;</label>
 							</div>
 						</div>  <br />
                         
-                        		<div class="control-group">
-									<label class="control-label" for="hazards">Please check mark if you are in any of the following hazarduous situation. </label>
-									<div class="controls">
-                            			<label class="checkbox-inline"><input type="checkbox" name="fire" value="fire" class="input-xlarge">Fire</label><br />
-                            			<label class="checkbox-inline"><input type="checkbox" name="chemical" value="chemical" class="input-xlarge">Chemical</label><br />
-                            			<label class="checkbox-inline"><input type="checkbox" name="debries" value="debries" class="input-xlarge">Falling Debries / Collapsing Buildings </label><br />
-                                        <label class="checkbox-inline"><input type="checkbox" name="altitude" value="altitude" class="input-xlarge">Altitude</label><br />
-									</div>
-								</div>  <br />
+						<div class="control-group">
+							<label class="control-label" for="hazards">Please check mark if you are in any of the following hazarduous situation. </label>
+							<div class="controls">
+                        		<label class="checkbox-inline"><input type="checkbox" name="fire" value="fire" class="input-xlarge">Fire</label><br />
+                            	<label class="checkbox-inline"><input type="checkbox" name="chemical" value="chemical" class="input-xlarge">Chemical</label><br />
+                            	<label class="checkbox-inline"><input type="checkbox" name="debries" value="debries" class="input-xlarge">Falling Debries / Collapsing Buildings </label><br />
+                                <label class="checkbox-inline"><input type="checkbox" name="altitude" value="altitude" class="input-xlarge">Altitude</label><br />
+                                <label class="checkbox-inline"><input type="checkbox" name="landslide" value="landslide" class="input-xlarge">Landslides</label><br />
+							</div>
+						</div>  <br />
                                  
                                 <div class="control-group">
                             <label class="control-label" for="situation_descp">If you can, please describe your situation further.</label>
@@ -221,11 +222,12 @@
 								<b>Closest matching address:</b>
     							<div class="iP" id="address">
                                 </div>
-                                <input type="hidden" name="lat" id="lat">
-                                <input type="hidden" name="lon" id="lon">
-                                <input type="hidden" name="user_alt" id="user_alt">
-                                <input type="hidden" name="pos_acc" id="pos_acc">
-                                <input type="hidden" name="alt_acc" id="alt_acc">
+                                <input type="hidden" name="lat" id="lat"> <!--Latitude-->
+                                <input type="hidden" name="lon" id="lon"> <!--Longitude-->
+                                <input type="hidden" name="user_alt" id="user_alt"> <!--Altitude : not available if GPS not used-->
+                                <input type="hidden" name="pos_acc" id="pos_acc"> <!--Coordinates accuracy-->
+                                <input type="hidden" name="alt_acc" id="alt_acc"> <!--Altitude Accuracy : not available if GPS not used-->
+                                <input type="hidden" name="map_address" id="map_address"> <!--Closest matching address from victim's Geo-Coordinates-->
 							</div>
                             
                         </div>
@@ -316,7 +318,7 @@ function showPosition(position) {
 	var marker = new google.maps.Marker({
 		position:latLng,
 		map:map,
-		title:'User Address Here',
+		title:'Your Location',
 		animation: google.maps.Animation.DROP,
 		draggable:true
 		
@@ -345,6 +347,7 @@ function showPosition(position) {
 		}, function(responses) {
 			if (responses && responses.length > 0) {
 				updateMarkerAddress(responses[0].formatted_address);
+				document.getElementById("map_address").value=responses[0].formatted_address;
 			} else {
 				updateMarkerAddress('Cannot determine address at this location.');
 			}
@@ -368,7 +371,7 @@ function showPosition(position) {
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            y.innerHTML = "User denied the request for Geolocation. If you are concerned with your privacy choose <b>Use Form</b> option to fill the address form."
+            y.innerHTML = "You denied the request for Geolocation. If you are concerned with your privacy, please choose <b>Use Form</b> option to fill the address form."
             break;
         case error.POSITION_UNAVAILABLE:
             y.innerHTML = "Location information is unavailable. Choose <b>Use Form</b> option to fill the address form."
@@ -451,5 +454,4 @@ function geolocate() {
 // [END region_geolocation]
 
     </script>
-    
     

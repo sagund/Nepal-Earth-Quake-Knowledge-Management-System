@@ -67,7 +67,7 @@
     <!--Victim Rescue Form-->
     <div class="container">
     	<div>
-        	<legend>Victim Reporting</legend>
+        	<legend>Victim Rescue Call</legend>
         </div>
         <form class="form-horizontal" action="gmap_output.php" method="POST" id="myForm">
 			<fieldset>
@@ -108,7 +108,7 @@
 						</div>  <br />
                         
 						<div class="control-group">
-							<label class="control-label" for="hazards">Please check mark if you are in any of the following hazarduous situation. </label>
+							<label class="control-label" for="hazards">Please check mark if you are in any of the following hazardous situation. </label>
 							<div class="controls">
                         		<label class="checkbox-inline"><input type="checkbox" name="fire" value="fire" class="input-xlarge">Fire</label><br />
                             	<label class="checkbox-inline"><input type="checkbox" name="chemical" value="chemical" class="input-xlarge">Chemical</label><br />

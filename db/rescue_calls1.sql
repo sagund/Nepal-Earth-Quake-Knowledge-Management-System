@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2015 at 05:18 AM
+-- Generation Time: May 25, 2015 at 05:45 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `rescue_calls` (
   `name` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `lat` varchar(255) DEFAULT NULL,
-  `lon` varchar(255) DEFAULT NULL,
+  `lat` double DEFAULT NULL,
+  `lon` double DEFAULT NULL,
   `pos_acc` varchar(255) DEFAULT NULL,
   `injury` varchar(255) DEFAULT NULL,
   `trap` varchar(255) DEFAULT NULL,
@@ -57,8 +57,8 @@ CREATE TABLE IF NOT EXISTS `rescue_calls` (
 --
 
 INSERT INTO `rescue_calls` (`id`, `name`, `phone`, `address`, `lat`, `lon`, `pos_acc`, `injury`, `trap`, `complications`, `hazards`, `description`, `locality`, `street`, `city_vdc`, `region`, `zip_code`, `rescue_status`, `call_received_date_time`, `call_ack_date_time`, `rescued_date_time`) VALUES
-(1, 'raj', '11111', 'Timba Sirak Factory, Patan 44700, Nepal\r\n\r\n', '27.657416', '85.318379', '25', 'Minor', 'trapped_and_immobile', 'suffocating, loosing consciousness', 'fire, chemical', NULL, NULL, NULL, NULL, NULL, NULL, 'rescued', NULL, NULL, NULL),
-(2, 'raja', '22222', 'Lagankhel Road, Patan 44700, Nepal', '27.659696', '85.324387', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(1, 'raj', '11111', 'Timba Sirak Factory, Patan 44700, Nepal\r\n\r\n', 27.657416, 85.318379, '25', 'Minor', 'trapped_and_immobile', 'suffocating, loosing consciousness', 'fire, chemical', NULL, NULL, NULL, NULL, NULL, NULL, 'rescued', NULL, NULL, NULL),
+(2, 'raja', '22222', 'Lagankhel Road, Patan 44700, Nepal', 27.659696, 85.324387, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

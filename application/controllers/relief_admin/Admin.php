@@ -105,11 +105,11 @@ class Admin extends MY_Controller {
 			}
 
 			if($id==NULL){
-				$insert_results=$this->Admin_model->add_media_files ($data);
+				$insert_results=$this->admin_model->add_media_files ($data);
 			}
 			else{
 
-				$insert_results=$this->Admin_model->add_media_files ($data,$id);
+				$insert_results=$this->admin_model->add_media_files ($data,$id);
 			}
 
 
@@ -133,7 +133,7 @@ class Admin extends MY_Controller {
 
 		else{
 
-			$media_data['media_m']=$this->Admin_model->get_media_data($id);
+			$media_data['media_m']=$this->admin_model->get_media_data($id);
 			$this->load->view ( 'relief_admin/admin_header');
 			
 			if($id==NULL){$this->load->view('relief_admin/admin_media',$media_data);}
@@ -145,11 +145,11 @@ class Admin extends MY_Controller {
 
 
 	public function delete_media($id){
-		$media_data=$this->Admin_model->get_media_data($id);
+		$media_data=$this->admin_model->get_media_data($id);
 		
 		
 		
-		$d_results=$this->Admin_model->delete_media($id);
+		$d_results=$this->admin_model->delete_media($id);
 		/*
 //to delete media file -TODO
 		foreach ($media_data as $mdd){

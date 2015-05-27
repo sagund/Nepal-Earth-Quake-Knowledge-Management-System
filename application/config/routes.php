@@ -91,14 +91,16 @@ $route['admin/logout']='relief_admin/admin/logout';
 $route['admin/media']='relief_admin/admin/add_media';
 //Static page CRUD ADMIN
 
-$route['admin/pages']='relief_admin/admin/pages';
-$route['admin/pages/(:any)']='relief_admin/admin/pages/$1';
+$route['admin/pages']            ='relief_admin/admin/pages';
+$route['admin/pages/(:any)']     ='relief_admin/admin/pages/$1';
+$route['admin/addpage']			 ='relief_admin/admin/addpage';
+$route['admin/addpage/(:any)']	 ='relief_admin/admin/addpage/$1';
 $route['admin/updatepage/(:any)']='relief_admin/admin/addpage/$1';
 $route['admin/deletepage/(:any)']='relief_admin/admin/deletepage/$1';
 
 //USER CRUD ADMIN
 $route['admin/crud/user/(:any)'] 			=  "relief_admin/reliefcrud/user/$1";
-$route['admin/crud/user/(:any)/(:any)'] 			=  "relief_admin/reliefcrud/user/$1/$2";
+$route['admin/crud/user/(:any)/(:any)']		=  "relief_admin/reliefcrud/user/$1/$2";
 
 // DONATION CRUD ADMIN
 $route['admin/crud/donation/(:any)'] 			=  "relief_admin/reliefcrud/donation/$1";

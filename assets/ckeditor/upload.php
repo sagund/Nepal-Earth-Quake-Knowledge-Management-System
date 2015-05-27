@@ -1,6 +1,6 @@
 <?php 
 
-$url = '../images/editorUploads/';
+$url = '../../images/editorUploads/';
 if(!file_exists($url)){
   mkdir($url, 0755);
 }
@@ -30,7 +30,7 @@ if(!file_exists($url)){
       {
          $message = "Error moving uploaded file. Check the script is granted Read/Write/Modify permissions.";
       }
-      $url = "../" . $url;
+      // $url = "../" . $url;
     }
 $funcNum = $_GET['CKEditorFuncNum'] ;
 echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";

@@ -22,9 +22,11 @@
                             <div class="controls">
                                 <select id="item_type" name="item_type" placeholder="" class="form-control">
                                 	<option>Select Item Type</option>
-                                    <option>Cash</option>
-                                    <option>Food</option>
-                                    <option>Water</option>
+                                    <option value="money">Cash</option>
+                                    <option value="food">Food</option>
+                                    <option value="clothes">Clothes</option>
+                                    <option value="service">Service</option>
+                                    <option value="general">General</option>
                                 </select>
                             </div>
                         </div>
@@ -34,14 +36,14 @@
                             <div class="controls">
                                 <select id="item_unit" name="item_unit" placeholder="" class="form-control">
                                 	<option>Select Unit</option>
-                                    <option>Rs.</option>
-                                    <option>Pcs.</option>
-                                    <option>Kg</option>
-                                    <option>Litre</option>
-                                    <option>Meter</option>
-                                    <option>Quintel</option>
-                                    <option>Ton</option>
-                                    <option>Carton</option>
+                                    <option value="rs">Rs.</option>
+                                    <option value="pcs">Pcs.</option>
+                                    <option value="kg">Kg</option>
+                                    <option value="ltr">Litre</option>
+                                    <option value="meter">Meter</option>
+                                    <option value="qui">Quintel</option>
+                                    <option value="ton">Ton</option>
+                                    <option value="carton">Carton</option>
                                     
                                 </select>
                             </div>
@@ -55,9 +57,9 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label" for="item_description">Item Description</label>
+                            <label class="control-label" for="item_desc">Item Description</label>
                             <div class="controls">
-                                <textarea id="item_description" name="item_description" placeholder="Enter a short description about the item you are donating here." class="form-control"></textarea>
+                                <textarea id="item_desc" name="item_desc" placeholder="Enter a short description about the item you are donating here." class="form-control"></textarea>
                             </div>
                         </div>
                       </div>
@@ -89,10 +91,10 @@
                             <div class="controls">
                                 <select id="item_status" name="item_status" placeholder="" class="form-control">
                                 	<option>Select Item Status</option>
-                                    <option>Delivered</option>
-                                    <option>On the Way</option>
-                                    <option>Available</option>
-                                    <option>Out of stock</option>
+                                    <option value="delivered">Delivered</option>
+                                    <option value="way">On the Way</option>
+                                    <option value="avil">Available</option>
+                                    <option value="out_stock">Out of stock</option>
                                 </select>
                             </div>
                         </div>

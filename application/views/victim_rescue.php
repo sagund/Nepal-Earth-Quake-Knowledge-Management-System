@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+ 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     <title>Nepal Earthquake 2015 KMS</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <!--<link href="../../assets/css/portfolio-item.css" rel="stylesheet">-->
@@ -47,10 +47,10 @@
     <!--End of assets for GMap-->
     
     <!-- jQuery -->
-    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JS -->
-    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
     
     <!-- Custom JS -->
     <!--<script src="../../assets/js/custom.js"></script>-->
@@ -69,13 +69,14 @@
     	<div>
         	<legend>Victim Rescue Call</legend>
         </div>
-        <form class="form-horizontal" action="gmap_output.php" method="POST" id="myForm">
+        <form class="form-horizontal" action="" method="POST" id="myForm">
 			<fieldset>
                         <div class="well col-md-12">
                         	<h4 style="color:#F00"><strong>Are you a victim? Report Your Situation now.</strong></h4>
                             <p style="color:#F00">Rescue teams & concerned authorities will be informed to reach to you as sooon as possible.</p><a class="pull-right" href="#">No, just take me to the site's regular home page.</a><br /><br />
 							<legend></legend>
                             <div class="col-md-6">
+                           <?php  print_r($this->session->userdata('msg'));  ?>
                                 <h4><strong>Your Condition</strong></h4>
                                 <legend></legend>
                                         
